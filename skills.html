@@ -9,10 +9,18 @@
     crossorigin="anonymous">
 
   <link rel="stylesheet" href="css/main.css">
-  <title>Welcome To My Portfolio</title>
+  <title>About Me</title>
+  <style>
+    .w3-light-grey,.w3-hover-light-grey:hover,.w3-light-gray,.w3-hover-light-gray:hover{color:#000!important;background-color:#f1f1f1!important}
+    .w3-round-xlarge{border-radius:16px}
+    .w3-container,.w3-panel{padding:0.01em 16px}
+    .w3-blue,.w3-hover-blue:hover{color:#fff!important;background-color:#2196F3!important}
+    .w3-round-xlarge{border-radius:16px}.w3-round-xxlarge{border-radius:32px}
+    
+  </style>
 </head>
 
-<body id="bg-img">
+<body>
   <header>
     <div class="menu-btn">
       <div class="btn-line"></div>
@@ -25,16 +33,16 @@
         <div class="portrait"></div>
       </div>
       <ul class="menu-nav">
-        <li class="nav-item current">
+        <li class="nav-item">
           <a href="index.html" class="nav-link">
             Home
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item current">
           <a href="about.html" class="nav-link">
             About Me
           </a>
-        </li>        
+        </li>
         <li class="nav-item">
           <a href="skills.html" class="nav-link">
             Skills
@@ -42,7 +50,7 @@
         </li>
         <li class="nav-item">
           <a href="work.html" class="nav-link">
-            My Projects
+            My Work
           </a>
         </li>
         <li class="nav-item">
@@ -54,33 +62,20 @@
     </nav>
   </header>
 
-  <main id="home">
-    <div class="about-info">
-      <img src="img/portrait.jpg" alt="Priyansh Gupta" class="bio-image">
-    </div><br>
-    <h1 class="lg-heading">
-      Priyansh
-      <span class="text-secondary">Gupta</span>
-    </h1>  
-    <h2 class="sm-heading">
-      Data Science & ML Enthusiast.
-    </h2>
-    <div class="icons">
-      <a href="https://twitter.com/priyans78593745">
-        <i class="fab fa-twitter fa-2x"></i>
-      </a>
-      <a href="https://www.facebook.com/priyansh.gupta.351756">
-        <i class="fab fa-facebook fa-2x"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/priyansh-gupta-649048159/">
-        <i class="fab fa-linkedin fa-2x"></i>
-      </a>
-      <a href="https://github.com/priyansh19">
-        <i class="fab fa-github fa-2x"></i>
-      </a>
-    </div>
+  <main id="skills">
+  <div class="w3-container">
+  <h2>My Skill Set</h2>
+  <p>My Skills :</p>
 
+  <div class="w3-light-grey w3-round-xlarge">
+    <div class="w3-container w3-blue w3-round-xlarge" style="width:25%">HTML - 25%</div>
+  </div>
+</div>
   </main>
+
+  <footer id="main-footer">
+    Copyright to TechWalt.org  &copy; 2019
+  </footer>
 
   <script src="js/main.js"></script>
 </body>

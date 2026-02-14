@@ -1,88 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Priyansh Gupta - Interactive 3D Resume</title>
+    <meta
+      name="description"
+      content="Senior DevOps Engineer | Cloud Infrastructure Specialist | Azure | Kubernetes | Terraform"
+    />
+    <meta
+      itemprop="name"
+      content="Priyansh Gupta - Senior DevOps Engineer"
+    />
+    <meta
+      itemprop="description"
+      content="Interactive 3D portfolio showcasing expertise in DevOps, Cloud Infrastructure, and Kubernetes"
+    />
+    <meta itemprop="image" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Priyansh Gupta - Senior DevOps Engineer"
+    />
+    <meta
+      name="twitter:description"
+      content="Explore my interactive 3D resume. Cloud infrastructure, DevOps expertise, and passion for automation."
+    />
+    <meta name="twitter:image" />
+    <meta
+      property="og:site_name"
+      content="Priyansh Gupta - Senior DevOps Engineer"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://priyansh-3d-resume.com"
+    />
+    <meta
+      property="og:title"
+      content="Priyansh Gupta - Interactive 3D Resume"
+    />
+    <meta
+      property="og:description"
+      content="Drive through my cloud infrastructure desert and explore my professional journey."
+    />
+    <meta property="og:image" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/images/8f7cb9e7de037c07.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/0adf2932e78e7213.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/b1ba879833e94ae6.png"
+    />
+    <link rel="manifest" href="83eb0899ca40f015.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="assets/images/8d02841183231ad3.svg"
+      color="#00d9ff"
+    />
+    <meta name="apple-mobile-web-app-title" content="Priyansh's 3D Resume" />
+    <meta name="application-name" content="Priyansh's 3D Resume" />
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta name="theme-color" content="#000000" />
+    <script defer="defer" src="bundle.3ea4b3f1364c1bb7.js"></script>
+    <script defer="defer" src="resume-data.js"></script>
+    <script defer="defer" src="resume-interaction.js"></script>
+    <link href="main-resume.css" rel="stylesheet" />
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-Y1BR9CXE0X"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || []
+    function gtag() {
+      dataLayer.push(arguments)
+    }
+    gtag("js", new Date())
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-    crossorigin="anonymous">
-
-  <link rel="stylesheet" href="css/main.css">
-  <title>Welcome To My Portfolio</title>
-</head>
-
-<body id="bg-img">
-  <header>
-    <div class="menu-btn">
-      <h1><div class="btn-line"></div>
-      <div class="btn-line"></div>
-      <div class="btn-line"></div></h1>
-    </div>
-
-    <nav class="menu">
-      <div class="menu-branding">
-        <div class="portrait"></div>
+    gtag("config", "G-Y1BR9CXE0X")
+  </script>
+  <body>
+    <canvas class="webgl"></canvas>
+    <div class="overlay"></div>
+    <div id="loading-screen">
+      <div class="loading-spinner">
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
       </div>
-      <ul class="menu-nav">
-        <li class="nav-item current">
-          <a href="index.html" class="nav-link">
-            Home
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="about.html" class="nav-link">
-            About Me
-          </a>
-        </li>        
-        <li class="nav-item">
-          <a href="skills.html" class="nav-link">
-            Skills
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="work.html" class="nav-link">
-            My Projects
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="contact.html" class="nav-link">
-            How To Reach Me
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-
-  <main id="home">
-    <div class="about-info">
-      <img src="img/portrait.jpg" alt="Priyansh Gupta" class="bio-image">
-    </div><br>
-    <h1 class="lg-heading">
-      Priyansh
-      <span class="text-secondary">Gupta</span>
-    </h1>  
-    <h2 class="sm-heading">
-      Data Science & ML Enthusiast.
-    </h2>
-    <div class="icons">
-      <a href="https://twitter.com/priyans78593745">
-        <i class="fab fa-twitter fa-2x"></i>
-      </a>
-      <a href="https://www.facebook.com/priyansh.gupta.351756">
-        <i class="fab fa-facebook fa-2x"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/priyansh-gupta-649048159/">
-        <i class="fab fa-linkedin fa-2x"></i>
-      </a>
-      <a href="https://github.com/priyansh19">
-        <i class="fab fa-github fa-2x"></i>
-      </a>
+      <h1>Initializing Cloud Infrastructure... <span id="progressPercentage">0</span>%</h1>
+      <p class="loading-subtitle">Loading your DevOps journey</p>
     </div>
-
-  </main>
-
-  <script src="js/main.js"></script>
-</body>
-
+    <div id="info-overlay">
+      <div class="info-panel">
+        <h2 id="panel-title">Welcome</h2>
+        <div id="panel-content"></div>
+        <button class="close-btn">&times;</button>
+      </div>
+    </div>
+    <button class="start-btn">ENTER EXPERIENCE</button>
+  </body>
 </html>

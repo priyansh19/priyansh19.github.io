@@ -150,8 +150,8 @@ jobs:
             ! -name '_green_src' \
             -exec rm -rf {} +
 
-          echo "── Copying green content into place ──"
-          cp -r _green_src/. .
+          echo "── Copying green content into place (excluding .git) ──"
+          rsync -a --exclude='.git' _green_src/ .
           rm -rf _green_src
 
           echo "── Resulting files ──"

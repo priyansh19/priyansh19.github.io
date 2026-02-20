@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - claude/maintenance-page-github-theme-bh7wk
 
 permissions:
   contents: read

@@ -1,0 +1,53 @@
+.footer {
+  position: relative; z-index: 1;
+  border-top: 1px solid var(--border);
+  padding: 4rem 2rem 2rem;
+}
+
+.top {
+  max-width: 1200px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.brand p {
+  font-size: 0.85rem; color: var(--muted); margin-top: 0.75rem; line-height: 1.7;
+}
+
+.logo {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700; font-size: 1.2rem; color: var(--white);
+}
+
+.angle {
+  background: var(--grad);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.navTitle {
+  font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.12em; color: var(--white); margin-bottom: 1rem;
+}
+
+.nav, .contact { display: flex; flex-direction: column; gap: 0.6rem; }
+
+.nav a, .contact a {
+  font-size: 0.85rem; color: var(--muted);
+  transition: color 0.2s;
+}
+.nav a:hover, .contact a:hover { color: var(--white); }
+
+.bottom {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 0.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.78rem; color: var(--muted);
+}
+
+@media (max-width: 768px) { .top { grid-template-columns: 1fr; gap: 2rem; } }
+@media (max-width: 480px) { .bottom { flex-direction: column; align-items: center; text-align: center; } }

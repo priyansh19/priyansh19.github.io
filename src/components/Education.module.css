@@ -1,0 +1,113 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s;
+  cursor: default;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.degreeRow { display: flex; align-items: center; gap: 0.6rem; }
+
+.degree {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.5rem;
+  font-weight: 800;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.badge {
+  font-size: 0.68rem;
+  background: rgba(16,185,129,.12);
+  border: 1px solid rgba(16,185,129,.3);
+  color: var(--emerald);
+  border-radius: 5px;
+  padding: 0.15rem 0.45rem;
+}
+
+.period {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.field {
+  font-size: 1.05rem; font-weight: 700;
+  color: var(--white); margin-bottom: 0.3rem;
+}
+
+.school { font-size: 0.85rem; color: var(--text); margin-bottom: 0.4rem; }
+.school span { color: var(--muted); }
+
+.gpa {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem; color: var(--indigo);
+  margin-bottom: 0.75rem;
+}
+
+.highlights {
+  list-style: none; padding: 0;
+  display: flex; flex-direction: column; gap: 0.4rem;
+}
+
+.highlights li {
+  font-size: 0.82rem; color: var(--muted);
+  padding-left: 1rem; position: relative;
+}
+
+.highlights li::before {
+  content: "•"; position: absolute; left: 0;
+  color: var(--indigo);
+}
+
+/* Certifications */
+.certsWrap { }
+
+.certsTitle {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem; font-weight: 600;
+  color: var(--indigo); letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.certs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.9rem;
+}
+
+.cert {
+  display: flex; align-items: center; gap: 1rem;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 12px; padding: 1rem 1.25rem;
+  cursor: default; transition: all 0.3s;
+}
+
+.certCode {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem; font-weight: 800;
+  min-width: 52px; padding: 0.35rem 0.5rem;
+  border-radius: 7px; border: 1px solid;
+  text-align: center; flex-shrink: 0;
+}
+
+.certName { font-size: 0.82rem; font-weight: 600; color: var(--white); }
+.certIssuer { font-size: 0.72rem; color: var(--muted); }

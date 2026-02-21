@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - claude/maintenance-page-github-theme-bh7wk
 
 permissions:
   contents: read

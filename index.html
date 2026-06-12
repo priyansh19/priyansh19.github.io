@@ -1,1 +1,1010 @@
-<!DOCTYPE html><html lang="en" class="scroll-smooth"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" href="/_next/static/media/797e433ab948586e-s.p.09zddjkbdep5a.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="preload" href="/_next/static/media/caa3a2e1cccd8315-s.p.09~u27dqhyhd6.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="stylesheet" href="/_next/static/chunks/0nxa9gq2-17_t.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/0ht900cau6_ur.js"/><script src="/_next/static/chunks/0r8nt2o8muejo.js" async=""></script><script src="/_next/static/chunks/07lhk_q6pmm3r.js" async=""></script><script src="/_next/static/chunks/turbopack-05c8c~j12fn14.js" async=""></script><script src="/_next/static/chunks/0dbhjjzl8qfwv.js" async=""></script><script src="/_next/static/chunks/0l6jb1hq72ft..js" async=""></script><meta name="next-size-adjust" content=""/><title>CrewSpace — Build AI Companies, Not Just Chatbots</title><meta name="description" content="CrewSpace is a control plane for autonomous AI-agent companies. Create AI organizations, hire agents, set budgets, enforce approvals, and delegate work — all from a single desktop app."/><meta name="keywords" content="AI agents,multi-agent orchestration,AI company,agent framework,autonomous agents,AI control plane,open source"/><meta property="og:title" content="CrewSpace — Build AI Companies, Not Just Chatbots"/><meta property="og:description" content="The control plane for autonomous AI-agent companies. Local-first. Open source."/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="CrewSpace — Build AI Companies, Not Just Chatbots"/><meta name="twitter:description" content="The control plane for autonomous AI-agent companies. Local-first. Open source."/><link rel="icon" href="/favicon.ico?favicon.0x3dzn~oxb6tn.ico" sizes="256x256" type="image/x-icon"/><script src="/_next/static/chunks/03~yq9q893hmn.js" noModule=""></script></head><body class="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__variable antialiased bg-[#0a0a0a] text-white"><div hidden=""><!--$--><!--/$--></div><main><nav class="fixed top-0 left-0 right-0 z-50 border-b border-[#2a2a28] bg-[#0a0a0a]/80 backdrop-blur-md"><div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between"><a href="#" class="flex items-center gap-2.5 group"><div class="w-8 h-8 rounded-lg bg-[#cc785c] flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bot w-5 h-5 text-white" aria-hidden="true"><path d="M12 8V4H8"></path><rect width="16" height="12" x="4" y="8" rx="2"></rect><path d="M2 14h2"></path><path d="M20 14h2"></path><path d="M15 13v2"></path><path d="M9 13v2"></path></svg></div><span class="text-lg font-semibold tracking-tight text-[#faf9f5]">CrewSpace</span></a><div class="hidden md:flex items-center gap-8"><a href="#features" class="text-sm text-[#5c5a54] hover:text-[#faf9f5] transition-colors duration-200">Features</a><a href="#how-it-works" class="text-sm text-[#5c5a54] hover:text-[#faf9f5] transition-colors duration-200">How it works</a><a href="#open-source" class="text-sm text-[#5c5a54] hover:text-[#faf9f5] transition-colors duration-200">Open Source</a><a href="https://github.com/priyansh19/CrewSpace" target="_blank" rel="noopener noreferrer" class="text-sm font-medium px-4 py-2 rounded-lg bg-[#cc785c] hover:bg-[#b86a50] text-white transition-colors duration-200">Get Started</a></div><button class="md:hidden p-2 text-[#faf9f5]" aria-label="Toggle menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu w-6 h-6" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg></button></div></nav><section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16"><div class="absolute inset-0 opacity-[0.03]"><div class="w-full h-full" style="background-image:linear-gradient(rgba(250,249,245,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(250,249,245,0.5) 1px, transparent 1px);background-size:60px 60px"></div></div><div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#cc785c]/10 rounded-full blur-[120px]"></div><div class="relative max-w-7xl mx-auto px-6 py-20 text-center"><div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#2a2a28] bg-[#141413] mb-8" style="opacity:0;transform:translateY(20px)"><span class="w-2 h-2 rounded-full bg-[#4daa62] animate-pulse"></span><span class="text-xs font-medium text-[#5c5a54]">Open Source — Local First</span></div><h1 class="text-5xl md:text-7xl font-bold tracking-tight text-[#faf9f5] mb-6 leading-[1.1]" style="opacity:0;transform:translateY(30px)">Build<!-- --> <span class="text-gradient">AI Companies</span><br/>Not Just Chatbots</h1><p class="text-lg md:text-xl text-[#5c5a54] max-w-2xl mx-auto mb-10 leading-relaxed" style="opacity:0;transform:translateY(30px)">CrewSpace is the control plane for autonomous AI-agent companies. Hire agents, set budgets, enforce approvals, and delegate work — all from a single desktop app that keeps your data local.</p><div class="flex flex-col sm:flex-row items-center justify-center gap-4" style="opacity:0;transform:translateY(30px)"><a href="https://github.com/priyansh19/CrewSpace" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-2 px-6 py-3 rounded-xl bg-[#cc785c] hover:bg-[#b86a50] text-white font-medium transition-all duration-200">Get Started<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a><a href="#features" class="px-6 py-3 rounded-xl border border-[#2a2a28] text-[#faf9f5] hover:bg-[#141413] font-medium transition-all duration-200">Explore Features</a></div><div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto" style="opacity:0;transform:translateY(40px)"><div class="flex flex-col items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bot w-5 h-5 text-[#cc785c]" aria-hidden="true"><path d="M12 8V4H8"></path><rect width="16" height="12" x="4" y="8" rx="2"></rect><path d="M2 14h2"></path><path d="M20 14h2"></path><path d="M15 13v2"></path><path d="M9 13v2"></path></svg><span class="text-sm font-semibold text-[#faf9f5]">Multi-Agent</span><span class="text-xs text-[#5c5a54]">AI Agents</span></div><div class="flex flex-col items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building2 lucide-building-2 w-5 h-5 text-[#cc785c]" aria-hidden="true"><path d="M10 12h4"></path><path d="M10 8h4"></path><path d="M14 21v-3a2 2 0 0 0-4 0v3"></path><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"></path><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"></path></svg><span class="text-sm font-semibold text-[#faf9f5]">Unlimited</span><span class="text-xs text-[#5c5a54]">Companies</span></div><div class="flex flex-col items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield w-5 h-5 text-[#cc785c]" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg><span class="text-sm font-semibold text-[#faf9f5]">Local-First</span><span class="text-xs text-[#5c5a54]">Data</span></div><div class="flex flex-col items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap w-5 h-5 text-[#cc785c]" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg><span class="text-sm font-semibold text-[#faf9f5]">One Click</span><span class="text-xs text-[#5c5a54]">Setup</span></div></div></div></section><section id="features" class="py-24 md:py-32"><div class="max-w-7xl mx-auto px-6"><div class="text-center mb-16" style="opacity:0;transform:translateY(20px)"><span class="text-xs font-semibold tracking-widest uppercase text-[#cc785c]">Features</span><h2 class="mt-4 text-3xl md:text-5xl font-bold text-[#faf9f5] tracking-tight">Everything you need to run<!-- --> <span class="text-gradient">an AI company</span></h2><p class="mt-4 text-[#5c5a54] max-w-xl mx-auto">From hiring your first AI agent to managing complex multi-team operations, CrewSpace gives you the tools to scale.</p></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"><div class="group p-6 rounded-2xl border border-[#2a2a28] bg-[#141413] hover:bg-[#1c1c1b] hover:border-[#3d3d3a] transition-all duration-300" style="opacity:0;transform:translateY(24px)"><div class="w-10 h-10 rounded-lg bg-[#cc785c]/10 flex items-center justify-center mb-4 group-hover:bg-[#cc785c]/20 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building2 lucide-building-2 w-5 h-5 text-[#cc785c]" aria-hidden="true"><path d="M10 12h4"></path><path d="M10 8h4"></path><path d="M14 21v-3a2 2 0 0 0-4 0v3"></path><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"></path><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"></path></svg></div><h3 class="text-lg font-semibold text-[#faf9f5] mb-2">AI Company Creation</h3><p class="text-sm text-[#5c5a54] leading-relaxed">Spin up a complete AI organization in minutes. Define your company structure, goals, and projects from a single dashboard.</p></div><div class="group p-6 rounded-2xl border border-[#2a2a28] bg-[#141413] hover:bg-[#1c1c1b] hover:border-[#3d3d3a] transition-all duration-300" style="opacity:0;transform:translateY(24px)"><div class="w-10 h-10 rounded-lg bg-[#cc785c]/10 flex items-center justify-center mb-4 group-hover:bg-[#cc785c]/20 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-5 h-5 text-[#cc785c]" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg></div><h3 class="text-lg font-semibold text-[#faf9f5] mb-2">Org Chart &amp; Hierarchy</h3><p class="text-sm text-[#5c5a54] leading-relaxed">Build role-based hierarchies with your AI agents. Assign managers, engineers, and specialists with clear reporting lines.</p></div><div class="group p-6 rounded-2xl border border-[#2a2a28] bg-[#141413] hover:bg-[#1c1c1b] hover:border-[#3d3d3a] transition-all duration-300" style="opacity:0;transform:translateY(24px)"><div class="w-10 h-10 rounded-lg bg-[#cc785c]/10 flex items-center justify-center mb-4 group-hover:bg-[#cc785c]/20 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bot w-5 h-5 text-[#cc785c]" aria-hidden="true"><path d="M12 8V4H8"></path><rect width="16" height="12" x="4" y="8" rx="2"></rect><path d="M2 14h2"></path><path d="M20 14h2"></path><path d="M15 13v2"></path><path d="M9 13v2"></path></svg></div><h3 class="text-lg font-semibold text-[#faf9f5] mb-2">Multi-Agent Orchestration</h3><p class="text-sm text-[#5c5a54] leading-relaxed">Hire and manage multiple AI agents — Claude, Codex, Gemini, Kimi, Cursor, and more. Each agent gets its own role and responsibilities.</p></div><div class="group p-6 rounded-2xl border border-[#2a2a28] bg-[#141413] hover:bg-[#1c1c1b] hover:border-[#3d3d3a] transition-all duration-300" style="opacity:0;transform:translateY(24px)"><div class="w-10 h-10 rounded-lg bg-[#cc785c]/10 flex items-center justify-center mb-4 group-hover:bg-[#cc785c]/20 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wallet w-5 h-5 text-[#cc785c]" aria-hidden="true"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"></path><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"></path></svg></div><h3 class="text-lg font-semibold text-[#faf9f5] mb-2">Budget Policies</h3><p class="text-sm text-[#5c5a54] leading-relaxed">Set spending limits per agent and team. Track costs in real-time with automatic rollups and hard-stop auto-pause when limits are hit.</p></div><div class="group p-6 rounded-2xl border border-[#2a2a28] bg-[#141413] hover:bg-[#1c1c1b] hover:border-[#3d3d3a] transition-all duration-300" style="opacity:0;transform:translateY(24px)"><div class="w-10 h-10 rounded-lg bg-[#cc785c]/10 flex items-center justify-center mb-4 group-hover:bg-[#cc785c]/20 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check w-5 h-5 text-[#cc785c]" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg></div><h3 class="text-lg font-semibold text-[#faf9f5] mb-2">Approval Gates</h3><p class="text-sm text-[#5c5a54] leading-relaxed">Enforce human-in-the-loop oversight for critical actions. Agents request approval before executing high-impact tasks.</p></div><div class="group p-6 rounded-2xl border border-[#2a2a28] bg-[#141413] hover:bg-[#1c1c1b] hover:border-[#3d3d3a] transition-all duration-300" style="opacity:0;transform:translateY(24px)"><div class="w-10 h-10 rounded-lg bg-[#cc785c]/10 flex items-center justify-center mb-4 group-hover:bg-[#cc785c]/20 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-list-todo w-5 h-5 text-[#cc785c]" aria-hidden="true"><path d="M13 5h8"></path><path d="M13 12h8"></path><path d="M13 19h8"></path><path d="m3 17 2 2 4-4"></path><rect x="3" y="4" width="6" height="6" rx="1"></rect></svg></div><h3 class="text-lg font-semibold text-[#faf9f5] mb-2">Task &amp; Issue Management</h3><p class="text-sm text-[#5c5a54] leading-relaxed">Create, assign, and track tasks across your AI workforce. Atomic checkout semantics prevent conflicting work.</p></div><div class="group p-6 rounded-2xl border border-[#2a2a28] bg-[#141413] hover:bg-[#1c1c1b] hover:border-[#3d3d3a] transition-all duration-300" style="opacity:0;transform:translateY(24px)"><div class="w-10 h-10 rounded-lg bg-[#cc785c]/10 flex items-center justify-center mb-4 group-hover:bg-[#cc785c]/20 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-git-branch w-5 h-5 text-[#cc785c]" aria-hidden="true"><path d="M15 6a9 9 0 0 0-9 9V3"></path><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle></svg></div><h3 class="text-lg font-semibold text-[#faf9f5] mb-2">Goal-Driven Roadmaps</h3><p class="text-sm text-[#5c5a54] leading-relaxed">Link tasks to strategic goals. Break down high-level objectives into concrete, delegable work items with clear success criteria.</p></div><div class="group p-6 rounded-2xl border border-[#2a2a28] bg-[#141413] hover:bg-[#1c1c1b] hover:border-[#3d3d3a] transition-all duration-300" style="opacity:0;transform:translateY(24px)"><div class="w-10 h-10 rounded-lg bg-[#cc785c]/10 flex items-center justify-center mb-4 group-hover:bg-[#cc785c]/20 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square w-5 h-5 text-[#cc785c]" aria-hidden="true"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path></svg></div><h3 class="text-lg font-semibold text-[#faf9f5] mb-2">Real-Time Agent Chat</h3><p class="text-sm text-[#5c5a54] leading-relaxed">Talk to any agent directly. Stream responses in real-time, extract memories automatically, and review conversation history.</p></div><div class="group p-6 rounded-2xl border border-[#2a2a28] bg-[#141413] hover:bg-[#1c1c1b] hover:border-[#3d3d3a] transition-all duration-300" style="opacity:0;transform:translateY(24px)"><div class="w-10 h-10 rounded-lg bg-[#cc785c]/10 flex items-center justify-center mb-4 group-hover:bg-[#cc785c]/20 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-puzzle w-5 h-5 text-[#cc785c]" aria-hidden="true"><path d="M15.39 4.39a1 1 0 0 0 1.68-.474 2.5 2.5 0 1 1 3.014 3.015 1 1 0 0 0-.474 1.68l1.683 1.682a2.414 2.414 0 0 1 0 3.414L19.61 15.39a1 1 0 0 1-1.68-.474 2.5 2.5 0 1 0-3.014 3.015 1 1 0 0 1 .474 1.68l-1.683 1.682a2.414 2.414 0 0 1-3.414 0L8.61 19.61a1 1 0 0 0-1.68.474 2.5 2.5 0 1 1-3.014-3.015 1 1 0 0 0 .474-1.68l-1.683-1.682a2.414 2.414 0 0 1 0-3.414L4.39 8.61a1 1 0 0 1 1.68.474 2.5 2.5 0 1 0 3.014-3.015 1 1 0 0 1-.474-1.68l1.683-1.682a2.414 2.414 0 0 1 3.414 0z"></path></svg></div><h3 class="text-lg font-semibold text-[#faf9f5] mb-2">Plugin Ecosystem</h3><p class="text-sm text-[#5c5a54] leading-relaxed">Extend CrewSpace with custom plugins. Build integrations, add new adapter types, or create custom workflows using the Plugin SDK.</p></div><div class="group p-6 rounded-2xl border border-[#2a2a28] bg-[#141413] hover:bg-[#1c1c1b] hover:border-[#3d3d3a] transition-all duration-300" style="opacity:0;transform:translateY(24px)"><div class="w-10 h-10 rounded-lg bg-[#cc785c]/10 flex items-center justify-center mb-4 group-hover:bg-[#cc785c]/20 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hard-drive w-5 h-5 text-[#cc785c]" aria-hidden="true"><path d="M10 16h.01"></path><path d="M2.212 11.577a2 2 0 0 0-.212.896V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5.527a2 2 0 0 0-.212-.896L18.55 5.11A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><path d="M21.946 12.013H2.054"></path><path d="M6 16h.01"></path></svg></div><h3 class="text-lg font-semibold text-[#faf9f5] mb-2">Local-First Architecture</h3><p class="text-sm text-[#5c5a54] leading-relaxed">All data stays on your machine. Embedded PostgreSQL means no cloud dependencies, no data leaks, and full privacy by default.</p></div></div></div></section><section id="how-it-works" class="py-24 md:py-32 bg-[#141413]"><div class="max-w-7xl mx-auto px-6"><div class="text-center mb-16" style="opacity:0;transform:translateY(20px)"><span class="text-xs font-semibold tracking-widest uppercase text-[#cc785c]">How it works</span><h2 class="mt-4 text-3xl md:text-5xl font-bold text-[#faf9f5] tracking-tight">From zero to <span class="text-gradient">AI organization</span> <!-- -->in four steps</h2></div><div class="relative"><div class="hidden lg:block absolute top-24 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-[#2a2a28] to-transparent"></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"><div class="relative flex flex-col items-center text-center" style="opacity:0;transform:translateY(30px)"><div class="relative z-10 w-12 h-12 rounded-full bg-[#0a0a0a] border border-[#2a2a28] flex items-center justify-center mb-6"><span class="text-sm font-bold text-[#cc785c]">01</span></div><div class="w-14 h-14 rounded-xl bg-[#cc785c]/10 flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building2 lucide-building-2 w-7 h-7 text-[#cc785c]" aria-hidden="true"><path d="M10 12h4"></path><path d="M10 8h4"></path><path d="M14 21v-3a2 2 0 0 0-4 0v3"></path><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"></path><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"></path></svg></div><h3 class="text-lg font-semibold text-[#faf9f5] mb-2">Create Your Company</h3><p class="text-sm text-[#5c5a54] leading-relaxed max-w-xs">Define your AI company&#x27;s name, prefix, and strategic goals. CrewSpace initializes the embedded database and sets up your control plane locally.</p></div><div class="relative flex flex-col items-center text-center" style="opacity:0;transform:translateY(30px)"><div class="relative z-10 w-12 h-12 rounded-full bg-[#0a0a0a] border border-[#2a2a28] flex items-center justify-center mb-6"><span class="text-sm font-bold text-[#cc785c]">02</span></div><div class="w-14 h-14 rounded-xl bg-[#cc785c]/10 flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-plus w-7 h-7 text-[#cc785c]" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><line x1="19" x2="19" y1="8" y2="14"></line><line x1="22" x2="16" y1="11" y2="11"></line></svg></div><h3 class="text-lg font-semibold text-[#faf9f5] mb-2">Hire AI Agents</h3><p class="text-sm text-[#5c5a54] leading-relaxed max-w-xs">Add agents from any supported adapter — Claude, Codex, Gemini, Kimi, Cursor, OpenClaw, and more. Assign roles, models, and budgets to each agent.</p></div><div class="relative flex flex-col items-center text-center" style="opacity:0;transform:translateY(30px)"><div class="relative z-10 w-12 h-12 rounded-full bg-[#0a0a0a] border border-[#2a2a28] flex items-center justify-center mb-6"><span class="text-sm font-bold text-[#cc785c]">03</span></div><div class="w-14 h-14 rounded-xl bg-[#cc785c]/10 flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-list-checks w-7 h-7 text-[#cc785c]" aria-hidden="true"><path d="M13 5h8"></path><path d="M13 12h8"></path><path d="M13 19h8"></path><path d="m3 17 2 2 4-4"></path><path d="m3 7 2 2 4-4"></path></svg></div><h3 class="text-lg font-semibold text-[#faf9f5] mb-2">Delegate &amp; Govern</h3><p class="text-sm text-[#5c5a54] leading-relaxed max-w-xs">Create tasks and issues, assign them to agents, and set approval gates for critical actions. Agents check out work atomically and report progress.</p></div><div class="relative flex flex-col items-center text-center" style="opacity:0;transform:translateY(30px)"><div class="relative z-10 w-12 h-12 rounded-full bg-[#0a0a0a] border border-[#2a2a28] flex items-center justify-center mb-6"><span class="text-sm font-bold text-[#cc785c]">04</span></div><div class="w-14 h-14 rounded-xl bg-[#cc785c]/10 flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up w-7 h-7 text-[#cc785c]" aria-hidden="true"><path d="M16 7h6v6"></path><path d="m22 7-8.5 8.5-5-5L2 17"></path></svg></div><h3 class="text-lg font-semibold text-[#faf9f5] mb-2">Track &amp; Optimize</h3><p class="text-sm text-[#5c5a54] leading-relaxed max-w-xs">Monitor spending against budgets, review agent performance, and iterate on your org structure. All data stays local — you own everything.</p></div></div></div></div></section><section id="open-source" class="py-24 md:py-32"><div class="max-w-7xl mx-auto px-6"><div class="relative overflow-hidden rounded-3xl border border-[#2a2a28] bg-[#141413] p-8 md:p-16" style="opacity:0;transform:translateY(20px)"><div class="absolute top-0 right-0 w-[400px] h-[400px] bg-[#cc785c]/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div><div class="absolute bottom-0 left-0 w-[300px] h-[300px] bg-[#4daa62]/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2"></div><div class="relative text-center max-w-2xl mx-auto"><div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#2a2a28] bg-[#0a0a0a] mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-xml w-4 h-4 text-[#faf9f5]" aria-hidden="true"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg><span class="text-xs font-medium text-[#5c5a54]">100% Open Source</span></div><h2 class="text-3xl md:text-5xl font-bold text-[#faf9f5] tracking-tight mb-4">Built in the<!-- --> <span class="text-gradient">open</span></h2><p class="text-lg text-[#5c5a54] mb-8 leading-relaxed">CrewSpace is fully open source under the MIT license. No vendor lock-in, no hidden APIs, no cloud dependencies. Fork it, extend it, run it entirely on your own infrastructure.</p><div class="flex flex-col sm:flex-row items-center justify-center gap-4"><a href="https://github.com/priyansh19/CrewSpace" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-6 py-3 rounded-xl bg-[#faf9f5] text-[#0a0a0a] font-medium hover:bg-white transition-colors duration-200"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-xml w-5 h-5" aria-hidden="true"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg>Star on GitHub</a><a href="https://github.com/priyansh19/CrewSpace/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-6 py-3 rounded-xl border border-[#2a2a28] text-[#faf9f5] hover:bg-[#1c1c1b] transition-colors duration-200">Read the Docs<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-4 h-4" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div><div class="mt-10 flex items-center justify-center gap-2 text-sm text-[#5c5a54]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart w-4 h-4 text-[#cc785c]" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg><span>Made with care by the open source community. Contributions welcome.</span></div></div></div></div></section><footer class="border-t border-[#2a2a28] bg-[#0a0a0a]"><div class="max-w-7xl mx-auto px-6 py-16"><div class="grid grid-cols-1 md:grid-cols-4 gap-12"><div class="md:col-span-1"><a href="#" class="flex items-center gap-2.5 mb-4"><div class="w-8 h-8 rounded-lg bg-[#cc785c] flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bot w-5 h-5 text-white" aria-hidden="true"><path d="M12 8V4H8"></path><rect width="16" height="12" x="4" y="8" rx="2"></rect><path d="M2 14h2"></path><path d="M20 14h2"></path><path d="M15 13v2"></path><path d="M9 13v2"></path></svg></div><span class="text-lg font-semibold text-[#faf9f5]">CrewSpace</span></a><p class="text-sm text-[#5c5a54] leading-relaxed mb-6">The control plane for autonomous AI-agent companies. Local-first. Open source.</p><div class="flex items-center gap-4"><a href="https://github.com/priyansh19/CrewSpace" target="_blank" rel="noopener noreferrer" class="text-[#5c5a54] hover:text-[#faf9f5] transition-colors" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-xml w-5 h-5" aria-hidden="true"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg></a><a href="#" class="text-[#5c5a54] hover:text-[#faf9f5] transition-colors" aria-label="Community"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle w-5 h-5" aria-hidden="true"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg></a></div></div><div><h4 class="text-sm font-semibold text-[#faf9f5] mb-4">Product</h4><ul class="space-y-3"><li><a href="#features" class="text-sm text-[#5c5a54] hover:text-[#faf9f5] transition-colors">Features</a></li><li><a href="#how-it-works" class="text-sm text-[#5c5a54] hover:text-[#faf9f5] transition-colors">How it works</a></li><li><a href="https://github.com/priyansh19/CrewSpace" target="_blank" rel="noopener noreferrer" class="text-sm text-[#5c5a54] hover:text-[#faf9f5] transition-colors">GitHub</a></li></ul></div><div><h4 class="text-sm font-semibold text-[#faf9f5] mb-4">Resources</h4><ul class="space-y-3"><li><a href="https://github.com/priyansh19/CrewSpace/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="text-sm text-[#5c5a54] hover:text-[#faf9f5] transition-colors">Documentation</a></li><li><a href="https://github.com/priyansh19/CrewSpace/blob/main/AGENTS.md" target="_blank" rel="noopener noreferrer" class="text-sm text-[#5c5a54] hover:text-[#faf9f5] transition-colors">Contributing</a></li><li><a href="https://github.com/priyansh19/CrewSpace/releases" target="_blank" rel="noopener noreferrer" class="text-sm text-[#5c5a54] hover:text-[#faf9f5] transition-colors">Changelog</a></li></ul></div><div><h4 class="text-sm font-semibold text-[#faf9f5] mb-4">Community</h4><ul class="space-y-3"><li><a href="https://github.com/priyansh19/CrewSpace/discussions" target="_blank" rel="noopener noreferrer" class="text-sm text-[#5c5a54] hover:text-[#faf9f5] transition-colors">GitHub Discussions</a></li><li><a href="https://github.com/priyansh19/CrewSpace/issues" target="_blank" rel="noopener noreferrer" class="text-sm text-[#5c5a54] hover:text-[#faf9f5] transition-colors">Issues</a></li><li><a href="#" class="text-sm text-[#5c5a54] hover:text-[#faf9f5] transition-colors">Twitter / X</a></li></ul></div></div><div class="mt-16 pt-8 border-t border-[#2a2a28] flex flex-col md:flex-row items-center justify-between gap-4"><p class="text-xs text-[#5c5a54]">© <!-- -->2026<!-- --> CrewSpace. MIT License.</p><p class="text-xs text-[#5c5a54]">Built by the open source community.</p></div></div></footer></main><!--$--><!--/$--><script src="/_next/static/chunks/0ht900cau6_ur.js" id="_R_" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[39756,[\"/_next/static/chunks/0dbhjjzl8qfwv.js\"],\"default\"]\n3:I[37457,[\"/_next/static/chunks/0dbhjjzl8qfwv.js\"],\"default\"]\n4:I[45678,[\"/_next/static/chunks/0dbhjjzl8qfwv.js\",\"/_next/static/chunks/0l6jb1hq72ft..js\"],\"default\"]\n5:I[32177,[\"/_next/static/chunks/0dbhjjzl8qfwv.js\",\"/_next/static/chunks/0l6jb1hq72ft..js\"],\"default\"]\n6:I[79722,[\"/_next/static/chunks/0dbhjjzl8qfwv.js\",\"/_next/static/chunks/0l6jb1hq72ft..js\"],\"default\"]\n7:I[15775,[\"/_next/static/chunks/0dbhjjzl8qfwv.js\",\"/_next/static/chunks/0l6jb1hq72ft..js\"],\"default\"]\n8:I[3459,[\"/_next/static/chunks/0dbhjjzl8qfwv.js\",\"/_next/static/chunks/0l6jb1hq72ft..js\"],\"default\"]\n9:I[13642,[\"/_next/static/chunks/0dbhjjzl8qfwv.js\",\"/_next/static/chunks/0l6jb1hq72ft..js\"],\"default\"]\na:I[97367,[\"/_next/static/chunks/0dbhjjzl8qfwv.js\"],\"OutletBoundary\"]\nb:\"$Sreact.suspense\"\nd:I[97367,[\"/_next/static/chunks/0dbhjjzl8qfwv.js\"],\"ViewportBoundary\"]\nf:I[97367,[\"/_next/static/chunks/0dbhjjzl8qfwv.js\"],\"MetadataBoundary\"]\n11:I[68027,[\"/_next/static/chunks/0dbhjjzl8qfwv.js\"],\"default\",1]\n:HL[\"/_next/static/chunks/0nxa9gq2-17_t.css\",\"style\"]\n:HL[\"/_next/static/media/797e433ab948586e-s.p.09zddjkbdep5a.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n:HL[\"/_next/static/media/caa3a2e1cccd8315-s.p.09~u27dqhyhd6.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"c\":[\"\",\"\"],\"q\":\"\",\"i\":false,\"f\":[[[\"\",{\"children\":[\"__PAGE__\",{}]},\"$undefined\",\"$undefined\",16],[[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/chunks/0nxa9gq2-17_t.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-0\",{\"src\":\"/_next/static/chunks/0dbhjjzl8qfwv.js\",\"async\":true,\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"className\":\"scroll-smooth\",\"children\":[\"$\",\"body\",null,{\"className\":\"geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__variable antialiased bg-[#0a0a0a] text-white\",\"children\":[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L3\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":404}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]}]]}],{\"children\":[[\"$\",\"$1\",\"c\",{\"children\":[[\"$\",\"main\",null,{\"children\":[[\"$\",\"$L4\",null,{}],[\"$\",\"$L5\",null,{}],[\"$\",\"$L6\",null,{}],[\"$\",\"$L7\",null,{}],[\"$\",\"$L8\",null,{}],[\"$\",\"$L9\",null,{}]]}],[[\"$\",\"script\",\"script-0\",{\"src\":\"/_next/static/chunks/0l6jb1hq72ft..js\",\"async\":true,\"nonce\":\"$undefined\"}]],[\"$\",\"$La\",null,{\"children\":[\"$\",\"$b\",null,{\"name\":\"Next.MetadataOutlet\",\"children\":\"$@c\"}]}]]}],{},null,false,null]},null,false,null],[\"$\",\"$1\",\"h\",{\"children\":[null,[\"$\",\"$Ld\",null,{\"children\":\"$Le\"}],[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$Lf\",null,{\"children\":[\"$\",\"$b\",null,{\"name\":\"Next.Metadata\",\"children\":\"$L10\"}]}]}],[\"$\",\"meta\",null,{\"name\":\"next-size-adjust\",\"content\":\"\"}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$11\",[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/chunks/0nxa9gq2-17_t.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]]],\"S\":true,\"h\":null,\"s\":\"$undefined\",\"l\":\"$undefined\",\"p\":\"$undefined\",\"d\":\"$undefined\",\"b\":\"iTfmLlMp-08xoWhYC0jt-\"}\n"])</script><script>self.__next_f.push([1,"e:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n"])</script><script>self.__next_f.push([1,"12:I[27201,[\"/_next/static/chunks/0dbhjjzl8qfwv.js\"],\"IconMark\"]\nc:null\n10:[[\"$\",\"title\",\"0\",{\"children\":\"CrewSpace — Build AI Companies, Not Just Chatbots\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"CrewSpace is a control plane for autonomous AI-agent companies. Create AI organizations, hire agents, set budgets, enforce approvals, and delegate work — all from a single desktop app.\"}],[\"$\",\"meta\",\"2\",{\"name\":\"keywords\",\"content\":\"AI agents,multi-agent orchestration,AI company,agent framework,autonomous agents,AI control plane,open source\"}],[\"$\",\"meta\",\"3\",{\"property\":\"og:title\",\"content\":\"CrewSpace — Build AI Companies, Not Just Chatbots\"}],[\"$\",\"meta\",\"4\",{\"property\":\"og:description\",\"content\":\"The control plane for autonomous AI-agent companies. Local-first. Open source.\"}],[\"$\",\"meta\",\"5\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"6\",{\"name\":\"twitter:card\",\"content\":\"summary\"}],[\"$\",\"meta\",\"7\",{\"name\":\"twitter:title\",\"content\":\"CrewSpace — Build AI Companies, Not Just Chatbots\"}],[\"$\",\"meta\",\"8\",{\"name\":\"twitter:description\",\"content\":\"The control plane for autonomous AI-agent companies. Local-first. Open source.\"}],[\"$\",\"link\",\"9\",{\"rel\":\"icon\",\"href\":\"/favicon.ico?favicon.0x3dzn~oxb6tn.ico\",\"sizes\":\"256x256\",\"type\":\"image/x-icon\"}],[\"$\",\"$L12\",\"10\",{}]]\n"])</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRIYANSH GUPTA — Agentic AI & MLOps Engineer</title>
+<meta name="description" content="Priyansh Gupta — Agentic AI & MLOps Engineer. I build secure AI agents, production RAG systems, and the cloud infrastructure they run on.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Archivo:wght@400;500;600;700;900&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FBFAF5;
+  --paper-2:#F2EFE6;
+  --ink:#15151C;
+  --ink-soft:#4A4A58;
+  --red:#E0202F;
+  --red-deep:#B30E1E;
+  --blue:#2342D6;
+  --blue-deep:#16289B;
+  --yellow:#FFC400;
+  --line:rgba(21,21,28,.16);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{background:var(--paper);color:var(--ink);overflow-x:hidden}
+body{font-family:'Archivo',sans-serif;line-height:1.6;cursor:none}
+::selection{background:var(--yellow);color:var(--ink)}
+a{color:inherit;text-decoration:none}
+
+/* ---------- halftone comic texture ---------- */
+.halftone{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.4;
+  background-image:radial-gradient(rgba(21,21,28,.09) 1px,transparent 1.4px);
+  background-size:14px 14px}
+.halftone-red{position:fixed;top:-20vh;right:-15vw;width:55vw;height:55vw;z-index:1;pointer-events:none;opacity:.14;border-radius:50%;
+  background-image:radial-gradient(var(--red) 1.4px,transparent 2px);background-size:11px 11px;
+  -webkit-mask-image:radial-gradient(circle,black 0%,transparent 68%);mask-image:radial-gradient(circle,black 0%,transparent 68%);
+  animation:dotDrift 14s ease-in-out infinite alternate}
+@keyframes dotDrift{from{transform:translate(0,0) rotate(0)}to{transform:translate(4vw,-3vh) rotate(8deg)}}
+
+/* ---------- cursor ---------- */
+.cursor-dot,.cursor-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;border-radius:50%;transform:translate(-50%,-50%)}
+.cursor-dot{width:10px;height:10px;background:var(--red);border:2px solid var(--ink)}
+.cursor-ring{width:44px;height:44px;border:2px solid var(--ink);transition:width .25s,height .25s,border-color .25s,background .25s}
+.cursor-ring.hovering{width:86px;height:86px;border-color:var(--red);background:rgba(224,32,47,.07)}
+.cursor-label{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;font-family:'Bangers',cursive;font-size:15px;letter-spacing:.1em;color:var(--blue);transform:translate(16px,20px) rotate(-4deg);opacity:0;transition:opacity .3s;text-shadow:1.5px 1.5px 0 var(--paper),2.5px 2.5px 0 var(--ink)}
+#webTrail{position:fixed;inset:0;z-index:9998;pointer-events:none}
+@media (hover:none){.cursor-dot,.cursor-ring,.cursor-label,#webTrail{display:none}body{cursor:auto}}
+
+/* ---------- loader ---------- */
+#loader{position:fixed;inset:0;background:var(--paper);z-index:9000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;transition:opacity .9s,visibility .9s}
+#loader.done{opacity:0;visibility:hidden}
+#loader::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(224,32,47,.12) 1.6px,transparent 2px);background-size:16px 16px;animation:dotDrift 6s linear infinite alternate}
+.loader-logo{font-family:'Bangers',cursive;font-size:clamp(44px,8vw,90px);letter-spacing:.06em;color:var(--red);
+  text-shadow:2px 2px 0 var(--paper),4px 4px 0 var(--ink),7px 7px 0 rgba(35,66,214,.5);
+  animation:loaderBounce 1s ease-in-out infinite}
+@keyframes loaderBounce{0%,100%{transform:rotate(-2deg) scale(1)}50%{transform:rotate(2deg) scale(1.05)}}
+.loader-bar{width:min(340px,70vw);height:14px;background:var(--paper);border:3px solid var(--ink);border-radius:99px;overflow:hidden;box-shadow:4px 4px 0 var(--ink)}
+.loader-bar i{display:block;height:100%;width:0;background:repeating-linear-gradient(45deg,var(--red) 0 12px,var(--blue) 12px 24px);transition:width .2s}
+.loader-status{font-family:'Bangers',cursive;font-size:18px;letter-spacing:.12em;color:var(--blue);min-height:24px;transform:rotate(-2deg)}
+
+#gl{position:fixed;inset:0;z-index:0;pointer-events:none}
+
+/* ---------- HUD ---------- */
+.hud{position:fixed;z-index:7000;pointer-events:none;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.22em;color:var(--ink-soft);text-transform:uppercase}
+.hud b{color:var(--red);font-weight:500}
+.hud-tl{top:84px;left:22px}.hud-br{bottom:18px;right:22px;text-align:right}
+.hud::before{content:"";position:absolute;width:18px;height:18px;border:2px solid var(--ink)}
+.hud-tl::before{top:-12px;left:-8px;border-right:none;border-bottom:none}
+.hud-br::before{bottom:-6px;right:-8px;border-left:none;border-top:none}
+@media(max-width:860px){.hud{display:none}}
+
+.progress{position:fixed;top:0;left:0;height:5px;width:100%;z-index:8000}
+.progress i{display:block;height:100%;width:0;background:repeating-linear-gradient(90deg,var(--red) 0 30px,var(--blue) 30px 60px);border-bottom:2px solid var(--ink)}
+
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:7500;display:flex;justify-content:space-between;align-items:center;padding:18px clamp(20px,5vw,64px);background:rgba(251,250,245,.75);backdrop-filter:blur(10px);border-bottom:3px solid var(--ink)}
+.nav-logo{font-family:'Bangers',cursive;font-size:24px;letter-spacing:.06em;color:var(--ink)}
+.nav-logo span{color:var(--red)}
+.nav-links{display:flex;gap:32px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:500}
+.nav-links a{position:relative;color:var(--ink-soft);transition:color .3s}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:3px;background:var(--red);transition:width .35s}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a:hover::after{width:100%}
+@media(max-width:760px){.nav-links{display:none}}
+.nav-cta{font-family:'Bangers',cursive;font-size:16px;letter-spacing:.08em;border:3px solid var(--ink);padding:8px 20px;border-radius:99px;color:var(--ink);background:var(--yellow);box-shadow:3px 3px 0 var(--ink);transition:.25s}
+.nav-cta:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+
+/* ---------- layout ---------- */
+main{position:relative;z-index:2}
+section{position:relative;padding:clamp(90px,14vh,160px) clamp(20px,6vw,96px)}
+.skew-wrap{will-change:transform}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:var(--blue);display:flex;align-items:center;gap:14px;margin-bottom:28px;font-weight:500}
+.eyebrow::before{content:"";width:36px;height:3px;background:var(--red)}
+
+/* ---------- 3D hero text ---------- */
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-top:130px;perspective:1100px}
+.hero-tag{font-family:'JetBrains Mono',monospace;font-size:clamp(11px,1.3vw,14px);letter-spacing:.45em;text-transform:uppercase;color:var(--blue);margin-bottom:26px;opacity:0;font-weight:500}
+.h1-3d{transform-style:preserve-3d;will-change:transform}
+.hero h1{font-family:'Bangers',cursive;font-weight:400;font-size:clamp(60px,12vw,180px);line-height:.92;letter-spacing:.015em;text-transform:uppercase;transform-style:preserve-3d}
+.hero h1 .row{display:block;overflow:visible;transform-style:preserve-3d}
+.hero h1 .row span{display:inline-block;transform:translateY(120%) rotateX(-80deg);transform-style:preserve-3d}
+.t3d-red{color:var(--red);text-shadow:1px 1px 0 var(--red-deep),2px 2px 0 var(--red-deep),3px 3px 0 var(--red-deep),4px 4px 0 var(--red-deep),5px 5px 0 var(--red-deep),6px 6px 0 var(--ink),9px 9px 0 rgba(21,21,28,.18)}
+.t3d-blue{color:var(--blue);text-shadow:1px 1px 0 var(--blue-deep),2px 2px 0 var(--blue-deep),3px 3px 0 var(--blue-deep),4px 4px 0 var(--blue-deep),5px 5px 0 var(--blue-deep),6px 6px 0 var(--ink),9px 9px 0 rgba(21,21,28,.18)}
+.t3d-ink{color:var(--paper);-webkit-text-stroke:3px var(--ink);text-shadow:5px 5px 0 var(--yellow),8px 8px 0 var(--ink)}
+.hero-sub{margin-top:36px;max-width:560px;font-size:clamp(16px,1.7vw,20px);color:var(--ink-soft);opacity:0;font-weight:500}
+.hero-sub b{color:var(--ink);font-weight:700}
+.hero-actions{display:flex;gap:18px;margin-top:44px;flex-wrap:wrap;opacity:0}
+.btn{position:relative;display:inline-flex;align-items:center;gap:12px;font-family:'Bangers',cursive;font-size:20px;letter-spacing:.08em;padding:14px 32px;border-radius:14px;border:3px solid var(--ink);transition:.25s;will-change:transform;overflow:hidden}
+.btn-primary{background:var(--red);color:#fff;box-shadow:5px 5px 0 var(--ink)}
+.btn-primary:hover{transform:translate(-3px,-3px) rotate(-1deg);box-shadow:9px 9px 0 var(--ink)}
+.btn-ghost{background:var(--paper);color:var(--ink);box-shadow:5px 5px 0 var(--ink)}
+.btn-ghost:hover{transform:translate(-3px,-3px) rotate(1deg);box-shadow:9px 9px 0 var(--ink);background:var(--yellow)}
+.btn .dot{width:9px;height:9px;border-radius:50%;background:#fff;border:2px solid var(--ink);animation:blink 1.2s infinite}
+.btn-ghost .dot{background:var(--red)}
+@keyframes blink{50%{opacity:.25}}
+.hero-meta{position:absolute;bottom:36px;left:clamp(20px,6vw,96px);right:clamp(20px,6vw,96px);display:flex;justify-content:space-between;align-items:flex-end;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);opacity:0;font-weight:500}
+.scroll-hint{display:flex;flex-direction:column;align-items:center;gap:10px}
+.scroll-hint .wheel{width:3px;height:46px;background:linear-gradient(180deg,var(--red),transparent);animation:dropLine 1.8s ease-in-out infinite}
+@keyframes dropLine{0%{transform:scaleY(0);transform-origin:top}55%{transform:scaleY(1);transform-origin:top}56%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ---------- marquees ---------- */
+.marquee{position:relative;z-index:2;border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);overflow:hidden;padding:16px 0;background:var(--ink);transform:rotate(-1.2deg) scale(1.02);margin:10px 0}
+.marquee.m2{background:var(--red);transform:rotate(1deg) scale(1.02)}
+.marquee-track{display:flex;width:max-content;font-family:'Bangers',cursive;font-size:clamp(20px,2.6vw,30px);text-transform:uppercase;letter-spacing:.14em;color:var(--paper)}
+.marquee-track span{padding:0 30px;white-space:nowrap}
+.marquee-track .hl{color:var(--yellow)}
+.m-fwd .marquee-track{animation:marquee 22s linear infinite}
+.m-rev .marquee-track{animation:marqueeRev 26s linear infinite}
+@keyframes marquee{to{transform:translateX(-50%)}}
+@keyframes marqueeRev{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+
+/* ---------- headings ---------- */
+.h2{font-family:'Bangers',cursive;font-weight:400;font-size:clamp(40px,6.5vw,86px);line-height:1;text-transform:uppercase;max-width:960px;letter-spacing:.02em;transform-style:preserve-3d}
+.h2 .accent{color:var(--red);text-shadow:3px 3px 0 var(--ink)}
+.h2 .accent-b{color:var(--blue);text-shadow:3px 3px 0 var(--ink)}
+.reveal{opacity:0;transform:translateY(60px)}
+.flip3d{opacity:0;transform:rotateX(-85deg) translateY(40px);transform-origin:top center}
+
+/* ---------- about ---------- */
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(40px,6vw,90px);margin-top:60px;align-items:start}
+@media(max-width:900px){.about-grid{grid-template-columns:1fr}}
+.about-text p{font-size:clamp(16px,1.7vw,20px);color:var(--ink-soft);margin-bottom:24px;font-weight:500}
+.about-text p b{color:var(--ink);font-weight:700}
+.about-text .quote{font-family:'Bangers',cursive;font-size:clamp(22px,2.4vw,30px);color:var(--ink);border:3px solid var(--ink);border-radius:18px;padding:22px 26px;background:var(--yellow);box-shadow:6px 6px 0 var(--ink);transform:rotate(-1deg);letter-spacing:.04em}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.stat{position:relative;background:var(--paper);border:3px solid var(--ink);border-radius:16px;padding:26px 24px;box-shadow:5px 5px 0 var(--ink);transition:.25s;overflow:hidden}
+.stat:nth-child(odd){transform:rotate(-1deg)}
+.stat:nth-child(even){transform:rotate(1deg)}
+.stat:hover{transform:translate(-3px,-3px) rotate(0);box-shadow:9px 9px 0 var(--ink);background:#FFF}
+.stat .num{font-family:'Bangers',cursive;font-size:clamp(34px,3.8vw,52px);color:var(--red);text-shadow:2px 2px 0 var(--ink)}
+.stat .lbl{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin-top:6px;font-weight:500}
+
+/* ---------- experience timeline ---------- */
+.xp-list{margin-top:70px}
+.xp{display:grid;grid-template-columns:200px 1fr;gap:30px;align-items:start;padding:34px 30px;border:3px solid var(--ink);border-radius:18px;margin-bottom:18px;background:var(--paper);box-shadow:5px 5px 0 var(--ink);transition:.3s}
+.xp:nth-child(odd){transform:rotate(-.4deg)}
+.xp:nth-child(even){transform:rotate(.4deg)}
+.xp:hover{transform:translate(-4px,-4px) rotate(0);box-shadow:10px 10px 0 var(--ink);background:#fff}
+@media(max-width:760px){.xp{grid-template-columns:1fr;gap:10px}}
+.xp .when{font-family:'Bangers',cursive;font-size:20px;letter-spacing:.06em;color:var(--paper);-webkit-text-stroke:1.5px var(--ink);text-shadow:3px 3px 0 var(--red)}
+.xp .where{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-top:8px;font-weight:500}
+.xp h4{font-family:'Bangers',cursive;font-size:clamp(22px,2.2vw,28px);text-transform:uppercase;letter-spacing:.04em}
+.xp p{color:var(--ink-soft);font-size:15px;font-weight:500;margin-top:8px}
+.xp p b{color:var(--ink)}
+.xp .chip-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+
+/* ---------- comic panel cards (projects) ---------- */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:64px;perspective:1400px}
+@media(max-width:980px){.cards{grid-template-columns:1fr}}
+.card{position:relative;border:3px solid var(--ink);border-radius:20px;padding:40px 32px;background:var(--paper);box-shadow:8px 8px 0 var(--ink);transform-style:preserve-3d;will-change:transform;overflow:hidden;transition:box-shadow .3s}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(500px circle at var(--mx,50%) var(--my,50%),rgba(255,196,0,.35),transparent 45%);opacity:0;transition:opacity .4s;pointer-events:none}
+.card:hover::before{opacity:1}
+.card:hover{box-shadow:14px 14px 0 var(--ink)}
+.card .badge{position:absolute;top:-3px;right:24px;font-family:'Bangers',cursive;font-size:16px;letter-spacing:.08em;background:var(--blue);color:#fff;border:3px solid var(--ink);border-top:none;padding:8px 14px;border-radius:0 0 12px 12px}
+.card:nth-child(3n+2) .badge{background:var(--red)}
+.card:nth-child(3n) .badge{background:var(--yellow);color:var(--ink)}
+.card h3{font-family:'Bangers',cursive;font-size:clamp(24px,2.2vw,32px);margin:20px 0 6px;text-transform:uppercase;letter-spacing:.04em;transform:translateZ(46px)}
+.card .sub{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:14px;font-weight:500;transform:translateZ(30px)}
+.card p{color:var(--ink-soft);font-size:15px;transform:translateZ(28px);font-weight:500}
+.card .chip-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;transform:translateZ(20px)}
+.chip{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;border:2px solid var(--ink);border-radius:99px;padding:6px 12px;color:var(--ink);background:var(--paper-2);font-weight:500}
+.card .glyph{font-size:38px;display:inline-block;animation:floatGlyph 4s ease-in-out infinite;transform:translateZ(56px);filter:drop-shadow(3px 3px 0 rgba(21,21,28,.35))}
+.card:nth-child(3n+2) .glyph{animation-delay:-1.3s}
+.card:nth-child(3n) .glyph{animation-delay:-2.6s}
+@keyframes floatGlyph{0%,100%{transform:translateZ(56px) translateY(0) rotate(-5deg)}50%{transform:translateZ(56px) translateY(-12px) rotate(6deg)}}
+
+/* ---------- skills ---------- */
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:64px}
+@media(max-width:900px){.skills-grid{grid-template-columns:1fr}}
+.skill-box{border:3px solid var(--ink);border-radius:18px;padding:30px 28px;background:var(--paper);box-shadow:6px 6px 0 var(--ink);transition:.25s}
+.skill-box:nth-child(odd){transform:rotate(-.5deg)}
+.skill-box:nth-child(even){transform:rotate(.5deg)}
+.skill-box:hover{transform:translate(-3px,-3px) rotate(0);box-shadow:10px 10px 0 var(--ink);background:#fff}
+.skill-box h4{font-family:'Bangers',cursive;font-size:clamp(20px,2vw,26px);text-transform:uppercase;letter-spacing:.05em;margin-bottom:16px;display:flex;align-items:center;gap:12px}
+.skill-box h4 .ico{font-size:24px;filter:drop-shadow(2px 2px 0 rgba(21,21,28,.3))}
+.skill-box .chip-row{display:flex;flex-wrap:wrap;gap:8px}
+
+/* ---------- certifications ---------- */
+.certs{display:flex;flex-wrap:wrap;gap:16px;margin-top:48px}
+.cert{font-family:'Bangers',cursive;font-size:17px;letter-spacing:.07em;border:3px solid var(--ink);border-radius:14px;padding:12px 22px;background:var(--paper);box-shadow:4px 4px 0 var(--ink);transition:.25s;display:flex;align-items:center;gap:10px}
+.cert:nth-child(odd){transform:rotate(-1.2deg)}
+.cert:nth-child(even){transform:rotate(1.2deg)}
+.cert:hover{transform:translate(-2px,-3px) rotate(0);box-shadow:7px 8px 0 var(--ink);background:var(--yellow)}
+.cert .star{color:var(--red)}
+
+/* ---------- contact ---------- */
+.contact{text-align:center;min-height:92svh;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.contact .h2{margin:0 auto}
+.mega-cta{margin-top:54px;display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
+.social-row{margin-top:56px;display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
+.social{display:flex;align-items:center;gap:12px;border:3px solid var(--ink);padding:15px 26px;border-radius:16px;font-family:'Bangers',cursive;font-size:17px;letter-spacing:.08em;color:var(--ink);transition:.25s;background:var(--paper);box-shadow:5px 5px 0 var(--ink)}
+.social:hover{transform:translate(-3px,-5px) rotate(-1deg);box-shadow:9px 11px 0 var(--ink)}
+.social.gh:hover{background:#EEE9FA}
+.social.li:hover{background:#E3EEFA}
+.social.wa:hover{background:#E3F8EB}
+.social.em:hover{background:#FDE5E5}
+.social svg{width:20px;height:20px}
+
+footer{position:relative;z-index:2;border-top:3px solid var(--ink);padding:30px clamp(20px,6vw,96px);display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);background:var(--paper-2);font-weight:500}
+
+/* ---------- comic click burst ---------- */
+.burst{position:fixed;z-index:9500;pointer-events:none;transform:translate(-50%,-50%);font-family:'Bangers',cursive;display:flex;align-items:center;justify-content:center}
+.burst svg{position:absolute;width:150px;height:150px}
+.burst b{position:relative;font-size:30px;letter-spacing:.06em;color:#fff;transform:rotate(-6deg)}
+.websplat{position:fixed;z-index:9400;pointer-events:none;transform:translate(-50%,-50%)}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  body{cursor:auto}
+  .cursor-dot,.cursor-ring,.cursor-label,#webTrail{display:none}
+  .reveal,.flip3d,.hero-tag,.hero-sub,.hero-actions,.hero-meta{opacity:1!important;transform:none!important}
+  .hero h1 .row span{transform:none!important}
+}
+</style>
+</head>
+<body>
+
+<div id="loader">
+  <div class="loader-logo">PRIYANSH!</div>
+  <div class="loader-bar"><i id="loadFill"></i></div>
+  <div class="loader-status" id="loadStatus">BOOTING THE AGENTS…</div>
+</div>
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+<div class="cursor-label" id="cursorLabel"></div>
+<canvas id="gl"></canvas>
+<canvas id="webTrail"></canvas>
+<div class="halftone"></div>
+<div class="halftone-red"></div>
+<div class="progress"><i id="progFill"></i></div>
+
+<div class="hud hud-tl">SYS // <b>PRIYANSH.AI</b><br>NODE: BLR-IN</div>
+<div class="hud hud-br">WEB FIRED <b id="hudWeb">000%</b><br>SCROLL <b id="hudScroll">000%</b></div>
+
+<nav>
+  <a class="nav-logo hoverable" href="#top">PRIYANSH<span>.AI</span></a>
+  <div class="nav-links">
+    <a class="hoverable" href="#about">About</a>
+    <a class="hoverable" href="#experience">Experience</a>
+    <a class="hoverable" href="#projects">Projects</a>
+    <a class="hoverable" href="#skills">Skills</a>
+    <a class="hoverable" href="#contact">Contact</a>
+  </div>
+  <a class="nav-cta hoverable" href="mailto:priyansh.9071@gmail.com">Hire Me ↗</a>
+</nav>
+
+<main id="top">
+<div class="skew-wrap">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-tag" id="scrambleTag">// AGENTIC AI · MLOPS · CLOUD — BANGALORE, INDIA</div>
+    <div class="h1-3d" id="h13d">
+      <h1>
+        <span class="row"><span class="t3d-ink">I BUILD</span></span>
+        <span class="row"><span class="t3d-red">AI AGENTS.</span></span>
+        <span class="row"><span class="t3d-blue">I RUN PROD.</span></span>
+      </h1>
+    </div>
+    <p class="hero-sub">Hey, I'm <b>Priyansh Gupta</b> — Agentic AI &amp; MLOps Engineer with <b>5+ years</b> of backend and cloud-infrastructure experience. I design <b>secure multi-agent systems, production RAG pipelines, and tool-calling agents</b> — then ship them on Kubernetes with full audit trails, zero-trust networking, and zero-downtime deploys.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary hoverable magnetic" data-label="LET'S GO!" href="#contact"><span class="dot"></span> Work With Me</a>
+      <a class="btn btn-ghost hoverable magnetic" data-label="DIVE IN!" href="#about">Explore ↓</a>
+    </div>
+    <div class="hero-meta">
+      <div>EST. 5+ YRS — CLOUD × AGENTIC AI</div>
+      <div class="scroll-hint"><div class="wheel"></div>SCROLL TO FIRE THE WEB</div>
+      <div>BUILD · SECURE · SHIP</div>
+    </div>
+  </section>
+
+  <!-- DOUBLE MARQUEE -->
+  <div class="marquee m-fwd">
+    <div class="marquee-track">
+      <span>AI Agents</span><span class="hl">★</span><span>RAG Pipelines</span><span class="hl">★</span><span>MCP</span><span class="hl">★</span><span>Kubernetes</span><span class="hl">★</span><span>Terraform</span><span class="hl">★</span><span>Azure AI</span><span class="hl">★</span>
+      <span>AI Agents</span><span class="hl">★</span><span>RAG Pipelines</span><span class="hl">★</span><span>MCP</span><span class="hl">★</span><span>Kubernetes</span><span class="hl">★</span><span>Terraform</span><span class="hl">★</span><span>Azure AI</span><span class="hl">★</span>
+    </div>
+  </div>
+  <div class="marquee m-rev m2">
+    <div class="marquee-track">
+      <span>Build</span><span>·</span><span>Secure</span><span>·</span><span>Deploy</span><span>·</span><span>Audit</span><span>·</span><span>Scale</span><span>·</span><span>Build</span><span>·</span><span>Secure</span><span>·</span><span>Deploy</span><span>·</span><span>Audit</span><span>·</span><span>Scale</span><span>·</span>
+      <span>Build</span><span>·</span><span>Secure</span><span>·</span><span>Deploy</span><span>·</span><span>Audit</span><span>·</span><span>Scale</span><span>·</span><span>Build</span><span>·</span><span>Secure</span><span>·</span><span>Deploy</span><span>·</span><span>Audit</span><span>·</span><span>Scale</span><span>·</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="eyebrow reveal">01 — Who is Priyansh</div>
+    <h2 class="h2 flip3d">DEVOPS ENGINEER TURNED <span class="accent">AGENTIC AI BUILDER</span></h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="reveal">For 5+ years I've built and run <b>cloud infrastructure and backend systems</b> — Kubernetes clusters, GitOps pipelines, zero-trust service meshes — for Fortune 500 enterprises and global clients. Then LLMs arrived, and I realized the same discipline could make <b>autonomous agents safe enough for production.</b></p>
+        <p class="reveal">Today I design <b>multi-agent orchestration frameworks, enterprise RAG systems, and MCP integrations</b> — with role-based tool access, prompt-injection defences, signed inter-agent messaging, and full audit trails. Certified <b>Azure AI Engineer (AI-102), CKA, CKAD, and AZ-400.</b></p>
+        <p class="quote reveal">"Agents you can't audit are agents you can't trust."</p>
+      </div>
+      <div class="stats reveal">
+        <div class="stat"><div class="num" data-count="5">0</div><div class="lbl">Years Experience</div></div>
+        <div class="stat"><div class="num" data-count="8" data-suffix="">0</div><div class="lbl">Cloud &amp; AI Certifications</div></div>
+        <div class="stat"><div class="num" data-count="20">0</div><div class="lbl">Microservices Governed</div></div>
+        <div class="stat"><div class="num" data-count="6">0</div><div class="lbl">Production AI Systems</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="eyebrow reveal">02 — Where I've Been</div>
+    <h2 class="h2 flip3d">FROM PIPELINES TO <span class="accent-b">PRODUCTION AI</span></h2>
+    <div class="xp-list">
+      <div class="xp reveal">
+        <div><div class="when">AUG 2024 — NOW</div><div class="where">Applied Information Services · Hyderabad</div></div>
+        <div>
+          <h4>Senior DevOps &amp; AI Platform Engineer</h4>
+          <p>Deployed <b>multimodal LLMs on Azure AI Foundry</b> with inference scaling and Content Safety filters. Built <b>enterprise RAG pipelines</b> into Azure AI Search and wired <b>MCP connections to Azure Boards</b> so AI assistants reference live sprint data. Led cloud modernisation for <b>FMGlobal (Fortune 500)</b> and standardised CI/CD governance across 20+ microservices.</p>
+          <div class="chip-row"><span class="chip">Azure AI Foundry</span><span class="chip">RAG</span><span class="chip">MCP</span><span class="chip">JFrog</span></div>
+        </div>
+      </div>
+      <div class="xp reveal">
+        <div><div class="when">AUG 2022 — NOW</div><div class="where">Freelance (Upwork) · Remote</div></div>
+        <div>
+          <h4>Senior DevOps / MLOps / Agentic AI Engineer</h4>
+          <p>Delivered <b>production AI integrations</b> embedding Azure OpenAI, Claude, and GPT-4o into SaaS products. Architected <b>end-to-end RAG pipelines</b> with LangChain + Pinecone/ChromaDB, built <b>agentic automation workflows</b> with n8n and Python, and shipped zero-downtime GitOps infrastructure for global clients on Azure and AWS.</p>
+          <div class="chip-row"><span class="chip">LangChain</span><span class="chip">n8n</span><span class="chip">Azure ML</span><span class="chip">SageMaker</span></div>
+        </div>
+      </div>
+      <div class="xp reveal">
+        <div><div class="when">OCT 2022 — AUG 2024</div><div class="where">Applied Information Services</div></div>
+        <div>
+          <h4>DevOps Engineer</h4>
+          <p>Engineered <b>Helm charts for AKS onboarding</b> with rollback-enabled pipelines, enforced <b>Kyverno admission policies</b> for security baselines and image signing, ran <b>FluxCD GitOps</b> across environments, and configured <b>Istio with mTLS</b> for canary and A/B deployments — secrets managed via Azure Key Vault CSI.</p>
+          <div class="chip-row"><span class="chip">AKS</span><span class="chip">Istio</span><span class="chip">FluxCD</span><span class="chip">Kyverno</span></div>
+        </div>
+      </div>
+      <div class="xp reveal">
+        <div><div class="when">MAY 2021 — OCT 2022</div><div class="where">Applied Information Services</div></div>
+        <div>
+          <h4>Software Engineer</h4>
+          <p>Built <b>reusable Terraform modules</b> for Azure VNets, Key Vaults, Application Gateways, AKS, and Log Analytics; authored reusable <b>Azure DevOps YAML CI/CD templates</b> for build, test, and deploy workflows.</p>
+          <div class="chip-row"><span class="chip">Terraform</span><span class="chip">Azure DevOps</span><span class="chip">IaC</span></div>
+        </div>
+      </div>
+      <div class="xp reveal">
+        <div><div class="when">FEB 2020 — JUL 2020</div><div class="where">StatusNeo · India</div></div>
+        <div>
+          <h4>DevOps Engineer Intern</h4>
+          <p>Built <b>Azure DevOps CI/CD pipelines</b> and executed on-premise to cloud migrations using <b>Docker</b> across multiple application workloads.</p>
+          <div class="chip-row"><span class="chip">CI/CD</span><span class="chip">Docker</span><span class="chip">Cloud Migration</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="eyebrow reveal">03 — What I've Built</div>
+    <h2 class="h2 flip3d">AGENTS WITH <span class="accent">GUARDRAILS</span>, INFRA THAT <span class="accent-b">SCALES</span></h2>
+    <div class="cards">
+      <div class="card hoverable reveal">
+        <div class="badge">ISSUE #01</div>
+        <div class="glyph">🕸️</div>
+        <h3>NemoClaw</h3>
+        <div class="sub">Secure Multi-Agent Orchestration</div>
+        <p>A lead orchestrator commanding up to 5 worker agents — scoped tool-calling, sandboxed execution, prompt-injection detection, and <b style="color:var(--ink)">signed JSON inter-agent messaging</b> with full audit trails. Hybrid inference: local Ollama for workers, cloud at the orchestrator tier only.</p>
+        <div class="chip-row"><span class="chip">TypeScript</span><span class="chip">Ollama</span><span class="chip">LangChain</span><span class="chip">Docker</span></div>
+      </div>
+      <div class="card hoverable reveal">
+        <div class="badge">ISSUE #02</div>
+        <div class="glyph">📎</div>
+        <h3>Paperclip</h3>
+        <div class="sub">Agentic Control Plane</div>
+        <p>A control plane over NemoClaw — dynamic org-chart construction, task delegation with <b style="color:var(--ink)">budget enforcement</b>, and full agent lifecycle management across concurrent DevOps, research, and content workflows under one audited orchestrator.</p>
+        <div class="chip-row"><span class="chip">Multi-Agent</span><span class="chip">Budgets</span><span class="chip">Audit Logs</span></div>
+      </div>
+      <div class="card hoverable reveal">
+        <div class="badge">ISSUE #03</div>
+        <div class="glyph">⚙️</div>
+        <h3>AutoOps AI</h3>
+        <div class="sub">Autonomous DevOps Agent</div>
+        <p>Monitors GitHub repos and CI/CD pipelines, performs multi-step <b style="color:var(--ink)">root-cause analysis</b>, then raises PRs with fixes autonomously. Plain-English Terraform provisioning via LLM function-calling, with Prometheus-triggered auto-revert on regressions.</p>
+        <div class="chip-row"><span class="chip">LLM Reasoning</span><span class="chip">Terraform</span><span class="chip">Prometheus</span></div>
+      </div>
+      <div class="card hoverable reveal">
+        <div class="badge">ISSUE #04</div>
+        <div class="glyph">📚</div>
+        <h3>RAG Chatbot</h3>
+        <div class="sub">Shipped to Production</div>
+        <p>Fully <b style="color:var(--ink)">local Ollama inference</b> — zero external API dependencies, full data-privacy compliance. ChromaDB vector pipeline with semantic top-k retrieval, a FastAPI REST layer, and structured logging of every query, retrieval, and response.</p>
+        <div class="chip-row"><span class="chip">Ollama</span><span class="chip">ChromaDB</span><span class="chip">FastAPI</span></div>
+      </div>
+      <div class="card hoverable reveal">
+        <div class="badge">ISSUE #05</div>
+        <div class="glyph">🛡️</div>
+        <h3>Istio Mesh</h3>
+        <div class="sub">Zero-Trust on Kubernetes</div>
+        <p>Ingress gateways, VirtualServices, and DestinationRules for canary and A/B traffic routing across AKS clusters — with <b style="color:var(--ink)">cluster-wide mTLS</b> eliminating plaintext inter-service communication entirely.</p>
+        <div class="chip-row"><span class="chip">Istio</span><span class="chip">AKS</span><span class="chip">mTLS</span></div>
+      </div>
+      <div class="card hoverable reveal">
+        <div class="badge">ISSUE #06</div>
+        <div class="glyph">🧱</div>
+        <h3>AWS Terraform</h3>
+        <div class="sub">Modular Infrastructure-as-Code</div>
+        <p>Reusable Terraform modules for S3, EKS, EC2, KMS, IAM, and VPC across dev, staging, and prod — <b style="color:var(--ink)">remote state with DynamoDB locking</b> and GitOps delivery via ArgoCD for declarative multi-cluster rollouts.</p>
+        <div class="chip-row"><span class="chip">Terraform</span><span class="chip">EKS</span><span class="chip">ArgoCD</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="eyebrow reveal">04 — The Arsenal</div>
+    <h2 class="h2 flip3d">POWERS &amp; <span class="accent">GADGETS</span></h2>
+    <div class="skills-grid">
+      <div class="skill-box reveal">
+        <h4><span class="ico">🤖</span>Agentic AI &amp; LLM Stack</h4>
+        <div class="chip-row"><span class="chip">LangChain</span><span class="chip">LlamaIndex</span><span class="chip">Function Calling</span><span class="chip">RAG</span><span class="chip">Ollama</span><span class="chip">Pinecone</span><span class="chip">ChromaDB</span><span class="chip">Qdrant</span><span class="chip">MCP</span></div>
+      </div>
+      <div class="skill-box reveal">
+        <h4><span class="ico">☁️</span>Azure AI Services</h4>
+        <div class="chip-row"><span class="chip">Azure OpenAI</span><span class="chip">AI Foundry</span><span class="chip">Prompt Flow</span><span class="chip">AI Search</span><span class="chip">Azure ML</span><span class="chip">Document Intelligence</span><span class="chip">Content Safety</span></div>
+      </div>
+      <div class="skill-box reveal">
+        <h4><span class="ico">⚡</span>Backend &amp; APIs</h4>
+        <div class="chip-row"><span class="chip">Node.js</span><span class="chip">TypeScript</span><span class="chip">Python / FastAPI</span><span class="chip">Java / Spring Boot</span><span class="chip">REST</span><span class="chip">Microservices</span></div>
+      </div>
+      <div class="skill-box reveal">
+        <h4><span class="ico">🏗️</span>Cloud &amp; IaC</h4>
+        <div class="chip-row"><span class="chip">Azure</span><span class="chip">AWS</span><span class="chip">GCP</span><span class="chip">Terraform</span><span class="chip">Bicep</span><span class="chip">Ansible</span><span class="chip">ARM Templates</span></div>
+      </div>
+      <div class="skill-box reveal">
+        <h4><span class="ico">🐳</span>Containers &amp; Orchestration</h4>
+        <div class="chip-row"><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">Helm</span><span class="chip">Istio</span><span class="chip">Kyverno</span><span class="chip">ArgoCD</span><span class="chip">FluxCD</span></div>
+      </div>
+      <div class="skill-box reveal">
+        <h4><span class="ico">🛡️</span>Security &amp; Observability</h4>
+        <div class="chip-row"><span class="chip">Prompt Injection Defence</span><span class="chip">Audit Logging</span><span class="chip">mTLS Zero-Trust</span><span class="chip">OPA</span><span class="chip">Key Vault</span><span class="chip">Prometheus</span><span class="chip">Grafana</span></div>
+      </div>
+    </div>
+    <div class="certs reveal">
+      <div class="cert hoverable"><span class="star">★</span>AI-102 Azure AI Engineer</div>
+      <div class="cert hoverable"><span class="star">★</span>CKA</div>
+      <div class="cert hoverable"><span class="star">★</span>CKAD</div>
+      <div class="cert hoverable"><span class="star">★</span>AZ-400 DevOps Expert</div>
+      <div class="cert hoverable"><span class="star">★</span>AZ-700 Networking</div>
+      <div class="cert hoverable"><span class="star">★</span>AZ-104</div>
+      <div class="cert hoverable"><span class="star">★</span>AZ-900</div>
+      <div class="cert hoverable"><span class="star">★</span>AI-900</div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="eyebrow reveal" style="justify-content:center">05 — Let's Build</div>
+    <h2 class="h2 flip3d">READY TO GO <span class="accent">AGENT-FIRST?</span></h2>
+    <p class="hero-sub reveal" style="opacity:1;margin:26px auto 0;text-align:center">Email me, message me, or just say hi. <b>Your next production AI system starts right here.</b></p>
+    <div class="mega-cta reveal">
+      <a class="btn btn-primary hoverable magnetic" data-label="SEND IT!" href="mailto:priyansh.9071@gmail.com"><span class="dot"></span> priyansh.9071@gmail.com</a>
+    </div>
+    <div class="social-row reveal">
+      <a class="social gh hoverable" href="https://github.com/priyansh19" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+        GitHub
+      </a>
+      <!-- REPLACE href with your LinkedIn profile URL -->
+      <a class="social li hoverable" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.4 2H3.6C2.7 2 2 2.7 2 3.6v16.8c0 .9.7 1.6 1.6 1.6h16.8c.9 0 1.6-.7 1.6-1.6V3.6c0-.9-.7-1.6-1.6-1.6zM8.1 18.7H5.2V9.7h2.9v9zM6.6 8.4a1.7 1.7 0 1 1 0-3.4 1.7 1.7 0 0 1 0 3.4zm12.1 10.3h-2.9v-4.4c0-1 0-2.4-1.5-2.4s-1.7 1.1-1.7 2.3v4.5H9.7V9.7h2.8V11h.1c.4-.7 1.3-1.5 2.8-1.5 3 0 3.5 2 3.5 4.5v4.7z"/></svg>
+        LinkedIn
+      </a>
+      <a class="social wa hoverable" href="https://wa.me/918130300323" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.5 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-2.9-1.3-4.8-4.2-5-4.4-.1-.2-1.2-1.6-1.2-3s.8-2.1 1-2.4c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .7.5.2.6.8 2 .9 2.2.1.2.1.4 0 .6-.1.2-.2.4-.4.6l-.5.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.2.5.1.7-.1l1-1.1c.2-.3.4-.2.7-.1.3.1 1.8.8 2.1 1 .3.2.5.2.6.4.1.1.1.7-.1 1.4z"/></svg>
+        WhatsApp
+      </a>
+      <a class="social em hoverable" href="mailto:priyansh.9071@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="4.5" width="19" height="15" rx="3"/><path d="M3 6l9 7 9-7"/></svg>
+        Email
+      </a>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer>
+  <div>© 2026 PRIYANSH GUPTA — AGENTIC AI &amp; MLOPS ENGINEER</div>
+  <div>BANGALORE, INDIA · BUILT WITH AI ⚡</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+gsap.registerPlugin(ScrollTrigger);
+
+/* ============================================================
+   3D SCENE — CITY + HERO ON ROOFTOP + SCROLL-FIRED WEB
+   Clean scene: skyline, hero silhouette, one epic web line
+   that draws farther across the sky with every scroll.
+============================================================ */
+const canvas=document.getElementById('gl');
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+renderer.setSize(innerWidth,innerHeight);
+renderer.setClearColor(0x000000,0);
+
+const scene=new THREE.Scene();
+scene.fog=new THREE.Fog(0xFBFAF5,26,60);
+const camera=new THREE.PerspectiveCamera(55,innerWidth/innerHeight,.1,200);
+camera.position.set(-2,3.5,14);
+
+const INK=0x15151C, RED=0xE0202F, BLUE=0x2342D6, YELLOW=0xE8A800, PAPER=0xF2EFE6;
+
+/* ---------- CITY SKYLINE (windows texture + ink edges) ---------- */
+function windowTexture(w,h){
+  const c=document.createElement('canvas');c.width=64;c.height=128;
+  const x=c.getContext('2d');
+  x.fillStyle='#EFEBDE';x.fillRect(0,0,64,128);
+  x.fillStyle='rgba(21,21,28,.8)';
+  for(let r=8;r<124;r+=14)for(let col=8;col<60;col+=14){
+    if(Math.random()<.72)x.fillRect(col,r,7,8);
+    else{x.fillStyle='rgba(255,196,0,.9)';x.fillRect(col,r,7,8);x.fillStyle='rgba(21,21,28,.8)';}
+  }
+  const t=new THREE.CanvasTexture(c);
+  t.repeat.set(Math.max(1,Math.round(w/1.4)),Math.max(1,Math.round(h/2.4)));
+  t.wrapS=t.wrapT=THREE.RepeatWrapping;
+  return t;
+}
+const city=new THREE.Group();
+const buildingDefs=[
+  // [x, width, height, z]
+  [-13,3,7,-6],[-9.5,2.6,10,-5],[-6,3.4,14,-4.5],[-2.4,2.4,8,-6.5],
+  [0.8,3,11,-5.5],[4.4,2.8,9,-6],[8.2,3.6,12.5,-2.6],[12.6,3,8,-6.2],[16.2,3.4,10.5,-5.4],
+  [-17,3,9,-7],[19.8,2.8,7.5,-7]
+];
+const HERO_BIDX=6, HERO_BH=12.5;
+let heroBuilding=null;
+buildingDefs.forEach((d,i)=>{
+  const [bx,bw,bh,bz]=d;
+  const g=new THREE.BoxGeometry(bw,bh,bw);
+  const m=new THREE.Mesh(g,new THREE.MeshBasicMaterial({map:windowTexture(bw,bh)}));
+  m.position.set(bx,bh/2-4.5,bz);
+  city.add(m);
+  const edges=new THREE.LineSegments(new THREE.EdgesGeometry(g),new THREE.LineBasicMaterial({color:INK,transparent:true,opacity:.9}));
+  edges.position.copy(m.position);
+  city.add(edges);
+  // rooftop ledge
+  const ledge=new THREE.Mesh(new THREE.BoxGeometry(bw+.3,.22,bw+.3),new THREE.MeshBasicMaterial({color:INK}));
+  ledge.position.set(bx,bh-4.5+.11,bz);
+  city.add(ledge);
+  if(i===HERO_BIDX)heroBuilding=m; // foreground right tower = hero's perch
+});
+scene.add(city);
+
+/* distant flat skyline silhouette for depth */
+const farRow=new THREE.Group();
+for(let i=0;i<16;i++){
+  const w=2+Math.random()*2.5,h=4+Math.random()*8;
+  const m=new THREE.Mesh(new THREE.PlaneGeometry(w,h),new THREE.MeshBasicMaterial({color:0xD9D4C4,transparent:true,opacity:.55}));
+  m.position.set(-22+i*3,h/2-4.5,-16);
+  farRow.add(m);
+}
+scene.add(farRow);
+
+/* a couple of comic clouds */
+const clouds=new THREE.Group();
+for(let i=0;i<4;i++){
+  const cg=new THREE.Group();
+  for(let b=0;b<4;b++){
+    const s=new THREE.Mesh(new THREE.SphereGeometry(.7+Math.random()*.5,10,10),new THREE.MeshBasicMaterial({color:0xFFFFFF}));
+    s.position.set(b*.9-1.3,Math.random()*.3,0);
+    cg.add(s);
+    const o=new THREE.LineSegments(new THREE.EdgesGeometry(s.geometry),new THREE.LineBasicMaterial({color:INK,transparent:true,opacity:.12}));
+    o.position.copy(s.position);cg.add(o);
+  }
+  cg.position.set(-14+i*9,6.5+Math.random()*3,-10-Math.random()*4);
+  cg.userData={sp:.08+Math.random()*.12};
+  clouds.add(cg);
+}
+scene.add(clouds);
+
+/* ---------- HERO SILHOUETTE (original ink figure, crouched, arm out) ---------- */
+const hero=new THREE.Group();
+const inkMat=new THREE.MeshBasicMaterial({color:INK});
+function part(geom,x,y,z,rx=0,ry=0,rz=0,sx=1,sy=1,sz=1){
+  const m=new THREE.Mesh(geom,inkMat);
+  m.position.set(x,y,z);m.rotation.set(rx,ry,rz);m.scale.set(sx,sy,sz);
+  hero.add(m);return m;
+}
+/* crouched pose built from primitives — pure silhouette */
+part(new THREE.SphereGeometry(.34,14,14), .12,1.62,0, 0,0,0, 1,.92,1);            // head
+part(new THREE.CylinderGeometry(.26,.34,.95,10), -.08,.95,0, 0,0,.5);             // torso (leaning forward)
+part(new THREE.CylinderGeometry(.11,.13,.85,8), -.42,.42,.16, 0,0,1.25);          // back thigh
+part(new THREE.CylinderGeometry(.09,.11,.8,8), -.95,.18,.16, 0,0,-.9);            // back shin folded
+part(new THREE.CylinderGeometry(.11,.13,.8,8), -.1,.36,-.18, 0,0,.35);            // front thigh
+part(new THREE.CylinderGeometry(.09,.11,.75,8), .12,.0,-.18, 0,0,-.15);           // front shin
+part(new THREE.BoxGeometry(.34,.12,.16), .16,-.36,-.18);                          // front foot
+part(new THREE.BoxGeometry(.34,.12,.16), -1.2,-.1,.16);                           // back foot
+part(new THREE.CylinderGeometry(.09,.1,.8,8), .58,1.45,.05, 0,0,-1.35);           // firing arm (extended)
+part(new THREE.SphereGeometry(.12,10,10), .98,1.62,.05);                          // firing hand
+part(new THREE.CylinderGeometry(.08,.09,.6,8), -.28,1.15,-.22, 0,0,.9);           // support arm down
+part(new THREE.SphereGeometry(.1,10,10), -.52,.88,-.22);                          // support hand on ledge
+hero.scale.setScalar(2.2);
+/* place hero on rooftop corner of his tower, facing LEFT across the city */
+const perch=new THREE.Vector3(heroBuilding.position.x-.4, heroBuilding.position.y+(HERO_BH/2)+.25, heroBuilding.position.z+1.2);
+hero.position.copy(perch);
+const HERO_BASE_ROT=2.75; // turned so the firing arm points left across the skyline
+hero.rotation.y=HERO_BASE_ROT;
+scene.add(hero);
+/* world-space position of the firing hand (recomputed each frame) */
+const handLocal=new THREE.Vector3(.98,1.62,.05);
+function handWorld(){return hero.localToWorld(handLocal.clone());}
+
+/* ---------- GIANT COMIC MOON behind the hero (silhouette pops) ---------- */
+const moon=new THREE.Group();
+const moonDisc=new THREE.Mesh(new THREE.CircleGeometry(4.6,48),new THREE.MeshBasicMaterial({color:0xFFE9A8}));
+const moonRing=new THREE.Mesh(new THREE.RingGeometry(4.6,4.78,48),new THREE.MeshBasicMaterial({color:INK}));
+const moonRing2=new THREE.Mesh(new THREE.RingGeometry(5.1,5.16,48),new THREE.MeshBasicMaterial({color:INK,transparent:true,opacity:.35}));
+moon.add(moonDisc,moonRing,moonRing2);
+/* halftone craters */
+for(let i=0;i<7;i++){
+  const cr=new THREE.Mesh(new THREE.CircleGeometry(.22+Math.random()*.4,20),new THREE.MeshBasicMaterial({color:0xF3D67C}));
+  const a=Math.random()*Math.PI*2, r=Math.random()*3.4;
+  cr.position.set(Math.cos(a)*r,Math.sin(a)*r,.01);
+  moon.add(cr);
+}
+moon.position.set(perch.x+.6, perch.y+2.6, perch.z-6.5);
+scene.add(moon);
+
+/* ---------- THE WEB — long 3D strand that draws on scroll ---------- */
+const WEB_SEGS=900, RADIAL=6;
+function buildWebCurve(){
+  const h=handWorld();
+  const pts=[
+    h,
+    h.clone().add(new THREE.Vector3(-3.2,2.6,1.2)),
+    new THREE.Vector3(3.5,8,-1),
+    new THREE.Vector3(-1,5,2.5),
+    new THREE.Vector3(-6,9,-2),
+    new THREE.Vector3(-11,5.5,3),
+    new THREE.Vector3(-16,10,-3),
+    new THREE.Vector3(-21,6.5,2),
+    new THREE.Vector3(-27,10.5,-4),
+    new THREE.Vector3(-33,7.5,1)
+  ];
+  return new THREE.CatmullRomCurve3(pts);
+}
+let webCurve=buildWebCurve();
+const webGeo=new THREE.TubeGeometry(webCurve,WEB_SEGS,.045,RADIAL,false);
+const web=new THREE.Mesh(webGeo,new THREE.MeshBasicMaterial({color:INK}));
+web.geometry.setDrawRange(0,0);
+scene.add(web);
+/* thin twin strand slightly offset (double thread look) */
+const web2=new THREE.Mesh(new THREE.TubeGeometry(webCurve,WEB_SEGS,.016,RADIAL,false),new THREE.MeshBasicMaterial({color:RED}));
+web2.position.y=.09;
+web2.geometry.setDrawRange(0,0);
+scene.add(web2);
+
+/* glowing tip + spark at the leading end of the web */
+const tip=new THREE.Mesh(new THREE.SphereGeometry(.14,10,10),new THREE.MeshBasicMaterial({color:RED}));
+const tipRing=new THREE.Mesh(new THREE.TorusGeometry(.3,.02,6,24),new THREE.MeshBasicMaterial({color:INK,transparent:true,opacity:.7}));
+scene.add(tip,tipRing);
+
+/* radial web "checkpoints" that pop in as the web passes them */
+const checkpoints=[];
+[ .22, .45, .68, .9 ].forEach((at,i)=>{
+  const grp=new THREE.Group();
+  const SP=10;
+  for(let s=0;s<SP;s++){
+    const a=s/SP*Math.PI*2;
+    const g=new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(0,0,0),new THREE.Vector3(Math.cos(a)*.9,Math.sin(a)*.9,0)]);
+    grp.add(new THREE.Line(g,new THREE.LineBasicMaterial({color:INK,transparent:true,opacity:.8})));
+  }
+  for(let r=.25;r<=.85;r+=.2){
+    const ringPts=[];
+    for(let s=0;s<=SP;s++){const a=s/SP*Math.PI*2;ringPts.push(new THREE.Vector3(Math.cos(a)*r,Math.sin(a)*r,0));}
+    grp.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(ringPts),new THREE.LineBasicMaterial({color:INK,transparent:true,opacity:.6})));
+  }
+  const p=webCurve.getPointAt(at);
+  grp.position.copy(p);
+  grp.scale.setScalar(0);
+  grp.userData={at,shown:false};
+  scene.add(grp);
+  checkpoints.push(grp);
+});
+
+/* ---------- scroll drives the web ---------- */
+let webProgress=0, webTarget=0;
+function setHud(p){
+  document.getElementById('hudWeb').textContent=String(Math.round(p*100)).padStart(3,'0')+'%';
+}
+addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  const p=h.scrollTop/(h.scrollHeight-h.clientHeight);
+  webTarget=p;
+  document.getElementById('progFill').style.width=p*100+'%';
+  document.getElementById('hudScroll').textContent=String(Math.round(p*100)).padStart(3,'0')+'%';
+},{passive:true});
+
+/* ---------- camera follows the web tip across the city ---------- */
+const camBase={x:0,y:5,z:14};
+
+/* mouse parallax + web sway */
+const mouse={x:0,y:0};
+addEventListener('pointermove',e=>{mouse.x=e.clientX/innerWidth-.5;mouse.y=e.clientY/innerHeight-.5;});
+
+/* ---------- CLICK = hero fires a quick web at your cursor ---------- */
+const shots=[];
+const WORDS=['THWACK!','BAM!','ZAP!','SHIPPED!','DEPLOYED!'];
+function comicBurst(x,y){
+  const el=document.createElement('div');
+  el.className='burst';
+  el.style.left=x+'px';el.style.top=y+'px';
+  const word=WORDS[Math.floor(Math.random()*WORDS.length)];
+  const col=Math.random()<.5?'#E0202F':'#2342D6';
+  el.innerHTML=`<svg viewBox="0 0 100 100"><polygon points="50,2 58,30 88,12 70,38 98,46 70,56 86,84 56,68 50,98 42,68 14,86 30,56 2,48 30,40 12,12 42,30" fill="${col}" stroke="#15151C" stroke-width="3"/></svg><b>${word}</b>`;
+  document.body.appendChild(el);
+  gsap.fromTo(el,{scale:0,rotate:-20},{scale:1,rotate:6,duration:.35,ease:'back.out(3)'});
+  gsap.to(el,{scale:0,opacity:0,duration:.3,delay:.55,ease:'back.in(2)',onComplete:()=>el.remove()});
+}
+function webSplat(x,y){
+  const el=document.createElement('div');
+  el.className='websplat';
+  el.style.left=x+'px';el.style.top=y+'px';
+  let spokes='',rings='';
+  for(let i=0;i<10;i++){const a=i/10*Math.PI*2;spokes+=`<line x1="60" y1="60" x2="${60+Math.cos(a)*56}" y2="${60+Math.sin(a)*56}"/>`;}
+  for(let r=14;r<=52;r+=13){
+    let d='';
+    for(let i=0;i<=10;i++){const a=i/10*Math.PI*2;d+=(i===0?'M':'L')+(60+Math.cos(a)*r)+','+(60+Math.sin(a)*r);}
+    rings+=`<path d="${d}Z" fill="none"/>`;
+  }
+  el.innerHTML=`<svg width="120" height="120" viewBox="0 0 120 120" stroke="#15151C" stroke-width="1.6" opacity=".75">${spokes}${rings}</svg>`;
+  document.body.appendChild(el);
+  gsap.fromTo(el,{scale:.2,opacity:1,rotate:Math.random()*40-20},{scale:1,duration:.3,ease:'back.out(2)'});
+  gsap.to(el,{opacity:0,scale:1.15,duration:.6,delay:.5,onComplete:()=>el.remove()});
+}
+addEventListener('pointerdown',e=>{
+  // unproject cursor onto a plane in front of camera
+  const v=new THREE.Vector3((e.clientX/innerWidth)*2-1,-(e.clientY/innerHeight)*2+1,.5).unproject(camera);
+  const dir=v.sub(camera.position).normalize();
+  const target=camera.position.clone().add(dir.multiplyScalar(13));
+  const start=handWorld();
+  const mid=start.clone().lerp(target,.5).add(new THREE.Vector3(0,1.2,0));
+  const curve=new THREE.CatmullRomCurve3([start,mid,target]);
+  const SEG=60;
+  const g=new THREE.TubeGeometry(curve,SEG,.03,5,false);
+  g.setDrawRange(0,0);
+  const m=new THREE.Mesh(g,new THREE.MeshBasicMaterial({color:RED}));
+  scene.add(m);
+  const shot={mesh:m,seg:SEG,t:0};
+  shots.push(shot);
+  // quick hero arm recoil
+  gsap.fromTo(hero.rotation,{z:0},{z:-.06,duration:.08,yoyo:true,repeat:1});
+  comicBurst(e.clientX,e.clientY);
+  webSplat(e.clientX,e.clientY);
+});
+
+/* ---------- render loop ---------- */
+const clock=new THREE.Clock();
+function tick(){
+  const dt=clock.getDelta(), t=clock.getElapsedTime();
+
+  /* hero idle: breathing + slight head/arm motion */
+  hero.position.y=perch.y+Math.sin(t*1.6)*.04;
+  hero.rotation.y=HERO_BASE_ROT+Math.sin(t*.5)*.05+mouse.x*.15;
+  /* moon gently pulses + always faces camera */
+  moon.lookAt(camera.position);
+  const mp=1+Math.sin(t*1.2)*.015;
+  moon.scale.set(mp,mp,mp);
+
+  /* web extends toward scroll target with smoothing — fires fast on every scroll */
+  webProgress+=(webTarget-webProgress)*.08;
+  const segsOn=Math.floor(webProgress*WEB_SEGS);
+  web.geometry.setDrawRange(0,Math.max(0,segsOn*RADIAL*6));
+  web2.geometry.setDrawRange(0,Math.max(0,segsOn*RADIAL*6));
+  setHud(webProgress);
+
+  /* tip follows the leading end + spins */
+  const tp=webCurve.getPointAt(Math.max(.001,Math.min(.999,webProgress)));
+  tip.position.copy(tp);
+  tip.scale.setScalar(1+Math.sin(t*8)*.18);
+  tipRing.position.copy(tp);
+  tipRing.rotation.z=t*3; tipRing.rotation.y=t*2;
+  tipRing.scale.setScalar(1+Math.sin(t*5)*.12);
+
+  /* gentle sway of the whole web like it's alive in the wind */
+  web.rotation.z=Math.sin(t*.8)*.012+mouse.y*.02;
+  web2.rotation.z=web.rotation.z;
+
+  /* checkpoint radial webs pop when the strand reaches them */
+  checkpoints.forEach(cp=>{
+    if(!cp.userData.shown&&webProgress>cp.userData.at){
+      cp.userData.shown=true;
+      gsap.to(cp.scale,{x:1,y:1,z:1,duration:.6,ease:'back.out(2.5)'});
+    }
+    if(cp.userData.shown&&webProgress<cp.userData.at-.03){
+      cp.userData.shown=false;
+      gsap.to(cp.scale,{x:0,y:0,z:0,duration:.3});
+    }
+    cp.lookAt(camera.position);
+  });
+
+  /* camera: starts framing the hero on the right, then follows the web tip left across the city */
+  const followX=THREE.MathUtils.lerp(camBase.x, tp.x*.55, webProgress);
+  const followY=THREE.MathUtils.lerp(camBase.y, 2.5+tp.y*.35, webProgress);
+  const followZ=THREE.MathUtils.lerp(camBase.z, 15.5, webProgress);
+  camera.position.x+=((followX+mouse.x*1.6)-camera.position.x)*.05;
+  camera.position.y+=((followY-mouse.y*1.0)-camera.position.y)*.05;
+  camera.position.z+=(followZ-camera.position.z)*.05;
+  const lookStart=new THREE.Vector3(perch.x-4.6,perch.y-2.2,perch.z); // hero sits right-of-center
+  const look=new THREE.Vector3().lerpVectors(lookStart,tp,Math.min(1,webProgress*1.25+.05));
+  camera.lookAt(look);
+
+  /* clouds drift */
+  clouds.children.forEach(c=>{c.position.x+=c.userData.sp*dt; if(c.position.x>22)c.position.x=-22;});
+
+  /* fired shots animate out then fade */
+  for(let i=shots.length-1;i>=0;i--){
+    const s=shots[i];
+    s.t+=dt*3.2;
+    const on=Math.min(1,s.t);
+    s.mesh.geometry.setDrawRange(0,Math.floor(on*s.seg)*5*6);
+    if(s.t>1.4){
+      s.mesh.material.transparent=true;
+      s.mesh.material.opacity=Math.max(0,1-(s.t-1.4)*2);
+      if(s.mesh.material.opacity<=0){scene.remove(s.mesh);s.mesh.geometry.dispose();shots.splice(i,1);}
+    }
+  }
+
+  renderer.render(scene,camera);
+  if(!reduceMotion)requestAnimationFrame(tick);
+}
+addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);});
+
+/* ============================================================
+   CURSOR WEB TRAIL (2D)
+============================================================ */
+const trailC=document.getElementById('webTrail'), tx=trailC.getContext('2d');
+function sizeTrail(){trailC.width=innerWidth;trailC.height=innerHeight;}
+sizeTrail(); addEventListener('resize',sizeTrail);
+const trail=[];
+addEventListener('pointermove',e=>{trail.unshift({x:e.clientX,y:e.clientY});if(trail.length>26)trail.pop();});
+(function trailLoop(){
+  tx.clearRect(0,0,trailC.width,trailC.height);
+  if(trail.length>2&&!reduceMotion){
+    for(let i=1;i<trail.length;i++){
+      const f=1-i/trail.length;
+      tx.strokeStyle=`rgba(224,32,47,${f*.5})`;
+      tx.lineWidth=f*3;
+      tx.beginPath();tx.moveTo(trail[i-1].x,trail[i-1].y);tx.lineTo(trail[i].x,trail[i].y);tx.stroke();
+      if(i%5===0){
+        tx.strokeStyle=`rgba(21,21,28,${f*.3})`;tx.lineWidth=1;
+        const dx=trail[i].x-trail[i-1].x,dy=trail[i].y-trail[i-1].y,L=Math.hypot(dx,dy)||1;
+        const nx=-dy/L*7*f,ny=dx/L*7*f;
+        tx.beginPath();tx.moveTo(trail[i].x-nx,trail[i].y-ny);tx.lineTo(trail[i].x+nx,trail[i].y+ny);tx.stroke();
+      }
+    }
+  }
+  requestAnimationFrame(trailLoop);
+})();
+
+/* ============================================================
+   LOADER → ENTRANCE
+============================================================ */
+const statuses=['BOOTING THE AGENTS…','MOUNTING THE CLUSTERS…','LOADING WEB FLUID…','INDEXING THE VECTORS…','READY TO SHIP!'];
+let progress=0,si=0;
+const loadFill=document.getElementById('loadFill'),loadStatus=document.getElementById('loadStatus');
+const loadInt=setInterval(()=>{
+  progress=Math.min(100,progress+Math.random()*14);
+  loadFill.style.width=progress+'%';
+  if(progress/100*statuses.length>si&&si<statuses.length-1){si++;loadStatus.textContent=statuses[si];}
+  if(progress>=100){clearInterval(loadInt);loadStatus.textContent=statuses[statuses.length-1];setTimeout(launch,400);}
+},110);
+
+function launch(){
+  document.getElementById('loader').classList.add('done');
+  tick();
+  if(reduceMotion){renderer.render(scene,camera);return;}
+  const tl=gsap.timeline({defaults:{ease:'power4.out'}});
+  tl.to('.hero h1 .row span',{y:0,rotateX:0,duration:1.4,stagger:.15,ease:'back.out(1.4)'},.2)
+    .to('.hero-tag',{opacity:1,duration:1},.5)
+    .to('.hero-sub',{opacity:1,duration:1},1)
+    .to('.hero-actions',{opacity:1,duration:1},1.2)
+    .to('.hero-meta',{opacity:1,duration:1},1.4)
+    .from(camera.position,{z:24,y:8,duration:2.6,ease:'power3.out'},0);
+  scrambleText(document.getElementById('scrambleTag'));
+}
+
+/* ============================================================
+   3D HERO TEXT — mouse tilt, depth rows, idle bob
+============================================================ */
+const h13d=document.getElementById('h13d');
+document.querySelectorAll('.hero h1 .row').forEach((r,i)=>r.style.transform=`translateZ(${i*38}px)`);
+addEventListener('pointermove',e=>{
+  if(reduceMotion)return;
+  const x=e.clientX/innerWidth-.5, y=e.clientY/innerHeight-.5;
+  gsap.to(h13d,{rotateY:x*14,rotateX:-y*10,duration:.8,ease:'power2.out',transformPerspective:1100});
+});
+gsap.to(h13d,{y:-8,duration:2.6,yoyo:true,repeat:-1,ease:'sine.inOut'});
+
+/* ============================================================
+   TEXT SCRAMBLE
+============================================================ */
+const CHARS='!<>-_\\/[]{}—=+*^?#01';
+function scrambleText(el){
+  const original=el.dataset.original||el.textContent;
+  el.dataset.original=original;
+  let frame=0;const total=40;
+  const timer=setInterval(()=>{
+    frame++;
+    el.textContent=original.split('').map((ch,i)=>{
+      if(ch===' ')return' ';
+      if(i<(frame/total)*original.length)return ch;
+      return CHARS[Math.floor(Math.random()*CHARS.length)];
+    }).join('');
+    if(frame>=total){el.textContent=original;clearInterval(timer);}
+  },30);
+}
+
+/* ============================================================
+   SCROLL FX
+============================================================ */
+gsap.utils.toArray('.reveal').forEach(el=>{
+  gsap.to(el,{opacity:1,y:0,duration:1.1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%'}});
+});
+gsap.utils.toArray('.flip3d').forEach(el=>{
+  gsap.to(el,{opacity:1,rotateX:0,y:0,duration:1.3,ease:'back.out(1.5)',transformPerspective:900,
+    scrollTrigger:{trigger:el,start:'top 86%'}});
+});
+gsap.utils.toArray('.num[data-count]').forEach(el=>{
+  const target=+el.dataset.count;
+  const suffix=el.dataset.suffix!==undefined?el.dataset.suffix:'+';
+  ScrollTrigger.create({trigger:el,start:'top 90%',once:true,onEnter:()=>{
+    gsap.fromTo(el,{innerText:0},{innerText:target,duration:2,ease:'power2.out',snap:{innerText:1},
+      onUpdate(){el.textContent=Math.floor(+el.textContent)+suffix;},
+      onComplete(){el.textContent=target+suffix;}});
+  }});
+});
+const skewSet=gsap.quickSetter('.skew-wrap','skewY','deg');
+ScrollTrigger.create({onUpdate(self){
+  const v=Math.max(-4,Math.min(4,self.getVelocity()/-450));
+  skewSet(v);
+  gsap.to('.skew-wrap',{skewY:0,duration:.7,ease:'power3.out',overwrite:true});
+}});
+gsap.utils.toArray('.card').forEach((c,i)=>{
+  gsap.fromTo(c,{y:60*(i%2?1:-.4)},{y:0,scrollTrigger:{trigger:'.cards',start:'top 95%',end:'top 30%',scrub:1}});
+});
+
+/* ============================================================
+   CURSOR + MAGNETIC + TILT
+============================================================ */
+const dot=document.querySelector('.cursor-dot'),ring=document.querySelector('.cursor-ring'),label=document.getElementById('cursorLabel');
+let rx=0,ry=0;
+addEventListener('pointermove',e=>{
+  dot.style.transform=`translate(${e.clientX}px,${e.clientY}px) translate(-50%,-50%)`;
+  label.style.left=e.clientX+'px';label.style.top=e.clientY+'px';
+  rx=e.clientX;ry=e.clientY;
+});
+(function ringLoop(){
+  const cur=ring.getBoundingClientRect();
+  const cx=cur.left+cur.width/2,cy=cur.top+cur.height/2;
+  ring.style.transform=`translate(${cx+(rx-cx)*.18}px,${cy+(ry-cy)*.18}px) translate(-50%,-50%)`;
+  requestAnimationFrame(ringLoop);
+})();
+document.querySelectorAll('.hoverable,a,button').forEach(el=>{
+  el.addEventListener('pointerenter',()=>{
+    ring.classList.add('hovering');
+    if(el.dataset.label){label.textContent=el.dataset.label;label.style.opacity=1;}
+  });
+  el.addEventListener('pointerleave',()=>{ring.classList.remove('hovering');label.style.opacity=0;});
+});
+document.querySelectorAll('.magnetic').forEach(btn=>{
+  btn.addEventListener('pointermove',e=>{
+    const r=btn.getBoundingClientRect();
+    gsap.to(btn,{x:(e.clientX-r.left-r.width/2)*.32,y:(e.clientY-r.top-r.height/2)*.32,duration:.4});
+  });
+  btn.addEventListener('pointerleave',()=>gsap.to(btn,{x:0,y:0,duration:.6,ease:'elastic.out(1,.4)'}));
+});
+document.querySelectorAll('.card').forEach(card=>{
+  card.addEventListener('pointermove',e=>{
+    const r=card.getBoundingClientRect();
+    const px=(e.clientX-r.left)/r.width,py=(e.clientY-r.top)/r.height;
+    card.style.setProperty('--mx',px*100+'%');card.style.setProperty('--my',py*100+'%');
+    gsap.to(card,{rotateY:(px-.5)*16,rotateX:(.5-py)*16,duration:.5,ease:'power2.out',transformPerspective:1000});
+  });
+  card.addEventListener('pointerleave',()=>gsap.to(card,{rotateX:0,rotateY:0,duration:.8,ease:'elastic.out(1,.5)'}));
+});
+</script>
+</body>
+</html>

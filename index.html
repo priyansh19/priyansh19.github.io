@@ -270,6 +270,7 @@ footer{position:relative;z-index:2;border-top:3px solid var(--red);padding:30px 
 .burst svg{position:absolute;width:150px;height:150px}
 .burst b{position:relative;font-size:30px;letter-spacing:.06em;color:#fff;transform:rotate(-6deg);text-shadow:2px 2px 0 #000}
 .websplat{position:fixed;z-index:9400;pointer-events:none;transform:translate(-50%,-50%)}
+#webCover{position:fixed;inset:0;z-index:9100;pointer-events:none;opacity:0}
 
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
@@ -486,7 +487,7 @@ footer{position:relative;z-index:2;border-top:3px solid var(--red);padding:30px 
   <!-- SKILLS -->
   <section id="skills">
     <div class="eyebrow reveal">04 — The Arsenal</div>
-    <h2 class="h2 flip3d">POWERS &amp; <span class="accent">GADGETS</span></h2>
+    <h2 class="h2 flip3d">SPIDEY <span class="accent">POWERS</span></h2>
     <div class="skills-grid">
       <div class="skill-box reveal">
         <h4><span class="ico">🤖</span>Agentic AI &amp; LLMs</h4>
@@ -656,45 +657,94 @@ for(let i=0;i<26;i++){
 }
 scene.add(dust);
 
-/* ---------- SPIDER SILHOUETTE (crouched, arm out — Miles on watch) ---------- */
-const hero=new THREE.Group();
-const inkMat=new THREE.MeshBasicMaterial({color:INK});
-function part(geom,x,y,z,rx=0,ry=0,rz=0,sx=1,sy=1,sz=1){
-  const m=new THREE.Mesh(geom,inkMat);
-  m.position.set(x,y,z);m.rotation.set(rx,ry,rz);m.scale.set(sx,sy,sz);
-  hero.add(m);return m;
+/* ---------- SPIDER-MAN (canvas-drawn classic red/blue, iconic jump crouch) ---------- */
+function spiderTexture(){
+  const c=document.createElement('canvas');c.width=640;c.height=640;
+  const x=c.getContext('2d');
+  const RED='#E62429', BLUE='#1C3F94', BLK='#0A0A0E', WHT='#F5F5FF';
+  x.lineCap='round';x.lineJoin='round';
+  function limb(pts,w,col){x.strokeStyle=col;x.lineWidth=w;x.beginPath();x.moveTo(pts[0][0],pts[0][1]);for(let i=1;i<pts.length;i++)x.lineTo(pts[i][0],pts[i][1]);x.stroke();}
+  function blob(cx,cy,rx,ry,col){x.fillStyle=col;x.beginPath();x.ellipse(cx,cy,rx,ry,0,0,Math.PI*2);x.fill();}
+  /* legs: knees flared wide, feet folded together under the body */
+  limb([[320,390],[175,425],[295,548]],52,BLUE);
+  limb([[320,390],[465,425],[345,548]],52,BLUE);
+  blob(298,556,30,16,RED);                       // boots
+  blob(342,556,30,16,RED);
+  blob(320,375,52,20,BLUE);                      // waist band
+  /* torso */
+  limb([[320,250],[320,372]],95,RED);
+  blob(320,278,62,50,RED);                       // chest
+  /* arms spread up and out: blue upper arm, red forearm, spread fingers */
+  limb([[272,255],[170,185]],30,BLUE);
+  limb([[368,255],[470,185]],30,BLUE);
+  limb([[170,185],[80,120]],26,RED);
+  limb([[470,185],[560,120]],26,RED);
+  [[80,120,-1],[560,120,1]].forEach(h=>{
+    const [hx,hy,s]=h;
+    blob(hx,hy,15,15,RED);
+    limb([[hx,hy],[hx+s*32,hy-24]],8,RED);
+    limb([[hx,hy],[hx+s*38,hy]],8,RED);
+    limb([[hx,hy],[hx+s*28,hy+26]],8,RED);
+    limb([[hx,hy],[hx-s*8,hy-34]],8,RED);
+  });
+  /* neck + head */
+  limb([[320,218],[320,242]],26,RED);
+  blob(320,150,54,60,RED);
+  /* head webbing: rays + arcs from the brow */
+  x.strokeStyle=BLK;x.lineWidth=2;
+  for(let a=0;a<360;a+=22){
+    const r=a*Math.PI/180;
+    x.beginPath();x.moveTo(320,158);x.lineTo(320+Math.cos(r)*54,158+Math.sin(r)*60);x.stroke();
+  }
+  [18,34,50].forEach(rr=>{
+    x.beginPath();x.ellipse(320,158,rr,rr*1.12,0,0,Math.PI*2);x.stroke();
+  });
+  /* big white teardrop lenses, black rims, angled down toward the nose */
+  function eye(pts){
+    x.beginPath();x.moveTo(pts[0][0],pts[0][1]);
+    for(let i=1;i<pts.length;i++)x.lineTo(pts[i][0],pts[i][1]);
+    x.closePath();
+    x.fillStyle=WHT;x.fill();
+    x.strokeStyle=BLK;x.lineWidth=6;x.stroke();
+  }
+  eye([[266,150],[302,124],[312,160],[284,184]]);
+  eye([[374,150],[338,124],[328,160],[356,184]]);
+  /* chest webbing fan + arcs */
+  x.strokeStyle=BLK;x.lineWidth=2;
+  for(let a=20;a<=160;a+=20){
+    const r=a*Math.PI/180;
+    x.beginPath();x.moveTo(320,240);x.lineTo(320+Math.cos(r)*70,240+Math.sin(r)*80);x.stroke();
+  }
+  [26,48,70].forEach(rr=>{
+    x.beginPath();x.arc(320,240,rr,10*Math.PI/180,170*Math.PI/180);x.stroke();
+  });
+  /* black spider emblem */
+  blob(320,298,8,18,BLK);
+  x.strokeStyle=BLK;x.lineWidth=4;
+  [-1,1].forEach(s=>{
+    x.beginPath();x.moveTo(320,288);x.lineTo(320+s*26,272);x.stroke();
+    x.beginPath();x.moveTo(320,296);x.lineTo(320+s*30,292);x.stroke();
+    x.beginPath();x.moveTo(320,306);x.lineTo(320+s*28,316);x.stroke();
+    x.beginPath();x.moveTo(320,312);x.lineTo(320+s*20,330);x.stroke();
+  });
+  return new THREE.CanvasTexture(c);
 }
-/* crouched pose built from primitives — pure silhouette */
-part(new THREE.SphereGeometry(.34,14,14), .12,1.62,0, 0,0,0, 1,.92,1);            // head
-part(new THREE.CylinderGeometry(.26,.34,.95,10), -.08,.95,0, 0,0,.5);             // torso (leaning forward)
-part(new THREE.CylinderGeometry(.11,.13,.85,8), -.42,.42,.16, 0,0,1.25);          // back thigh
-part(new THREE.CylinderGeometry(.09,.11,.8,8), -.95,.18,.16, 0,0,-.9);            // back shin folded
-part(new THREE.CylinderGeometry(.11,.13,.8,8), -.1,.36,-.18, 0,0,.35);            // front thigh
-part(new THREE.CylinderGeometry(.09,.11,.75,8), .12,.0,-.18, 0,0,-.15);           // front shin
-part(new THREE.BoxGeometry(.34,.12,.16), .16,-.36,-.18);                          // front foot
-part(new THREE.BoxGeometry(.34,.12,.16), -1.2,-.1,.16);                           // back foot
-part(new THREE.CylinderGeometry(.09,.1,.8,8), .58,1.45,.05, 0,0,-1.35);           // firing arm (extended)
-part(new THREE.SphereGeometry(.12,10,10), .98,1.62,.05);                          // firing hand
-part(new THREE.CylinderGeometry(.08,.09,.6,8), -.28,1.15,-.22, 0,0,.9);           // support arm down
-part(new THREE.SphereGeometry(.1,10,10), -.52,.88,-.22);                          // support hand on ledge
-/* Miles suit accents: red spider mark + glowing eyes */
-const markMat=new THREE.MeshBasicMaterial({color:RED});
-const chest=new THREE.Mesh(new THREE.SphereGeometry(.07,8,8),markMat);
-chest.position.set(.13,1.18,.21);hero.add(chest);
-const eyeMat=new THREE.MeshBasicMaterial({color:0xF4F2FF});
-[[.3,1.7,.22],[.05,1.72,.3]].forEach(p=>{
-  const e=new THREE.Mesh(new THREE.SphereGeometry(.055,8,8),eyeMat);
-  e.position.set(...p);e.scale.set(1,.55,.6);hero.add(e);
-});
-hero.scale.setScalar(2.2);
-/* place spider on rooftop corner of his tower, facing LEFT across the city */
-const perch=new THREE.Vector3(heroBuilding.position.x-.4, heroBuilding.position.y+(HERO_BH/2)+.25, heroBuilding.position.z+1.2);
+const hero=new THREE.Group();
+const PS=5.6, FOOT_Y=560;                       // sprite size + canvas ground line
+const SPRITE_OFF=(FOOT_Y/640-.5)*PS;            // lifts the plane so feet sit at group origin
+const spiderPlane=new THREE.Mesh(
+  new THREE.PlaneGeometry(PS,PS),
+  new THREE.MeshBasicMaterial({map:spiderTexture(),transparent:true,side:THREE.DoubleSide})
+);
+spiderPlane.position.y=SPRITE_OFF;
+hero.add(spiderPlane);
+/* place Spidey on the rooftop corner of his tower */
+const perch=new THREE.Vector3(heroBuilding.position.x-.4, heroBuilding.position.y+(HERO_BH/2)+.18, heroBuilding.position.z+1.2);
 hero.position.copy(perch);
-const HERO_BASE_ROT=2.75; // turned so the firing arm points left across the skyline
-hero.rotation.y=HERO_BASE_ROT;
 scene.add(hero);
-/* world-space position of the firing hand (recomputed each frame) */
-const handLocal=new THREE.Vector3(.98,1.62,.05);
+const recoil={z:0};
+/* world-space position of the web-shooting (left) hand, canvas 80,120 mapped onto the sprite */
+const handLocal=new THREE.Vector3((80/640-.5)*PS,(.5-120/640)*PS+SPRITE_OFF,.03);
 function handWorld(){return hero.localToWorld(handLocal.clone());}
 
 /* ---------- GIANT NEON MOON behind the spider ---------- */
@@ -836,7 +886,7 @@ addEventListener('pointerdown',e=>{
   const shot={mesh:m,seg:SEG,t:0};
   shots.push(shot);
   // quick spider arm recoil
-  gsap.fromTo(hero.rotation,{z:0},{z:-.06,duration:.08,yoyo:true,repeat:1});
+  gsap.fromTo(recoil,{z:0},{z:-.08,duration:.08,yoyo:true,repeat:1});
   comicBurst(e.clientX,e.clientY);
   webSplat(e.clientX,e.clientY);
 });
@@ -846,9 +896,10 @@ const clock=new THREE.Clock();
 function tick(){
   const dt=clock.getDelta(), t=clock.getElapsedTime();
 
-  /* spider idle: breathing + slight head/arm motion */
+  /* spider idle: breathing bob + upright billboard toward camera */
   hero.position.y=perch.y+Math.sin(t*1.6)*.04;
-  hero.rotation.y=HERO_BASE_ROT+Math.sin(t*.5)*.05+mouse.x*.15;
+  hero.lookAt(camera.position.x,hero.position.y,camera.position.z);
+  hero.rotateZ(Math.sin(t*.5)*.03+recoil.z);
   /* moon gently pulses + always faces camera */
   moon.lookAt(camera.position);
   const mp=1+Math.sin(t*1.2)*.015;
@@ -959,8 +1010,50 @@ const loadInt=setInterval(()=>{
   progress=Math.min(100,progress+Math.random()*14);
   loadFill.style.width=progress+'%';
   if(progress/100*statuses.length>si&&si<statuses.length-1){si++;loadStatus.textContent=statuses[si];}
-  if(progress>=100){clearInterval(loadInt);loadStatus.textContent=statuses[statuses.length-1];setTimeout(launch,400);}
+  if(progress>=100){
+    clearInterval(loadInt);loadStatus.textContent=statuses[statuses.length-1];
+    if(!reduceMotion)fireWebCover();
+    setTimeout(launch,reduceMotion?400:700);
+  }
 },110);
+
+/* full-screen web that thwips over the loader, then dissolves as the site fades in */
+function fireWebCover(){
+  const div=document.createElement('div');
+  div.id='webCover';
+  const w=innerWidth,h=innerHeight,wcx=w/2,wcy=h/2;
+  const R=Math.hypot(w,h)*.62, SP=18;
+  let strands='';
+  for(let i=0;i<SP;i++){
+    const a=i/SP*Math.PI*2;
+    strands+=`<line x1="${wcx}" y1="${wcy}" x2="${wcx+Math.cos(a)*R}" y2="${wcy+Math.sin(a)*R}"/>`;
+  }
+  [.1,.18,.27,.37,.48,.6,.73,.87,1.02].forEach(f=>{
+    const r=R*f;
+    let dStr='';
+    for(let i=0;i<=SP;i++){
+      const a=i/SP*Math.PI*2;
+      const px=wcx+Math.cos(a)*r, py=wcy+Math.sin(a)*r;
+      if(i===0){dStr+=`M${px},${py}`;}
+      else{
+        const am=(i-.5)/SP*Math.PI*2, rm=r*.93; // strands sag toward the center
+        dStr+=`Q${wcx+Math.cos(am)*rm},${wcy+Math.sin(am)*rm} ${px},${py}`;
+      }
+    }
+    strands+=`<path d="${dStr}" fill="none"/>`;
+  });
+  div.innerHTML=`<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">
+    <g stroke="rgba(244,242,255,.6)" stroke-width="2.2">${strands}</g>
+    <g stroke="rgba(255,46,99,.35)" stroke-width="1.2" transform="rotate(4 ${wcx} ${wcy})">${strands}</g>
+    <g stroke="rgba(0,229,255,.3)" stroke-width="1.2" transform="rotate(-4 ${wcx} ${wcy})">${strands}</g>
+  </svg>`;
+  document.body.appendChild(div);
+  gsap.set(div,{opacity:1});
+  gsap.fromTo(div.firstElementChild,
+    {scale:.12,rotation:-10,opacity:0,transformOrigin:'50% 50%'},
+    {scale:1,rotation:0,opacity:1,duration:.6,ease:'back.out(1.6)'});
+  gsap.to(div,{opacity:0,duration:.9,delay:1.2,ease:'power2.inOut',onComplete:()=>div.remove()});
+}
 
 function launch(){
   document.getElementById('loader').classList.add('done');

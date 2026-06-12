@@ -657,85 +657,169 @@ for(let i=0;i<26;i++){
 }
 scene.add(dust);
 
-/* ---------- SPIDER-MAN (canvas-drawn classic red/blue, iconic jump crouch) ---------- */
+/* ---------- SPIDER-MAN (vector-drawn Miles-style black/red suit, anatomical perch crouch) ---------- */
 function spiderTexture(){
   const c=document.createElement('canvas');c.width=640;c.height=640;
   const x=c.getContext('2d');
-  const RED='#E62429', BLUE='#1C3F94', BLK='#0A0A0E', WHT='#F5F5FF';
+  const SUIT='#14141F', HI='#2A2A45', RED='#E62429', RED_D='#A8121E',
+        PINK='#FF2E63', NCYAN='#00E5FF', WHT='#F5F5FF', BLK='#05050C';
   x.lineCap='round';x.lineJoin='round';
-  function limb(pts,w,col){x.strokeStyle=col;x.lineWidth=w;x.beginPath();x.moveTo(pts[0][0],pts[0][1]);for(let i=1;i<pts.length;i++)x.lineTo(pts[i][0],pts[i][1]);x.stroke();}
+  function path(cmds,fill,stroke,lw){
+    x.beginPath();
+    for(const k of cmds){
+      if(k[0]==='M')x.moveTo(k[1],k[2]);
+      else if(k[0]==='L')x.lineTo(k[1],k[2]);
+      else if(k[0]==='Q')x.quadraticCurveTo(k[1],k[2],k[3],k[4]);
+      else if(k[0]==='Z')x.closePath();
+    }
+    if(fill){x.fillStyle=fill;x.fill();}
+    if(stroke){x.strokeStyle=stroke;x.lineWidth=lw||3;x.stroke();}
+  }
+  /* filled tapered limb segment — natural muscle taper instead of stick lines */
+  function taper(p0,p1,w0,w1,col){
+    const dx=p1[0]-p0[0],dy=p1[1]-p0[1],L=Math.hypot(dx,dy)||1;
+    const nx=-dy/L,ny=dx/L;
+    x.fillStyle=col;x.beginPath();
+    x.moveTo(p0[0]+nx*w0/2,p0[1]+ny*w0/2);
+    x.lineTo(p1[0]+nx*w1/2,p1[1]+ny*w1/2);
+    x.lineTo(p1[0]-nx*w1/2,p1[1]-ny*w1/2);
+    x.lineTo(p0[0]-nx*w0/2,p0[1]-ny*w0/2);
+    x.closePath();x.fill();
+  }
+  function joint(cx,cy,r,col){x.fillStyle=col;x.beginPath();x.arc(cx,cy,r,0,Math.PI*2);x.fill();}
+  function curve(p0,p1,p2,w,col){x.strokeStyle=col;x.lineWidth=w;x.beginPath();x.moveTo(p0[0],p0[1]);x.quadraticCurveTo(p1[0],p1[1],p2[0],p2[1]);x.stroke();}
   function blob(cx,cy,rx,ry,col){x.fillStyle=col;x.beginPath();x.ellipse(cx,cy,rx,ry,0,0,Math.PI*2);x.fill();}
-  /* legs: knees flared wide, feet folded together under the body */
-  limb([[320,390],[175,425],[295,548]],52,BLUE);
-  limb([[320,390],[465,425],[345,548]],52,BLUE);
-  blob(298,556,30,16,RED);                       // boots
-  blob(342,556,30,16,RED);
-  blob(320,375,52,20,BLUE);                      // waist band
-  /* torso */
-  limb([[320,250],[320,372]],95,RED);
-  blob(320,278,62,50,RED);                       // chest
-  /* arms spread up and out: blue upper arm, red forearm, spread fingers */
-  limb([[272,255],[170,185]],30,BLUE);
-  limb([[368,255],[470,185]],30,BLUE);
-  limb([[170,185],[80,120]],26,RED);
-  limb([[470,185],[560,120]],26,RED);
-  [[80,120,-1],[560,120,1]].forEach(h=>{
-    const [hx,hy,s]=h;
-    blob(hx,hy,15,15,RED);
-    limb([[hx,hy],[hx+s*32,hy-24]],8,RED);
-    limb([[hx,hy],[hx+s*38,hy]],8,RED);
-    limb([[hx,hy],[hx+s*28,hy+26]],8,RED);
-    limb([[hx,hy],[hx-s*8,hy-34]],8,RED);
-  });
-  /* neck + head */
-  limb([[320,218],[320,242]],26,RED);
-  blob(320,150,54,60,RED);
-  /* head webbing: rays + arcs from the brow */
-  x.strokeStyle=BLK;x.lineWidth=2;
-  for(let a=0;a<360;a+=22){
+
+  /* neon rim glow strokes behind the silhouette (pink left / cyan right) */
+  x.shadowBlur=18;x.shadowColor=PINK;
+  curve([288,150],[226,256],[186,322],9,'rgba(255,46,99,.5)');
+  curve([252,420],[168,462],[224,546],9,'rgba(255,46,99,.42)');
+  x.shadowColor=NCYAN;
+  curve([352,150],[416,256],[450,356],8,'rgba(0,229,255,.45)');
+  curve([388,420],[472,470],[416,546],8,'rgba(0,229,255,.38)');
+  x.shadowBlur=0;
+
+  /* ---- legs: deep perch squat, knees flared, feet planted on the ledge ---- */
+  // left leg
+  taper([300,390],[205,468],52,38,SUIT); joint(205,468,19,SUIT);   // thigh + knee
+  taper([205,468],[252,532],36,20,SUIT);                           // calf
+  // right leg
+  taper([340,390],[435,468],52,38,SUIT); joint(435,468,19,SUIT);
+  taper([435,468],[388,532],36,20,SUIT);
+  /* red boots with heel + toe box */
+  path([['M',252,514],['Q',230,522,218,538],['Q',208,548,213,556],['L',270,556],['Q',273,538,264,524],['Z']],RED);
+  path([['M',388,514],['Q',410,522,422,538],['Q',432,548,427,556],['L',370,556],['Q',367,538,376,524],['Z']],RED);
+  path([['M',244,512],['L',268,512],['L',270,528],['L',246,530],['Z']],RED_D);   // boot cuffs
+  path([['M',396,512],['L',372,512],['L',370,528],['L',394,530],['Z']],RED_D);
+
+  /* ---- pelvis low between the thighs ---- */
+  path([['M',276,396],['L',364,396],['Q',350,438,320,442],['Q',290,438,276,396],['Z']],SUIT);
+
+  /* ---- torso: wide shoulders, lat taper, forward-leaning crouch ---- */
+  path([
+    ['M',262,266],['Q',320,248,378,266],     // trap / neck line
+    ['Q',398,276,394,304],                   // right deltoid
+    ['Q',384,348,356,374],                   // right lat taper
+    ['Q',370,384,368,404],                   // right hip
+    ['L',272,404],
+    ['Q',270,384,284,374],                   // left hip
+    ['Q',256,348,246,304],                   // left lat taper
+    ['Q',242,276,262,266],['Z']
+  ],SUIT);
+  /* muscle definition */
+  curve([284,302],[320,318],[356,302],2.5,HI);          // pec line
+  x.strokeStyle=HI;x.lineWidth=2;
+  x.beginPath();x.moveTo(320,322);x.lineTo(320,394);x.stroke();   // ab centerline
+  [336,356,376].forEach(yy=>{curve([302,yy],[320,yy+5],[338,yy],2,HI);});
+
+  /* ---- right arm: braced on the roof, fingers spread ---- */
+  taper([372,280],[442,352],34,24,SUIT); joint(442,352,13,SUIT);   // upper arm + elbow
+  taper([442,352],[378,512],24,14,SUIT);                           // forearm to ground
+  joint(372,524,15,RED);                                           // planted glove palm
+  x.strokeStyle=RED;x.lineWidth=7;
+  [[344,540],[356,546],[372,549],[388,544]].forEach(p=>{x.beginPath();x.moveTo(372,524);x.lineTo(p[0],p[1]);x.stroke();});
+  path([['M',432,366],['L',452,362],['L',454,376],['L',436,380],['Z']],RED_D);   // web-shooter band
+
+  /* ---- left arm: extended out, two-finger thwip ---- */
+  taper([268,280],[196,318],32,22,SUIT); joint(196,318,12,SUIT);
+  taper([196,318],[122,330],22,13,SUIT);
+  joint(110,332,13,RED);                                           // glove palm
+  x.strokeStyle=RED;x.lineWidth=6.5;
+  x.beginPath();x.moveTo(110,332);x.lineTo(78,316);x.stroke();     // index finger
+  x.beginPath();x.moveTo(110,332);x.lineTo(76,346);x.stroke();     // pinky
+  x.beginPath();x.moveTo(110,332);x.lineTo(92,334);x.stroke();     // folded middle fingers
+  path([['M',126,320],['L',142,318],['L',144,340],['L',128,342],['Z']],RED_D);   // web-shooter band
+
+  /* ---- neck + head: tapered jaw, not a balloon ---- */
+  taper([320,244],[320,266],26,30,SUIT);
+  path([
+    ['M',320,136],
+    ['Q',276,138,272,184],
+    ['Q',272,216,294,240],
+    ['Q',308,252,320,252],
+    ['Q',332,252,346,240],
+    ['Q',368,216,368,184],
+    ['Q',364,138,320,136],['Z']
+  ],SUIT);
+  /* red mask webbing, clipped to the head — subtle so the suit still reads black */
+  x.save();
+  x.beginPath();x.ellipse(320,194,49,58,0,0,Math.PI*2);x.clip();
+  x.strokeStyle='rgba(230,36,41,.42)';x.lineWidth=1.4;
+  for(let a=0;a<360;a+=24){
     const r=a*Math.PI/180;
-    x.beginPath();x.moveTo(320,158);x.lineTo(320+Math.cos(r)*54,158+Math.sin(r)*60);x.stroke();
+    x.beginPath();x.moveTo(320,194);x.lineTo(320+Math.cos(r)*52,194+Math.sin(r)*60);x.stroke();
   }
-  [18,34,50].forEach(rr=>{
-    x.beginPath();x.ellipse(320,158,rr,rr*1.12,0,0,Math.PI*2);x.stroke();
+  [16,30,44].forEach(rr=>{
+    x.beginPath();x.ellipse(320,194,rr,rr*1.16,0,0,Math.PI*2);x.stroke();
   });
-  /* big white teardrop lenses, black rims, angled down toward the nose */
-  function eye(pts){
-    x.beginPath();x.moveTo(pts[0][0],pts[0][1]);
-    for(let i=1;i<pts.length;i++)x.lineTo(pts[i][0],pts[i][1]);
-    x.closePath();
-    x.fillStyle=WHT;x.fill();
-    x.strokeStyle=BLK;x.lineWidth=6;x.stroke();
+  x.restore();
+  /* big expressive teardrop lenses with red rims */
+  function lens(cmds){
+    path(cmds,WHT);
+    path(cmds,null,RED,4.5);
+    path(cmds,null,BLK,1.5);
   }
-  eye([[266,150],[302,124],[312,160],[284,184]]);
-  eye([[374,150],[338,124],[328,160],[356,184]]);
-  /* chest webbing fan + arcs */
-  x.strokeStyle=BLK;x.lineWidth=2;
-  for(let a=20;a<=160;a+=20){
-    const r=a*Math.PI/180;
-    x.beginPath();x.moveTo(320,240);x.lineTo(320+Math.cos(r)*70,240+Math.sin(r)*80);x.stroke();
-  }
-  [26,48,70].forEach(rr=>{
-    x.beginPath();x.arc(320,240,rr,10*Math.PI/180,170*Math.PI/180);x.stroke();
+  lens([['M',270,182],['Q',282,154,304,162],['Q',314,192,302,216],['Q',278,212,270,182],['Z']]);
+  lens([['M',370,182],['Q',358,154,336,162],['Q',326,192,338,216],['Q',362,212,370,182],['Z']]);
+  /* red webbing accents on the shoulders */
+  x.strokeStyle='rgba(230,36,41,.65)';x.lineWidth=1.5;
+  [[372,284,1],[268,284,-1]].forEach(sh=>{
+    const [sx,sy,s]=sh;
+    for(let a=-50;a<=50;a+=25){
+      const r=(s>0?a:180-a)*Math.PI/180;
+      x.beginPath();x.moveTo(sx,sy);x.lineTo(sx+Math.cos(r)*34,sy+Math.sin(r)*34);x.stroke();
+    }
+    [14,26].forEach(rr=>{
+      x.beginPath();x.arc(sx,sy,rr,(s>0?-70:110)*Math.PI/180,(s>0?70:250)*Math.PI/180);x.stroke();
+    });
   });
-  /* black spider emblem */
-  blob(320,298,8,18,BLK);
-  x.strokeStyle=BLK;x.lineWidth=4;
+  /* red spider emblem on the chest — legs bend at the joint */
+  blob(320,304,4.5,4.5,RED);
+  blob(320,322,6.5,15,RED);
+  x.strokeStyle=RED;x.lineWidth=3.5;
   [-1,1].forEach(s=>{
-    x.beginPath();x.moveTo(320,288);x.lineTo(320+s*26,272);x.stroke();
-    x.beginPath();x.moveTo(320,296);x.lineTo(320+s*30,292);x.stroke();
-    x.beginPath();x.moveTo(320,306);x.lineTo(320+s*28,316);x.stroke();
-    x.beginPath();x.moveTo(320,312);x.lineTo(320+s*20,330);x.stroke();
+    x.beginPath();x.moveTo(320,308);x.lineTo(320+s*22,294);x.lineTo(320+s*36,298);x.stroke();
+    x.beginPath();x.moveTo(320,314);x.lineTo(320+s*28,312);x.lineTo(320+s*40,304);x.stroke();
+    x.beginPath();x.moveTo(320,326);x.lineTo(320+s*26,332);x.lineTo(320+s*38,344);x.stroke();
+    x.beginPath();x.moveTo(320,332);x.lineTo(320+s*18,344);x.lineTo(320+s*24,360);x.stroke();
   });
+  /* spider-verse halftone dots over the torso */
+  x.save();
+  x.beginPath();x.ellipse(320,330,62,72,0,0,Math.PI*2);x.clip();
+  x.fillStyle='rgba(255,46,99,.14)';
+  for(let dy=258;dy<410;dy+=12)for(let dx=260;dx<384;dx+=12){
+    x.beginPath();x.arc(dx+((dy/12|0)%2?6:0),dy,1.6,0,Math.PI*2);x.fill();
+  }
+  x.restore();
   return new THREE.CanvasTexture(c);
 }
 const hero=new THREE.Group();
-const PS=5.6, FOOT_Y=560;                       // sprite size + canvas ground line
-const SPRITE_OFF=(FOOT_Y/640-.5)*PS;            // lifts the plane so feet sit at group origin
-const spiderPlane=new THREE.Mesh(
-  new THREE.PlaneGeometry(PS,PS),
-  new THREE.MeshBasicMaterial({map:spiderTexture(),transparent:true,side:THREE.DoubleSide})
-);
+const PS=4.2, FOOT_FRAC=.94;                    // sprite size + ground line as fraction of the image
+const SPRITE_OFF=(FOOT_FRAC-.5)*PS;             // lifts the plane so feet sit at group origin
+/* canvas-drawn spidey as instant placeholder + offline fallback, swapped for the PNG once it loads */
+const spiderMat=new THREE.MeshBasicMaterial({map:spiderTexture(),transparent:true,side:THREE.DoubleSide});
+new THREE.TextureLoader().load('assets/spiderman-perch.png',t=>{spiderMat.map=t;spiderMat.needsUpdate=true;});
+const spiderPlane=new THREE.Mesh(new THREE.PlaneGeometry(PS,PS),spiderMat);
 spiderPlane.position.y=SPRITE_OFF;
 hero.add(spiderPlane);
 /* place Spidey on the rooftop corner of his tower */
@@ -743,8 +827,8 @@ const perch=new THREE.Vector3(heroBuilding.position.x-.4, heroBuilding.position.
 hero.position.copy(perch);
 scene.add(hero);
 const recoil={z:0};
-/* world-space position of the web-shooting (left) hand, canvas 80,120 mapped onto the sprite */
-const handLocal=new THREE.Vector3((80/640-.5)*PS,(.5-120/640)*PS+SPRITE_OFF,.03);
+/* world-space position of the web-shooting hands (planted at the bottom center of the image) */
+const handLocal=new THREE.Vector3((.50-.5)*PS,(.5-.93)*PS+SPRITE_OFF,.03);
 function handWorld(){return hero.localToWorld(handLocal.clone());}
 
 /* ---------- GIANT NEON MOON behind the spider ---------- */

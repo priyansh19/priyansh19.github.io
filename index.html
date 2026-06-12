@@ -3,61 +3,71 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PRIYANSH GUPTA — Agentic AI & MLOps Engineer</title>
-<meta name="description" content="Priyansh Gupta — Agentic AI & MLOps Engineer. I build secure AI agents, production RAG systems, and the cloud infrastructure they run on.">
+<title>PRIYANSH GUPTA — Senior Agentic AI Engineer</title>
+<meta name="description" content="Priyansh Gupta — Senior Agentic AI Engineer & GenAI Lead in Dubai. I build multi-agent systems, production RAG pipelines, and enterprise GenAI platforms.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Archivo:wght@400;500;600;700;900&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --paper:#FBFAF5;
-  --paper-2:#F2EFE6;
-  --ink:#15151C;
-  --ink-soft:#4A4A58;
-  --red:#E0202F;
-  --red-deep:#B30E1E;
-  --blue:#2342D6;
-  --blue-deep:#16289B;
-  --yellow:#FFC400;
-  --line:rgba(21,21,28,.16);
+  --bg:#0B0B14;
+  --bg-2:#14142A;
+  --ink:#F4F2FF;
+  --ink-soft:#A39FC4;
+  --red:#FF2E63;
+  --red-deep:#B81443;
+  --purple:#B537F2;
+  --purple-deep:#7A1FB8;
+  --cyan:#00E5FF;
+  --cyan-deep:#0093A6;
+  --yellow:#FFE600;
+  --line:rgba(244,242,255,.16);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-html,body{background:var(--paper);color:var(--ink);overflow-x:hidden}
+html,body{background:var(--bg);color:var(--ink);overflow-x:hidden}
 body{font-family:'Archivo',sans-serif;line-height:1.6;cursor:none}
-::selection{background:var(--yellow);color:var(--ink)}
+::selection{background:var(--yellow);color:var(--bg)}
 a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:none}
 
-/* ---------- halftone comic texture ---------- */
-.halftone{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.4;
-  background-image:radial-gradient(rgba(21,21,28,.09) 1px,transparent 1.4px);
+/* ---------- spider-verse halftone print ---------- */
+.halftone{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.35;
+  background-image:radial-gradient(rgba(244,242,255,.07) 1px,transparent 1.4px);
   background-size:14px 14px}
-.halftone-red{position:fixed;top:-20vh;right:-15vw;width:55vw;height:55vw;z-index:1;pointer-events:none;opacity:.14;border-radius:50%;
+.halftone-pink{position:fixed;top:-20vh;right:-15vw;width:55vw;height:55vw;z-index:1;pointer-events:none;opacity:.16;border-radius:50%;
   background-image:radial-gradient(var(--red) 1.4px,transparent 2px);background-size:11px 11px;
   -webkit-mask-image:radial-gradient(circle,black 0%,transparent 68%);mask-image:radial-gradient(circle,black 0%,transparent 68%);
   animation:dotDrift 14s ease-in-out infinite alternate}
+.halftone-cyan{position:fixed;bottom:-25vh;left:-18vw;width:60vw;height:60vw;z-index:1;pointer-events:none;opacity:.12;border-radius:50%;
+  background-image:radial-gradient(var(--cyan) 1.4px,transparent 2px);background-size:13px 13px;
+  -webkit-mask-image:radial-gradient(circle,black 0%,transparent 68%);mask-image:radial-gradient(circle,black 0%,transparent 68%);
+  animation:dotDrift 18s ease-in-out infinite alternate-reverse}
 @keyframes dotDrift{from{transform:translate(0,0) rotate(0)}to{transform:translate(4vw,-3vh) rotate(8deg)}}
+.glow{position:fixed;z-index:0;pointer-events:none;border-radius:50%;filter:blur(90px);opacity:.22}
+.glow-1{top:-10vh;left:55vw;width:46vw;height:46vw;background:var(--purple)}
+.glow-2{bottom:-18vh;left:-10vw;width:42vw;height:42vw;background:var(--red)}
 
 /* ---------- cursor ---------- */
 .cursor-dot,.cursor-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;border-radius:50%;transform:translate(-50%,-50%)}
-.cursor-dot{width:10px;height:10px;background:var(--red);border:2px solid var(--ink)}
-.cursor-ring{width:44px;height:44px;border:2px solid var(--ink);transition:width .25s,height .25s,border-color .25s,background .25s}
-.cursor-ring.hovering{width:86px;height:86px;border-color:var(--red);background:rgba(224,32,47,.07)}
-.cursor-label{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;font-family:'Bangers',cursive;font-size:15px;letter-spacing:.1em;color:var(--blue);transform:translate(16px,20px) rotate(-4deg);opacity:0;transition:opacity .3s;text-shadow:1.5px 1.5px 0 var(--paper),2.5px 2.5px 0 var(--ink)}
+.cursor-dot{width:10px;height:10px;background:var(--red);border:2px solid var(--ink);box-shadow:0 0 12px rgba(255,46,99,.8)}
+.cursor-ring{width:44px;height:44px;border:2px solid rgba(244,242,255,.7);transition:width .25s,height .25s,border-color .25s,background .25s}
+.cursor-ring.hovering{width:86px;height:86px;border-color:var(--cyan);background:rgba(0,229,255,.07)}
+.cursor-label{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;font-family:'Bangers',cursive;font-size:15px;letter-spacing:.1em;color:var(--yellow);transform:translate(16px,20px) rotate(-4deg);opacity:0;transition:opacity .3s;text-shadow:2px 2px 0 var(--bg),3.5px 3.5px 0 var(--red)}
 #webTrail{position:fixed;inset:0;z-index:9998;pointer-events:none}
 @media (hover:none){.cursor-dot,.cursor-ring,.cursor-label,#webTrail{display:none}body{cursor:auto}}
 
 /* ---------- loader ---------- */
-#loader{position:fixed;inset:0;background:var(--paper);z-index:9000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;transition:opacity .9s,visibility .9s}
+#loader{position:fixed;inset:0;background:var(--bg);z-index:9000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;transition:opacity .9s,visibility .9s}
 #loader.done{opacity:0;visibility:hidden}
-#loader::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(224,32,47,.12) 1.6px,transparent 2px);background-size:16px 16px;animation:dotDrift 6s linear infinite alternate}
+#loader::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,46,99,.16) 1.6px,transparent 2px);background-size:16px 16px;animation:dotDrift 6s linear infinite alternate}
 .loader-logo{font-family:'Bangers',cursive;font-size:clamp(44px,8vw,90px);letter-spacing:.06em;color:var(--red);
-  text-shadow:2px 2px 0 var(--paper),4px 4px 0 var(--ink),7px 7px 0 rgba(35,66,214,.5);
+  text-shadow:-3px 0 var(--cyan),3px 3px 0 var(--purple-deep),6px 6px 0 rgba(0,0,0,.6);
   animation:loaderBounce 1s ease-in-out infinite}
 @keyframes loaderBounce{0%,100%{transform:rotate(-2deg) scale(1)}50%{transform:rotate(2deg) scale(1.05)}}
-.loader-bar{width:min(340px,70vw);height:14px;background:var(--paper);border:3px solid var(--ink);border-radius:99px;overflow:hidden;box-shadow:4px 4px 0 var(--ink)}
-.loader-bar i{display:block;height:100%;width:0;background:repeating-linear-gradient(45deg,var(--red) 0 12px,var(--blue) 12px 24px);transition:width .2s}
-.loader-status{font-family:'Bangers',cursive;font-size:18px;letter-spacing:.12em;color:var(--blue);min-height:24px;transform:rotate(-2deg)}
+.loader-bar{width:min(340px,70vw);height:14px;background:var(--bg-2);border:3px solid var(--ink);border-radius:99px;overflow:hidden;box-shadow:4px 4px 0 rgba(255,46,99,.5)}
+.loader-bar i{display:block;height:100%;width:0;background:repeating-linear-gradient(45deg,var(--red) 0 12px,var(--cyan) 12px 24px);transition:width .2s}
+.loader-status{font-family:'Bangers',cursive;font-size:18px;letter-spacing:.12em;color:var(--cyan);min-height:24px;transform:rotate(-2deg)}
 
 #gl{position:fixed;inset:0;z-index:0;pointer-events:none}
 
@@ -65,71 +75,78 @@ a{color:inherit;text-decoration:none}
 .hud{position:fixed;z-index:7000;pointer-events:none;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.22em;color:var(--ink-soft);text-transform:uppercase}
 .hud b{color:var(--red);font-weight:500}
 .hud-tl{top:84px;left:22px}.hud-br{bottom:18px;right:22px;text-align:right}
-.hud::before{content:"";position:absolute;width:18px;height:18px;border:2px solid var(--ink)}
+.hud::before{content:"";position:absolute;width:18px;height:18px;border:2px solid var(--cyan)}
 .hud-tl::before{top:-12px;left:-8px;border-right:none;border-bottom:none}
 .hud-br::before{bottom:-6px;right:-8px;border-left:none;border-top:none}
 @media(max-width:860px){.hud{display:none}}
 
 .progress{position:fixed;top:0;left:0;height:5px;width:100%;z-index:8000}
-.progress i{display:block;height:100%;width:0;background:repeating-linear-gradient(90deg,var(--red) 0 30px,var(--blue) 30px 60px);border-bottom:2px solid var(--ink)}
+.progress i{display:block;height:100%;width:0;background:repeating-linear-gradient(90deg,var(--red) 0 30px,var(--cyan) 30px 60px);border-bottom:2px solid var(--bg)}
 
 /* ---------- nav ---------- */
-nav{position:fixed;top:0;left:0;right:0;z-index:7500;display:flex;justify-content:space-between;align-items:center;padding:18px clamp(20px,5vw,64px);background:rgba(251,250,245,.75);backdrop-filter:blur(10px);border-bottom:3px solid var(--ink)}
+nav{position:fixed;top:0;left:0;right:0;z-index:7500;display:flex;justify-content:space-between;align-items:center;padding:18px clamp(20px,5vw,64px);background:rgba(11,11,20,.78);backdrop-filter:blur(10px);border-bottom:3px solid var(--red)}
 .nav-logo{font-family:'Bangers',cursive;font-size:24px;letter-spacing:.06em;color:var(--ink)}
-.nav-logo span{color:var(--red)}
-.nav-links{display:flex;gap:32px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:500}
+.nav-logo span{color:var(--red);text-shadow:-2px 0 var(--cyan)}
+.nav-links{display:flex;gap:28px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:500}
 .nav-links a{position:relative;color:var(--ink-soft);transition:color .3s}
-.nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:3px;background:var(--red);transition:width .35s}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:3px;background:var(--cyan);transition:width .35s}
 .nav-links a:hover{color:var(--ink)}
 .nav-links a:hover::after{width:100%}
-@media(max-width:760px){.nav-links{display:none}}
-.nav-cta{font-family:'Bangers',cursive;font-size:16px;letter-spacing:.08em;border:3px solid var(--ink);padding:8px 20px;border-radius:99px;color:var(--ink);background:var(--yellow);box-shadow:3px 3px 0 var(--ink);transition:.25s}
-.nav-cta:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+@media(max-width:860px){.nav-links{display:none}}
+.nav-cta{font-family:'Bangers',cursive;font-size:16px;letter-spacing:.08em;border:3px solid var(--ink);padding:8px 20px;border-radius:99px;color:var(--bg);background:var(--yellow);box-shadow:3px 3px 0 var(--red);transition:.25s}
+.nav-cta:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--red)}
 .nav-right{display:flex;align-items:center;gap:14px}
-.nav-burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:46px;height:46px;padding:10px;background:var(--paper);border:3px solid var(--ink);border-radius:12px;box-shadow:3px 3px 0 var(--ink);cursor:pointer;transition:.25s}
+.nav-burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:46px;height:46px;padding:10px;background:var(--bg-2);border:3px solid var(--ink);border-radius:12px;box-shadow:3px 3px 0 var(--red);cursor:pointer;transition:.25s}
 .nav-burger span{display:block;height:3px;width:100%;background:var(--ink);border-radius:2px;transition:transform .3s,opacity .3s}
-.nav-burger.open{background:var(--yellow)}
+.nav-burger.open{background:var(--red)}
 .nav-burger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
 .nav-burger.open span:nth-child(2){opacity:0}
 .nav-burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
-@media(max-width:760px){.nav-burger{display:flex}}
-.mobile-menu{position:fixed;inset:0;z-index:7400;background:var(--paper);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;padding:100px 24px 40px;transform:translateX(100%);transition:transform .45s cubic-bezier(.7,0,.2,1);visibility:hidden}
-.mobile-menu::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(rgba(224,32,47,.12) 1.6px,transparent 2px);background-size:16px 16px}
+@media(max-width:860px){.nav-burger{display:flex}}
+.mobile-menu{position:fixed;inset:0;z-index:7400;background:var(--bg);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;padding:100px 24px 40px;transform:translateX(100%);transition:transform .45s cubic-bezier(.7,0,.2,1);visibility:hidden}
+.mobile-menu::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(rgba(255,46,99,.14) 1.6px,transparent 2px);background-size:16px 16px}
 .mobile-menu.open{transform:translateX(0);visibility:visible}
-.mobile-menu a{position:relative;font-family:'Bangers',cursive;font-size:clamp(34px,9vw,52px);letter-spacing:.05em;text-transform:uppercase;color:var(--ink);padding:6px 18px;transition:.25s}
+.mobile-menu a{position:relative;font-family:'Bangers',cursive;font-size:clamp(32px,8.5vw,50px);letter-spacing:.05em;text-transform:uppercase;color:var(--ink);padding:6px 18px;transition:.25s}
 .mobile-menu a:nth-child(odd){transform:rotate(-1.5deg)}
 .mobile-menu a:nth-child(even){transform:rotate(1.5deg)}
-.mobile-menu a .no{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.3em;color:var(--blue);vertical-align:super;margin-right:10px}
-.mobile-menu a:hover,.mobile-menu a:active{color:var(--red);text-shadow:2px 2px 0 var(--ink)}
-.mobile-menu .menu-cta{margin-top:26px;font-size:24px;background:var(--red);color:#fff;border:3px solid var(--ink);border-radius:14px;padding:12px 30px;box-shadow:5px 5px 0 var(--ink);transform:rotate(-1deg)}
+.mobile-menu a .no{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.3em;color:var(--cyan);vertical-align:super;margin-right:10px}
+.mobile-menu a:hover,.mobile-menu a:active{color:var(--red);text-shadow:-2px 0 var(--cyan),3px 3px 0 rgba(0,0,0,.7)}
+.mobile-menu .menu-cta{margin-top:26px;font-size:22px;background:var(--red);color:#fff;border:3px solid var(--ink);border-radius:14px;padding:12px 30px;box-shadow:5px 5px 0 var(--cyan-deep);transform:rotate(-1deg)}
 body.menu-locked{overflow:hidden}
 
 /* ---------- layout ---------- */
 main{position:relative;z-index:2}
 section{position:relative;padding:clamp(90px,14vh,160px) clamp(20px,6vw,96px)}
 .skew-wrap{will-change:transform}
-.eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:var(--blue);display:flex;align-items:center;gap:14px;margin-bottom:28px;font-weight:500}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:var(--cyan);display:flex;align-items:center;gap:14px;margin-bottom:28px;font-weight:500}
 .eyebrow::before{content:"";width:36px;height:3px;background:var(--red)}
 
-/* ---------- 3D hero text ---------- */
+/* ---------- 3D hero text (glitch) ---------- */
 .hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-top:130px;perspective:1100px}
-.hero-tag{font-family:'JetBrains Mono',monospace;font-size:clamp(11px,1.3vw,14px);letter-spacing:.45em;text-transform:uppercase;color:var(--blue);margin-bottom:26px;opacity:0;font-weight:500}
+.hero-tag{font-family:'JetBrains Mono',monospace;font-size:clamp(11px,1.3vw,14px);letter-spacing:.45em;text-transform:uppercase;color:var(--cyan);margin-bottom:26px;opacity:0;font-weight:500}
 .h1-3d{transform-style:preserve-3d;will-change:transform}
-.hero h1{font-family:'Bangers',cursive;font-weight:400;font-size:clamp(60px,12vw,180px);line-height:.92;letter-spacing:.015em;text-transform:uppercase;transform-style:preserve-3d}
+.hero h1{font-family:'Bangers',cursive;font-weight:400;font-size:clamp(56px,11.5vw,170px);line-height:.92;letter-spacing:.015em;text-transform:uppercase;transform-style:preserve-3d}
 .hero h1 .row{display:block;overflow:visible;transform-style:preserve-3d}
 .hero h1 .row span{display:inline-block;transform:translateY(120%) rotateX(-80deg);transform-style:preserve-3d}
-.t3d-red{color:var(--red);text-shadow:1px 1px 0 var(--red-deep),2px 2px 0 var(--red-deep),3px 3px 0 var(--red-deep),4px 4px 0 var(--red-deep),5px 5px 0 var(--red-deep),6px 6px 0 var(--ink),9px 9px 0 rgba(21,21,28,.18)}
-.t3d-blue{color:var(--blue);text-shadow:1px 1px 0 var(--blue-deep),2px 2px 0 var(--blue-deep),3px 3px 0 var(--blue-deep),4px 4px 0 var(--blue-deep),5px 5px 0 var(--blue-deep),6px 6px 0 var(--ink),9px 9px 0 rgba(21,21,28,.18)}
-.t3d-ink{color:var(--paper);-webkit-text-stroke:3px var(--ink);text-shadow:5px 5px 0 var(--yellow),8px 8px 0 var(--ink)}
-.hero-sub{margin-top:36px;max-width:560px;font-size:clamp(16px,1.7vw,20px);color:var(--ink-soft);opacity:0;font-weight:500}
+.t3d-red{color:var(--red);text-shadow:1px 1px 0 var(--red-deep),2px 2px 0 var(--red-deep),3px 3px 0 var(--red-deep),4px 4px 0 var(--red-deep),5px 5px 0 var(--red-deep),6px 6px 0 #000,9px 9px 0 rgba(0,229,255,.3)}
+.t3d-cyan{color:var(--cyan);text-shadow:1px 1px 0 var(--cyan-deep),2px 2px 0 var(--cyan-deep),3px 3px 0 var(--cyan-deep),4px 4px 0 var(--cyan-deep),5px 5px 0 var(--cyan-deep),6px 6px 0 #000,9px 9px 0 rgba(255,46,99,.3)}
+.t3d-ink{color:var(--bg);-webkit-text-stroke:3px var(--ink);text-shadow:5px 5px 0 var(--yellow),8px 8px 0 var(--purple-deep)}
+.glitching .row span{animation:glitchJit .28s steps(2) both}
+@keyframes glitchJit{
+  0%{transform:translate(0,0) skewX(0)}
+  25%{transform:translate(-5px,2px) skewX(-6deg);filter:drop-shadow(-4px 0 var(--cyan)) drop-shadow(4px 0 var(--red))}
+  60%{transform:translate(4px,-2px) skewX(5deg);filter:drop-shadow(4px 0 var(--cyan)) drop-shadow(-4px 0 var(--red))}
+  100%{transform:translate(0,0) skewX(0)}
+}
+.hero-sub{margin-top:36px;max-width:580px;font-size:clamp(16px,1.7vw,20px);color:var(--ink-soft);opacity:0;font-weight:500}
 .hero-sub b{color:var(--ink);font-weight:700}
 .hero-actions{display:flex;gap:18px;margin-top:44px;flex-wrap:wrap;opacity:0}
 .btn{position:relative;display:inline-flex;align-items:center;gap:12px;font-family:'Bangers',cursive;font-size:20px;letter-spacing:.08em;padding:14px 32px;border-radius:14px;border:3px solid var(--ink);transition:.25s;will-change:transform;overflow:hidden}
-.btn-primary{background:var(--red);color:#fff;box-shadow:5px 5px 0 var(--ink)}
-.btn-primary:hover{transform:translate(-3px,-3px) rotate(-1deg);box-shadow:9px 9px 0 var(--ink)}
-.btn-ghost{background:var(--paper);color:var(--ink);box-shadow:5px 5px 0 var(--ink)}
-.btn-ghost:hover{transform:translate(-3px,-3px) rotate(1deg);box-shadow:9px 9px 0 var(--ink);background:var(--yellow)}
-.btn .dot{width:9px;height:9px;border-radius:50%;background:#fff;border:2px solid var(--ink);animation:blink 1.2s infinite}
+.btn-primary{background:var(--red);color:#fff;box-shadow:5px 5px 0 var(--cyan-deep),0 0 26px rgba(255,46,99,.35)}
+.btn-primary:hover{transform:translate(-3px,-3px) rotate(-1deg);box-shadow:9px 9px 0 var(--cyan-deep),0 0 34px rgba(255,46,99,.5)}
+.btn-ghost{background:var(--bg-2);color:var(--ink);box-shadow:5px 5px 0 var(--purple-deep)}
+.btn-ghost:hover{transform:translate(-3px,-3px) rotate(1deg);box-shadow:9px 9px 0 var(--purple-deep);background:var(--yellow);color:var(--bg)}
+.btn .dot{width:9px;height:9px;border-radius:50%;background:#fff;border:2px solid var(--bg);animation:blink 1.2s infinite}
 .btn-ghost .dot{background:var(--red)}
 @keyframes blink{50%{opacity:.25}}
 .hero-meta{position:absolute;bottom:36px;left:clamp(20px,6vw,96px);right:clamp(20px,6vw,96px);display:flex;justify-content:space-between;align-items:flex-end;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);opacity:0;font-weight:500}
@@ -138,9 +155,10 @@ section{position:relative;padding:clamp(90px,14vh,160px) clamp(20px,6vw,96px)}
 @keyframes dropLine{0%{transform:scaleY(0);transform-origin:top}55%{transform:scaleY(1);transform-origin:top}56%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
 /* ---------- marquees ---------- */
-.marquee{position:relative;z-index:2;border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);overflow:hidden;padding:16px 0;background:var(--ink);transform:rotate(-1.2deg) scale(1.02);margin:10px 0}
-.marquee.m2{background:var(--red);transform:rotate(1deg) scale(1.02)}
-.marquee-track{display:flex;width:max-content;font-family:'Bangers',cursive;font-size:clamp(20px,2.6vw,30px);text-transform:uppercase;letter-spacing:.14em;color:var(--paper)}
+.marquee{position:relative;z-index:2;border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);overflow:hidden;padding:16px 0;background:var(--red);transform:rotate(-1.2deg) scale(1.02);margin:10px 0}
+.marquee.m2{background:var(--purple);transform:rotate(1deg) scale(1.02)}
+.marquee-track{display:flex;width:max-content;font-family:'Bangers',cursive;font-size:clamp(20px,2.6vw,30px);text-transform:uppercase;letter-spacing:.14em;color:var(--bg)}
+.marquee.m2 .marquee-track{color:var(--ink)}
 .marquee-track span{padding:0 30px;white-space:nowrap}
 .marquee-track .hl{color:var(--yellow)}
 .m-fwd .marquee-track{animation:marquee 22s linear infinite}
@@ -150,8 +168,8 @@ section{position:relative;padding:clamp(90px,14vh,160px) clamp(20px,6vw,96px)}
 
 /* ---------- headings ---------- */
 .h2{font-family:'Bangers',cursive;font-weight:400;font-size:clamp(40px,6.5vw,86px);line-height:1;text-transform:uppercase;max-width:960px;letter-spacing:.02em;transform-style:preserve-3d}
-.h2 .accent{color:var(--red);text-shadow:3px 3px 0 var(--ink)}
-.h2 .accent-b{color:var(--blue);text-shadow:3px 3px 0 var(--ink)}
+.h2 .accent{color:var(--red);text-shadow:-2px 0 var(--cyan),3px 3px 0 #000}
+.h2 .accent-b{color:var(--cyan);text-shadow:-2px 0 var(--red),3px 3px 0 #000}
 .reveal{opacity:0;transform:translateY(60px)}
 .flip3d{opacity:0;transform:rotateX(-85deg) translateY(40px);transform-origin:top center}
 
@@ -160,23 +178,30 @@ section{position:relative;padding:clamp(90px,14vh,160px) clamp(20px,6vw,96px)}
 @media(max-width:900px){.about-grid{grid-template-columns:1fr}}
 .about-text p{font-size:clamp(16px,1.7vw,20px);color:var(--ink-soft);margin-bottom:24px;font-weight:500}
 .about-text p b{color:var(--ink);font-weight:700}
-.about-text .quote{font-family:'Bangers',cursive;font-size:clamp(22px,2.4vw,30px);color:var(--ink);border:3px solid var(--ink);border-radius:18px;padding:22px 26px;background:var(--yellow);box-shadow:6px 6px 0 var(--ink);transform:rotate(-1deg);letter-spacing:.04em}
+.about-text .quote{font-family:'Bangers',cursive;font-size:clamp(22px,2.4vw,30px);color:var(--bg);border:3px solid var(--ink);border-radius:18px;padding:22px 26px;background:var(--yellow);box-shadow:6px 6px 0 var(--red);transform:rotate(-1deg);letter-spacing:.04em}
 .stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.stat{position:relative;background:var(--paper);border:3px solid var(--ink);border-radius:16px;padding:26px 24px;box-shadow:5px 5px 0 var(--ink);transition:.25s;overflow:hidden}
+.stat{position:relative;background:var(--bg-2);border:3px solid var(--ink);border-radius:16px;padding:26px 24px;box-shadow:5px 5px 0 var(--red);transition:.25s;overflow:hidden}
 .stat:nth-child(odd){transform:rotate(-1deg)}
-.stat:nth-child(even){transform:rotate(1deg)}
-.stat:hover{transform:translate(-3px,-3px) rotate(0);box-shadow:9px 9px 0 var(--ink);background:#FFF}
-.stat .num{font-family:'Bangers',cursive;font-size:clamp(34px,3.8vw,52px);color:var(--red);text-shadow:2px 2px 0 var(--ink)}
+.stat:nth-child(even){transform:rotate(1deg);box-shadow:5px 5px 0 var(--cyan-deep)}
+.stat:hover{transform:translate(-3px,-3px) rotate(0);box-shadow:9px 9px 0 var(--purple-deep);background:#1B1B36}
+.stat .num{font-family:'Bangers',cursive;font-size:clamp(34px,3.8vw,52px);color:var(--red);text-shadow:-2px 0 var(--cyan),2px 2px 0 #000}
 .stat .lbl{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin-top:6px;font-weight:500}
+.edu{margin-top:24px;display:grid;gap:14px}
+.edu-card{border:3px solid var(--ink);border-radius:16px;padding:20px 24px;background:var(--bg-2);box-shadow:5px 5px 0 var(--cyan-deep);transition:.25s;transform:rotate(.6deg)}
+.edu-card:first-child{transform:rotate(-.6deg);box-shadow:5px 5px 0 var(--purple-deep)}
+.edu-card:hover{transform:translate(-3px,-3px) rotate(0);box-shadow:9px 9px 0 var(--red)}
+.edu-card h5{font-family:'Bangers',cursive;font-size:20px;letter-spacing:.05em;text-transform:uppercase}
+.edu-card p{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-top:6px;font-weight:500}
+.edu-card .tag{display:inline-block;font-family:'Bangers',cursive;font-size:13px;letter-spacing:.08em;color:var(--bg);background:var(--cyan);border:2px solid var(--ink);border-radius:99px;padding:2px 12px;margin-top:10px}
 
 /* ---------- experience timeline ---------- */
 .xp-list{margin-top:70px}
-.xp{display:grid;grid-template-columns:200px 1fr;gap:30px;align-items:start;padding:34px 30px;border:3px solid var(--ink);border-radius:18px;margin-bottom:18px;background:var(--paper);box-shadow:5px 5px 0 var(--ink);transition:.3s}
+.xp{display:grid;grid-template-columns:200px 1fr;gap:30px;align-items:start;padding:34px 30px;border:3px solid var(--ink);border-radius:18px;margin-bottom:18px;background:var(--bg-2);box-shadow:5px 5px 0 var(--red);transition:.3s}
 .xp:nth-child(odd){transform:rotate(-.4deg)}
-.xp:nth-child(even){transform:rotate(.4deg)}
-.xp:hover{transform:translate(-4px,-4px) rotate(0);box-shadow:10px 10px 0 var(--ink);background:#fff}
+.xp:nth-child(even){transform:rotate(.4deg);box-shadow:5px 5px 0 var(--cyan-deep)}
+.xp:hover{transform:translate(-4px,-4px) rotate(0);box-shadow:10px 10px 0 var(--purple-deep);background:#1B1B36}
 @media(max-width:760px){.xp{grid-template-columns:1fr;gap:10px}}
-.xp .when{font-family:'Bangers',cursive;font-size:20px;letter-spacing:.06em;color:var(--paper);-webkit-text-stroke:1.5px var(--ink);text-shadow:3px 3px 0 var(--red)}
+.xp .when{font-family:'Bangers',cursive;font-size:20px;letter-spacing:.06em;color:var(--bg);-webkit-text-stroke:1.5px var(--ink);text-shadow:3px 3px 0 var(--red)}
 .xp .where{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-top:8px;font-weight:500}
 .xp h4{font-family:'Bangers',cursive;font-size:clamp(22px,2.2vw,28px);text-transform:uppercase;letter-spacing:.04em}
 .xp p{color:var(--ink-soft);font-size:15px;font-weight:500;margin-top:8px}
@@ -184,63 +209,66 @@ section{position:relative;padding:clamp(90px,14vh,160px) clamp(20px,6vw,96px)}
 .xp .chip-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 
 /* ---------- comic panel cards (projects) ---------- */
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:64px;perspective:1400px}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:64px;perspective:1400px}
 @media(max-width:980px){.cards{grid-template-columns:1fr}}
-.card{position:relative;border:3px solid var(--ink);border-radius:20px;padding:40px 32px;background:var(--paper);box-shadow:8px 8px 0 var(--ink);transform-style:preserve-3d;will-change:transform;overflow:hidden;transition:box-shadow .3s}
-.card::before{content:"";position:absolute;inset:0;background:radial-gradient(500px circle at var(--mx,50%) var(--my,50%),rgba(255,196,0,.35),transparent 45%);opacity:0;transition:opacity .4s;pointer-events:none}
+.card{position:relative;border:3px solid var(--ink);border-radius:20px;padding:40px 32px;background:var(--bg-2);box-shadow:8px 8px 0 var(--red);transform-style:preserve-3d;will-change:transform;overflow:hidden;transition:box-shadow .3s}
+.card:nth-child(even){box-shadow:8px 8px 0 var(--cyan-deep)}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(500px circle at var(--mx,50%) var(--my,50%),rgba(181,55,242,.3),transparent 45%);opacity:0;transition:opacity .4s;pointer-events:none}
 .card:hover::before{opacity:1}
-.card:hover{box-shadow:14px 14px 0 var(--ink)}
-.card .badge{position:absolute;top:-3px;right:24px;font-family:'Bangers',cursive;font-size:16px;letter-spacing:.08em;background:var(--blue);color:#fff;border:3px solid var(--ink);border-top:none;padding:8px 14px;border-radius:0 0 12px 12px}
-.card:nth-child(3n+2) .badge{background:var(--red)}
-.card:nth-child(3n) .badge{background:var(--yellow);color:var(--ink)}
+.card:hover{box-shadow:14px 14px 0 var(--purple-deep)}
+.card .badge{position:absolute;top:-3px;right:24px;font-family:'Bangers',cursive;font-size:16px;letter-spacing:.08em;background:var(--red);color:#fff;border:3px solid var(--ink);border-top:none;padding:8px 14px;border-radius:0 0 12px 12px}
+.card:nth-child(2) .badge{background:var(--cyan);color:var(--bg)}
+.card:nth-child(3) .badge{background:var(--purple)}
+.card:nth-child(4) .badge{background:var(--yellow);color:var(--bg)}
 .card h3{font-family:'Bangers',cursive;font-size:clamp(24px,2.2vw,32px);margin:20px 0 6px;text-transform:uppercase;letter-spacing:.04em;transform:translateZ(46px)}
-.card .sub{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:14px;font-weight:500;transform:translateZ(30px)}
+.card .sub{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:14px;font-weight:500;transform:translateZ(30px)}
 .card p{color:var(--ink-soft);font-size:15px;transform:translateZ(28px);font-weight:500}
+.card p b{color:var(--ink)}
 .card .chip-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;transform:translateZ(20px)}
-.chip{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;border:2px solid var(--ink);border-radius:99px;padding:6px 12px;color:var(--ink);background:var(--paper-2);font-weight:500}
-.card .glyph{font-size:38px;display:inline-block;animation:floatGlyph 4s ease-in-out infinite;transform:translateZ(56px);filter:drop-shadow(3px 3px 0 rgba(21,21,28,.35))}
-.card:nth-child(3n+2) .glyph{animation-delay:-1.3s}
-.card:nth-child(3n) .glyph{animation-delay:-2.6s}
+.chip{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;border:2px solid var(--line);border-radius:99px;padding:6px 12px;color:var(--ink);background:rgba(244,242,255,.05);font-weight:500}
+.card .glyph{font-size:38px;display:inline-block;animation:floatGlyph 4s ease-in-out infinite;transform:translateZ(56px);filter:drop-shadow(0 0 10px rgba(255,46,99,.55))}
+.card:nth-child(2) .glyph{animation-delay:-1.3s}
+.card:nth-child(3) .glyph{animation-delay:-2.6s}
 @keyframes floatGlyph{0%,100%{transform:translateZ(56px) translateY(0) rotate(-5deg)}50%{transform:translateZ(56px) translateY(-12px) rotate(6deg)}}
+.card-link{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-family:'Bangers',cursive;font-size:16px;letter-spacing:.08em;color:var(--bg);background:var(--cyan);border:3px solid var(--ink);border-radius:99px;padding:7px 18px;box-shadow:3px 3px 0 var(--red);transition:.25s;transform:translateZ(34px)}
+.card-link:hover{transform:translateZ(34px) translate(-2px,-2px);box-shadow:6px 6px 0 var(--red)}
 
 /* ---------- skills ---------- */
 .skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:64px}
 @media(max-width:900px){.skills-grid{grid-template-columns:1fr}}
-.skill-box{border:3px solid var(--ink);border-radius:18px;padding:30px 28px;background:var(--paper);box-shadow:6px 6px 0 var(--ink);transition:.25s}
+.skill-box{border:3px solid var(--ink);border-radius:18px;padding:30px 28px;background:var(--bg-2);box-shadow:6px 6px 0 var(--red);transition:.25s}
 .skill-box:nth-child(odd){transform:rotate(-.5deg)}
-.skill-box:nth-child(even){transform:rotate(.5deg)}
-.skill-box:hover{transform:translate(-3px,-3px) rotate(0);box-shadow:10px 10px 0 var(--ink);background:#fff}
+.skill-box:nth-child(even){transform:rotate(.5deg);box-shadow:6px 6px 0 var(--cyan-deep)}
+.skill-box:hover{transform:translate(-3px,-3px) rotate(0);box-shadow:10px 10px 0 var(--purple-deep);background:#1B1B36}
 .skill-box h4{font-family:'Bangers',cursive;font-size:clamp(20px,2vw,26px);text-transform:uppercase;letter-spacing:.05em;margin-bottom:16px;display:flex;align-items:center;gap:12px}
-.skill-box h4 .ico{font-size:24px;filter:drop-shadow(2px 2px 0 rgba(21,21,28,.3))}
+.skill-box h4 .ico{font-size:24px;filter:drop-shadow(0 0 8px rgba(0,229,255,.6))}
 .skill-box .chip-row{display:flex;flex-wrap:wrap;gap:8px}
 
 /* ---------- certifications ---------- */
 .certs{display:flex;flex-wrap:wrap;gap:16px;margin-top:48px}
-.cert{font-family:'Bangers',cursive;font-size:17px;letter-spacing:.07em;border:3px solid var(--ink);border-radius:14px;padding:12px 22px;background:var(--paper);box-shadow:4px 4px 0 var(--ink);transition:.25s;display:flex;align-items:center;gap:10px}
+.cert{font-family:'Bangers',cursive;font-size:17px;letter-spacing:.07em;border:3px solid var(--ink);border-radius:14px;padding:12px 22px;background:var(--bg-2);box-shadow:4px 4px 0 var(--red);transition:.25s;display:flex;align-items:center;gap:10px}
 .cert:nth-child(odd){transform:rotate(-1.2deg)}
-.cert:nth-child(even){transform:rotate(1.2deg)}
-.cert:hover{transform:translate(-2px,-3px) rotate(0);box-shadow:7px 8px 0 var(--ink);background:var(--yellow)}
+.cert:nth-child(even){transform:rotate(1.2deg);box-shadow:4px 4px 0 var(--cyan-deep)}
+.cert:hover{transform:translate(-2px,-3px) rotate(0);box-shadow:7px 8px 0 var(--purple-deep);background:var(--yellow);color:var(--bg)}
 .cert .star{color:var(--red)}
+.cert:hover .star{color:var(--bg)}
 
 /* ---------- contact ---------- */
 .contact{text-align:center;min-height:92svh;display:flex;flex-direction:column;justify-content:center;align-items:center}
 .contact .h2{margin:0 auto}
 .mega-cta{margin-top:54px;display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
 .social-row{margin-top:56px;display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
-.social{display:flex;align-items:center;gap:12px;border:3px solid var(--ink);padding:15px 26px;border-radius:16px;font-family:'Bangers',cursive;font-size:17px;letter-spacing:.08em;color:var(--ink);transition:.25s;background:var(--paper);box-shadow:5px 5px 0 var(--ink)}
-.social:hover{transform:translate(-3px,-5px) rotate(-1deg);box-shadow:9px 11px 0 var(--ink)}
-.social.gh:hover{background:#EEE9FA}
-.social.li:hover{background:#E3EEFA}
-.social.wa:hover{background:#E3F8EB}
-.social.em:hover{background:#FDE5E5}
+.social{display:flex;align-items:center;gap:12px;border:3px solid var(--ink);padding:15px 26px;border-radius:16px;font-family:'Bangers',cursive;font-size:17px;letter-spacing:.08em;color:var(--ink);transition:.25s;background:var(--bg-2);box-shadow:5px 5px 0 var(--red)}
+.social:nth-child(even){box-shadow:5px 5px 0 var(--cyan-deep)}
+.social:hover{transform:translate(-3px,-5px) rotate(-1deg);box-shadow:9px 11px 0 var(--purple-deep);background:#1B1B36}
 .social svg{width:20px;height:20px}
 
-footer{position:relative;z-index:2;border-top:3px solid var(--ink);padding:30px clamp(20px,6vw,96px);display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);background:var(--paper-2);font-weight:500}
+footer{position:relative;z-index:2;border-top:3px solid var(--red);padding:30px clamp(20px,6vw,96px);display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);background:var(--bg-2);font-weight:500}
 
 /* ---------- comic click burst ---------- */
 .burst{position:fixed;z-index:9500;pointer-events:none;transform:translate(-50%,-50%);font-family:'Bangers',cursive;display:flex;align-items:center;justify-content:center}
 .burst svg{position:absolute;width:150px;height:150px}
-.burst b{position:relative;font-size:30px;letter-spacing:.06em;color:#fff;transform:rotate(-6deg)}
+.burst b{position:relative;font-size:30px;letter-spacing:.06em;color:#fff;transform:rotate(-6deg);text-shadow:2px 2px 0 #000}
 .websplat{position:fixed;z-index:9400;pointer-events:none;transform:translate(-50%,-50%)}
 
 @media (prefers-reduced-motion:reduce){
@@ -257,7 +285,7 @@ footer{position:relative;z-index:2;border-top:3px solid var(--ink);padding:30px 
 <div id="loader">
   <div class="loader-logo">PRIYANSH!</div>
   <div class="loader-bar"><i id="loadFill"></i></div>
-  <div class="loader-status" id="loadStatus">BOOTING THE AGENTS…</div>
+  <div class="loader-status" id="loadStatus">WHAT'S UP DANGER…</div>
 </div>
 
 <div class="cursor-dot"></div>
@@ -265,11 +293,14 @@ footer{position:relative;z-index:2;border-top:3px solid var(--ink);padding:30px 
 <div class="cursor-label" id="cursorLabel"></div>
 <canvas id="gl"></canvas>
 <canvas id="webTrail"></canvas>
+<div class="glow glow-1"></div>
+<div class="glow glow-2"></div>
 <div class="halftone"></div>
-<div class="halftone-red"></div>
+<div class="halftone-pink"></div>
+<div class="halftone-cyan"></div>
 <div class="progress"><i id="progFill"></i></div>
 
-<div class="hud hud-tl">SYS // <b>PRIYANSH.AI</b><br>NODE: BLR-IN</div>
+<div class="hud hud-tl">SYS // <b>SPIDER-OPS</b><br>NODE: DXB-AE</div>
 <div class="hud hud-br">WEB FIRED <b id="hudWeb">000%</b><br>SCROLL <b id="hudScroll">000%</b></div>
 
 <nav>
@@ -280,6 +311,7 @@ footer{position:relative;z-index:2;border-top:3px solid var(--ink);padding:30px 
     <a class="hoverable" href="#projects">Projects</a>
     <a class="hoverable" href="#skills">Skills</a>
     <a class="hoverable" href="#contact">Contact</a>
+    <a class="hoverable" href="assets/Priyansh-Gupta-Resume.pdf" download>Resume ↓</a>
   </div>
   <div class="nav-right">
     <a class="nav-cta hoverable" href="mailto:priyansh.9071@gmail.com">Hire Me ↗</a>
@@ -293,6 +325,7 @@ footer{position:relative;z-index:2;border-top:3px solid var(--ink);padding:30px 
   <a href="#projects"><span class="no">03</span>Projects</a>
   <a href="#skills"><span class="no">04</span>Skills</a>
   <a href="#contact"><span class="no">05</span>Contact</a>
+  <a href="assets/Priyansh-Gupta-Resume.pdf" download><span class="no">↓</span>Resume</a>
   <a class="menu-cta" href="mailto:priyansh.9071@gmail.com">Hire Me ↗</a>
 </div>
 
@@ -301,102 +334,108 @@ footer{position:relative;z-index:2;border-top:3px solid var(--ink);padding:30px 
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-tag" id="scrambleTag">// AGENTIC AI · MLOPS · CLOUD — BANGALORE, INDIA</div>
+    <div class="hero-tag" id="scrambleTag">// SENIOR AGENTIC AI · GENAI LEAD · MLOPS — DUBAI, UAE</div>
     <div class="h1-3d" id="h13d">
-      <h1>
+      <h1 id="glitchH1">
         <span class="row"><span class="t3d-ink">I BUILD</span></span>
         <span class="row"><span class="t3d-red">AI AGENTS.</span></span>
-        <span class="row"><span class="t3d-blue">I RUN PROD.</span></span>
+        <span class="row"><span class="t3d-cyan">I RUN PROD.</span></span>
       </h1>
     </div>
-    <p class="hero-sub">Hey, I'm <b>Priyansh Gupta</b> — Agentic AI &amp; MLOps Engineer with <b>5+ years</b> of backend and cloud-infrastructure experience. I design <b>secure multi-agent systems, production RAG pipelines, and tool-calling agents</b> — then ship them on Kubernetes with full audit trails, zero-trust networking, and zero-downtime deploys.</p>
+    <p class="hero-sub">Hey, I'm <b>Priyansh Gupta</b> — Senior Agentic AI &amp; GenAI Engineer with <b>5+ years</b> delivering enterprise AI on Azure and AWS. I build <b>multi-agent systems, production RAG pipelines, and MCP integrations</b> — production-ready GenAI platforms trusted by <b>Fortune 500 clients.</b></p>
     <div class="hero-actions">
       <a class="btn btn-primary hoverable magnetic" data-label="LET'S GO!" href="#contact"><span class="dot"></span> Work With Me</a>
-      <a class="btn btn-ghost hoverable magnetic" data-label="DIVE IN!" href="#about">Explore ↓</a>
+      <a class="btn btn-ghost hoverable magnetic" data-label="GRAB IT!" href="assets/Priyansh-Gupta-Resume.pdf" download>Download Resume ↓</a>
     </div>
     <div class="hero-meta">
-      <div>EST. 5+ YRS — CLOUD × AGENTIC AI</div>
+      <div>EST. 5+ YRS — GENAI × CLOUD</div>
       <div class="scroll-hint"><div class="wheel"></div>SCROLL TO FIRE THE WEB</div>
-      <div>BUILD · SECURE · SHIP</div>
+      <div>DUBAI JVC · UAE · +971 50 654 7991 9</div>
     </div>
   </section>
 
   <!-- DOUBLE MARQUEE -->
   <div class="marquee m-fwd">
     <div class="marquee-track">
-      <span>AI Agents</span><span class="hl">★</span><span>RAG Pipelines</span><span class="hl">★</span><span>MCP</span><span class="hl">★</span><span>Kubernetes</span><span class="hl">★</span><span>Terraform</span><span class="hl">★</span><span>Azure AI</span><span class="hl">★</span>
-      <span>AI Agents</span><span class="hl">★</span><span>RAG Pipelines</span><span class="hl">★</span><span>MCP</span><span class="hl">★</span><span>Kubernetes</span><span class="hl">★</span><span>Terraform</span><span class="hl">★</span><span>Azure AI</span><span class="hl">★</span>
+      <span>AI Agents</span><span class="hl">★</span><span>RAG Pipelines</span><span class="hl">★</span><span>MCP</span><span class="hl">★</span><span>LangGraph</span><span class="hl">★</span><span>Azure OpenAI</span><span class="hl">★</span><span>Kubernetes</span><span class="hl">★</span>
+      <span>AI Agents</span><span class="hl">★</span><span>RAG Pipelines</span><span class="hl">★</span><span>MCP</span><span class="hl">★</span><span>LangGraph</span><span class="hl">★</span><span>Azure OpenAI</span><span class="hl">★</span><span>Kubernetes</span><span class="hl">★</span>
     </div>
   </div>
   <div class="marquee m-rev m2">
     <div class="marquee-track">
-      <span>Build</span><span>·</span><span>Secure</span><span>·</span><span>Deploy</span><span>·</span><span>Audit</span><span>·</span><span>Scale</span><span>·</span><span>Build</span><span>·</span><span>Secure</span><span>·</span><span>Deploy</span><span>·</span><span>Audit</span><span>·</span><span>Scale</span><span>·</span>
-      <span>Build</span><span>·</span><span>Secure</span><span>·</span><span>Deploy</span><span>·</span><span>Audit</span><span>·</span><span>Scale</span><span>·</span><span>Build</span><span>·</span><span>Secure</span><span>·</span><span>Deploy</span><span>·</span><span>Audit</span><span>·</span><span>Scale</span><span>·</span>
+      <span>Build</span><span>·</span><span>Secure</span><span>·</span><span>Deploy</span><span>·</span><span>Audit</span><span>·</span><span>Swing</span><span>·</span><span>Build</span><span>·</span><span>Secure</span><span>·</span><span>Deploy</span><span>·</span><span>Audit</span><span>·</span><span>Swing</span><span>·</span>
+      <span>Build</span><span>·</span><span>Secure</span><span>·</span><span>Deploy</span><span>·</span><span>Audit</span><span>·</span><span>Swing</span><span>·</span><span>Build</span><span>·</span><span>Secure</span><span>·</span><span>Deploy</span><span>·</span><span>Audit</span><span>·</span><span>Swing</span><span>·</span>
     </div>
   </div>
 
   <!-- ABOUT -->
   <section id="about">
-    <div class="eyebrow reveal">01 — Who is Priyansh</div>
-    <h2 class="h2 flip3d">DEVOPS ENGINEER TURNED <span class="accent">AGENTIC AI BUILDER</span></h2>
+    <div class="eyebrow reveal">01 — Who's Behind the Mask</div>
+    <h2 class="h2 flip3d">ANYONE CAN WEAR THE MASK. <span class="accent">I SHIP THE AGENTS.</span></h2>
     <div class="about-grid">
       <div class="about-text">
-        <p class="reveal">For 5+ years I've built and run <b>cloud infrastructure and backend systems</b> — Kubernetes clusters, GitOps pipelines, zero-trust service meshes — for Fortune 500 enterprises and global clients. Then LLMs arrived, and I realized the same discipline could make <b>autonomous agents safe enough for production.</b></p>
-        <p class="reveal">Today I design <b>multi-agent orchestration frameworks, enterprise RAG systems, and MCP integrations</b> — with role-based tool access, prompt-injection defences, signed inter-agent messaging, and full audit trails. Certified <b>Azure AI Engineer (AI-102), CKA, CKAD, and AZ-400.</b></p>
+        <p class="reveal">For 5+ years I've built and run <b>cloud infrastructure and backend systems</b> — Kubernetes clusters, GitOps pipelines, zero-trust service meshes — for Fortune 500 enterprises and global clients. Then GenAI arrived, and I took the leap of faith: the same engineering discipline could make <b>autonomous agents safe enough for production.</b></p>
+        <p class="reveal">Today I'm a <b>Senior Agentic AI Engineer &amp; GenAI Lead</b> based in <b>Dubai (JVC)</b>, designing multi-agent platforms, enterprise RAG systems, and MCP integrations — with guardrails, HITL approval flows, and full auditability. Certified <b>Azure AI Engineer (AI-102), CKA, CKAD, and AZ-400.</b></p>
         <p class="quote reveal">"Agents you can't audit are agents you can't trust."</p>
       </div>
-      <div class="stats reveal">
-        <div class="stat"><div class="num" data-count="5">0</div><div class="lbl">Years Experience</div></div>
-        <div class="stat"><div class="num" data-count="8" data-suffix="">0</div><div class="lbl">Cloud &amp; AI Certifications</div></div>
-        <div class="stat"><div class="num" data-count="20">0</div><div class="lbl">Microservices Governed</div></div>
-        <div class="stat"><div class="num" data-count="6">0</div><div class="lbl">Production AI Systems</div></div>
+      <div>
+        <div class="stats reveal">
+          <div class="stat"><div class="num" data-count="5">0</div><div class="lbl">Years Experience</div></div>
+          <div class="stat"><div class="num" data-count="8" data-suffix="">0</div><div class="lbl">Cloud &amp; AI Certifications</div></div>
+          <div class="stat"><div class="num" data-count="20">0</div><div class="lbl">Microservices Governed</div></div>
+          <div class="stat"><div class="num" data-count="100" data-suffix="%">0</div><div class="lbl">Production-Ready GenAI</div></div>
+        </div>
+        <div class="edu reveal">
+          <div class="edu-card">
+            <h5>M.Sc. Artificial Intelligence</h5>
+            <p>Heriot-Watt University · Dubai, UAE</p>
+            <span class="tag">IN PROGRESS</span>
+          </div>
+          <div class="edu-card">
+            <h5>B.Tech. Computer Science</h5>
+            <p>UPES · 2017 – 2021</p>
+            <span class="tag">CLOUD &amp; AI/ML</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- EXPERIENCE -->
   <section id="experience">
-    <div class="eyebrow reveal">02 — Where I've Been</div>
-    <h2 class="h2 flip3d">FROM PIPELINES TO <span class="accent-b">PRODUCTION AI</span></h2>
+    <div class="eyebrow reveal">02 — Across the Multiverse</div>
+    <h2 class="h2 flip3d">FROM PIPELINES TO <span class="accent-b">PRODUCTION GENAI</span></h2>
     <div class="xp-list">
       <div class="xp reveal">
         <div><div class="when">AUG 2024 — NOW</div><div class="where">Applied Information Services · Hyderabad</div></div>
         <div>
           <h4>Senior DevOps &amp; AI Platform Engineer</h4>
-          <p>Deployed <b>multimodal LLMs on Azure AI Foundry</b> with inference scaling and Content Safety filters. Built <b>enterprise RAG pipelines</b> into Azure AI Search and wired <b>MCP connections to Azure Boards</b> so AI assistants reference live sprint data. Led cloud modernisation for <b>FMGlobal (Fortune 500)</b> and standardised CI/CD governance across 20+ microservices.</p>
-          <div class="chip-row"><span class="chip">Azure AI Foundry</span><span class="chip">RAG</span><span class="chip">MCP</span><span class="chip">JFrog</span></div>
+          <p>Deployed <b>multimodal LLMs on Azure AI Foundry</b> with inference auto-scaling and Content Safety guardrails. Architected <b>enterprise RAG pipelines</b> with vector + semantic hybrid indexing in Azure AI Search, delivered <b>MCP integration for Azure Boards</b> for live agentic tool-use, and led <b>GenAI platform modernisation for FMGlobal</b> with zero-downtime migration. Standardised CI/CD governance across 20+ microservices with JFrog supply-chain gates.</p>
+          <div class="chip-row"><span class="chip">Azure AI Foundry</span><span class="chip">RAG</span><span class="chip">MCP</span><span class="chip">Azure AI Search</span><span class="chip">JFrog</span></div>
         </div>
       </div>
       <div class="xp reveal">
-        <div><div class="when">AUG 2022 — NOW</div><div class="where">Freelance (Upwork) · Remote</div></div>
+        <div><div class="when">AUG 2022 — NOW</div><div class="where">Freelance Consulting (Upwork) · Remote, Global</div></div>
         <div>
-          <h4>Senior DevOps / MLOps / Agentic AI Engineer</h4>
-          <p>Delivered <b>production AI integrations</b> embedding Azure OpenAI, Claude, and GPT-4o into SaaS products. Architected <b>end-to-end RAG pipelines</b> with LangChain + Pinecone/ChromaDB, built <b>agentic automation workflows</b> with n8n and Python, and shipped zero-downtime GitOps infrastructure for global clients on Azure and AWS.</p>
-          <div class="chip-row"><span class="chip">LangChain</span><span class="chip">n8n</span><span class="chip">Azure ML</span><span class="chip">SageMaker</span></div>
+          <h4>Senior GenAI / MLOps / Agentic AI Consultant</h4>
+          <p>Architected <b>end-to-end RAG pipelines</b> with LangChain, Pinecone, and ChromaDB — semantic retrieval with top-k reranking for production SaaS clients. Delivered <b>agentic AI solutions</b> embedding Azure OpenAI, Claude, and GPT-4o with tool-use, function-calling, and autonomous decision-making. Deployed <b>MLOps infrastructure</b> on Azure ML and AWS SageMaker with n8n-orchestrated pipelines, model monitoring, and drift detection.</p>
+          <div class="chip-row"><span class="chip">LangChain</span><span class="chip">Pinecone</span><span class="chip">GPT-4o</span><span class="chip">Claude</span><span class="chip">SageMaker</span></div>
         </div>
       </div>
       <div class="xp reveal">
-        <div><div class="when">OCT 2022 — AUG 2024</div><div class="where">Applied Information Services</div></div>
+        <div><div class="when">OCT 2022 — AUG 2024</div><div class="where">Applied Information Services · Hyderabad</div></div>
         <div>
           <h4>DevOps Engineer</h4>
-          <p>Engineered <b>Helm charts for AKS onboarding</b> with rollback-enabled pipelines, enforced <b>Kyverno admission policies</b> for security baselines and image signing, ran <b>FluxCD GitOps</b> across environments, and configured <b>Istio with mTLS</b> for canary and A/B deployments — secrets managed via Azure Key Vault CSI.</p>
-          <div class="chip-row"><span class="chip">AKS</span><span class="chip">Istio</span><span class="chip">FluxCD</span><span class="chip">Kyverno</span></div>
+          <p>Engineered <b>Helm charts for AKS onboarding</b> with rollback-enabled pipelines and <b>Kyverno admission control</b> for security baselines, quotas, and image signing. Configured <b>Istio with mTLS zero-trust</b>, FluxCD GitOps state management, and canary + A/B traffic routing. Enforced least-privilege secrets access via Kubernetes Secrets Store CSI and Azure Key Vault.</p>
+          <div class="chip-row"><span class="chip">AKS</span><span class="chip">Istio</span><span class="chip">FluxCD</span><span class="chip">Kyverno</span><span class="chip">Key Vault</span></div>
         </div>
       </div>
       <div class="xp reveal">
-        <div><div class="when">MAY 2021 — OCT 2022</div><div class="where">Applied Information Services</div></div>
+        <div><div class="when">MAY 2021 — OCT 2022</div><div class="where">Applied Information Services · Hyderabad</div></div>
         <div>
           <h4>Software Engineer</h4>
-          <p>Built <b>reusable Terraform modules</b> for Azure VNets, Key Vaults, Application Gateways, AKS, and Log Analytics; authored reusable <b>Azure DevOps YAML CI/CD templates</b> for build, test, and deploy workflows.</p>
-          <div class="chip-row"><span class="chip">Terraform</span><span class="chip">Azure DevOps</span><span class="chip">IaC</span></div>
-        </div>
-      </div>
-      <div class="xp reveal">
-        <div><div class="when">FEB 2020 — JUL 2020</div><div class="where">StatusNeo · India</div></div>
-        <div>
-          <h4>DevOps Engineer Intern</h4>
-          <p>Built <b>Azure DevOps CI/CD pipelines</b> and executed on-premise to cloud migrations using <b>Docker</b> across multiple application workloads.</p>
-          <div class="chip-row"><span class="chip">CI/CD</span><span class="chip">Docker</span><span class="chip">Cloud Migration</span></div>
+          <p>Built reusable <b>Terraform and Bicep modules</b> for Azure VNets, Key Vaults, AKS, and Application Gateways; authored <b>Azure DevOps YAML CI/CD templates</b> for build-test-deploy workflows across cloud-native services.</p>
+          <div class="chip-row"><span class="chip">Terraform</span><span class="chip">Bicep</span><span class="chip">Azure DevOps</span></div>
         </div>
       </div>
     </div>
@@ -404,56 +443,42 @@ footer{position:relative;z-index:2;border-top:3px solid var(--ink);padding:30px 
 
   <!-- PROJECTS -->
   <section id="projects">
-    <div class="eyebrow reveal">03 — What I've Built</div>
-    <h2 class="h2 flip3d">AGENTS WITH <span class="accent">GUARDRAILS</span>, INFRA THAT <span class="accent-b">SCALES</span></h2>
+    <div class="eyebrow reveal">03 — Spider-Tech</div>
+    <h2 class="h2 flip3d">AGENTS WITH <span class="accent">GUARDRAILS</span>, PLATFORMS THAT <span class="accent-b">SCALE</span></h2>
     <div class="cards">
       <div class="card hoverable reveal">
-        <div class="badge">ISSUE #01</div>
+        <div class="badge">FLAGSHIP</div>
         <div class="glyph">🕸️</div>
-        <h3>NemoClaw</h3>
-        <div class="sub">Secure Multi-Agent Orchestration</div>
-        <p>A lead orchestrator commanding up to 5 worker agents — scoped tool-calling, sandboxed execution, prompt-injection detection, and <b style="color:var(--ink)">signed JSON inter-agent messaging</b> with full audit trails. Hybrid inference: local Ollama for workers, cloud at the orchestrator tier only.</p>
-        <div class="chip-row"><span class="chip">TypeScript</span><span class="chip">Ollama</span><span class="chip">LangChain</span><span class="chip">Docker</span></div>
+        <h3>CrewSpace</h3>
+        <div class="sub">Open-Source Multi-Agent AI Workforce Platform</div>
+        <p>Built from scratch: a platform where a <b>CEO agent autonomously decomposes goals</b> into domain subtasks, delegates across specialist AI agents, proposes new hires when needed, and coordinates via multi-agent communication and approval workflows. Ships with <b>persistent per-agent memory, agent-to-agent and group chat, shared workspaces with file permissions, integrated terminal ops, real-time task boards, founder dashboards, and an interactive 3D office.</b></p>
+        <div class="chip-row"><span class="chip">Hierarchical Orchestration</span><span class="chip">Memory Graph</span><span class="chip">3D Workspace</span><span class="chip">Approvals</span></div>
+        <a class="card-link hoverable" href="https://github.com/priyansh19/CrewSpace" target="_blank" rel="noopener">View on GitHub ↗</a>
       </div>
       <div class="card hoverable reveal">
-        <div class="badge">ISSUE #02</div>
-        <div class="glyph">📎</div>
-        <h3>Paperclip</h3>
-        <div class="sub">Agentic Control Plane</div>
-        <p>A control plane over NemoClaw — dynamic org-chart construction, task delegation with <b style="color:var(--ink)">budget enforcement</b>, and full agent lifecycle management across concurrent DevOps, research, and content workflows under one audited orchestrator.</p>
-        <div class="chip-row"><span class="chip">Multi-Agent</span><span class="chip">Budgets</span><span class="chip">Audit Logs</span></div>
+        <div class="badge">OPEN SOURCE</div>
+        <div class="glyph">🦾</div>
+        <h3>OpenClaw</h3>
+        <div class="sub">Autonomous AI Agent Platform — Contributor, PRs Merged</div>
+        <p>Active contributor with <b>multiple PRs merged into the core codebase</b> — improving agent runtime tooling, workspace file handling, and developer-facing diagnostics. Fixed image-tool workspace path resolution to resolve against the agent workspace instead of <b>process.cwd()</b> (preserving allowlist security, with regression coverage), and improved tool validation errors to surface received parameter keys for easier debugging of long-running agent sessions.</p>
+        <div class="chip-row"><span class="chip">Agent Runtime</span><span class="chip">Tooling DX</span><span class="chip">Security-Aware</span></div>
+        <a class="card-link hoverable" href="https://github.com/priyansh19" target="_blank" rel="noopener">My GitHub ↗</a>
       </div>
       <div class="card hoverable reveal">
-        <div class="badge">ISSUE #03</div>
+        <div class="badge">AUTONOMOUS</div>
         <div class="glyph">⚙️</div>
         <h3>AutoOps AI</h3>
-        <div class="sub">Autonomous DevOps Agent</div>
-        <p>Monitors GitHub repos and CI/CD pipelines, performs multi-step <b style="color:var(--ink)">root-cause analysis</b>, then raises PRs with fixes autonomously. Plain-English Terraform provisioning via LLM function-calling, with Prometheus-triggered auto-revert on regressions.</p>
+        <div class="sub">Autonomous DevOps &amp; Infrastructure Agent</div>
+        <p>Monitors GitHub repositories and CI/CD pipelines, performs multi-step <b>LLM root-cause analysis</b>, raises PRs with fixes, and triggers <b>Terraform-based remediation on Azure</b>. Plain-English infrastructure provisioning via function-calling — parsed to HCL, validated, planned, applied — with auto-revert through Prometheus alerting.</p>
         <div class="chip-row"><span class="chip">LLM Reasoning</span><span class="chip">Terraform</span><span class="chip">Prometheus</span></div>
       </div>
       <div class="card hoverable reveal">
-        <div class="badge">ISSUE #04</div>
+        <div class="badge">SHIPPED</div>
         <div class="glyph">📚</div>
-        <h3>RAG Chatbot</h3>
-        <div class="sub">Shipped to Production</div>
-        <p>Fully <b style="color:var(--ink)">local Ollama inference</b> — zero external API dependencies, full data-privacy compliance. ChromaDB vector pipeline with semantic top-k retrieval, a FastAPI REST layer, and structured logging of every query, retrieval, and response.</p>
-        <div class="chip-row"><span class="chip">Ollama</span><span class="chip">ChromaDB</span><span class="chip">FastAPI</span></div>
-      </div>
-      <div class="card hoverable reveal">
-        <div class="badge">ISSUE #05</div>
-        <div class="glyph">🛡️</div>
-        <h3>Istio Mesh</h3>
-        <div class="sub">Zero-Trust on Kubernetes</div>
-        <p>Ingress gateways, VirtualServices, and DestinationRules for canary and A/B traffic routing across AKS clusters — with <b style="color:var(--ink)">cluster-wide mTLS</b> eliminating plaintext inter-service communication entirely.</p>
-        <div class="chip-row"><span class="chip">Istio</span><span class="chip">AKS</span><span class="chip">mTLS</span></div>
-      </div>
-      <div class="card hoverable reveal">
-        <div class="badge">ISSUE #06</div>
-        <div class="glyph">🧱</div>
-        <h3>AWS Terraform</h3>
-        <div class="sub">Modular Infrastructure-as-Code</div>
-        <p>Reusable Terraform modules for S3, EKS, EC2, KMS, IAM, and VPC across dev, staging, and prod — <b style="color:var(--ink)">remote state with DynamoDB locking</b> and GitOps delivery via ArgoCD for declarative multi-cluster rollouts.</p>
-        <div class="chip-row"><span class="chip">Terraform</span><span class="chip">EKS</span><span class="chip">ArgoCD</span></div>
+        <h3>RAG Production Chatbot</h3>
+        <div class="sub">Local Ollama + Vector DB Pipeline</div>
+        <p>Production RAG chatbot on fully <b>local Ollama inference — zero external API dependency</b> for data-privacy compliance. ChromaDB vector pipeline for chunking, indexing, semantic search, and top-k retrieval, with a FastAPI REST layer and <b>structured audit logging</b> of every query, retrieval, and response.</p>
+        <div class="chip-row"><span class="chip">Ollama</span><span class="chip">ChromaDB</span><span class="chip">FastAPI</span><span class="chip">Audit Logs</span></div>
       </div>
     </div>
   </section>
@@ -464,67 +489,75 @@ footer{position:relative;z-index:2;border-top:3px solid var(--ink);padding:30px 
     <h2 class="h2 flip3d">POWERS &amp; <span class="accent">GADGETS</span></h2>
     <div class="skills-grid">
       <div class="skill-box reveal">
-        <h4><span class="ico">🤖</span>Agentic AI &amp; LLM Stack</h4>
-        <div class="chip-row"><span class="chip">LangChain</span><span class="chip">LlamaIndex</span><span class="chip">Function Calling</span><span class="chip">RAG</span><span class="chip">Ollama</span><span class="chip">Pinecone</span><span class="chip">ChromaDB</span><span class="chip">Qdrant</span><span class="chip">MCP</span></div>
+        <h4><span class="ico">🤖</span>Agentic AI &amp; LLMs</h4>
+        <div class="chip-row"><span class="chip">LangChain</span><span class="chip">LangGraph</span><span class="chip">AutoGen</span><span class="chip">LlamaIndex</span><span class="chip">MCP</span><span class="chip">RAG</span><span class="chip">Tool-Use</span><span class="chip">HITL</span><span class="chip">Guardrails</span><span class="chip">Agent Memory</span><span class="chip">Multi-Agent Orchestration</span></div>
       </div>
       <div class="skill-box reveal">
-        <h4><span class="ico">☁️</span>Azure AI Services</h4>
-        <div class="chip-row"><span class="chip">Azure OpenAI</span><span class="chip">AI Foundry</span><span class="chip">Prompt Flow</span><span class="chip">AI Search</span><span class="chip">Azure ML</span><span class="chip">Document Intelligence</span><span class="chip">Content Safety</span></div>
+        <h4><span class="ico">☁️</span>Azure AI Platform</h4>
+        <div class="chip-row"><span class="chip">Azure AI Foundry</span><span class="chip">Azure OpenAI (GPT-4o)</span><span class="chip">Azure AI Search</span><span class="chip">Azure ML</span><span class="chip">Prompt Flow</span><span class="chip">Content Safety</span><span class="chip">Microsoft Fabric</span><span class="chip">Copilot Studio</span></div>
       </div>
       <div class="skill-box reveal">
-        <h4><span class="ico">⚡</span>Backend &amp; APIs</h4>
-        <div class="chip-row"><span class="chip">Node.js</span><span class="chip">TypeScript</span><span class="chip">Python / FastAPI</span><span class="chip">Java / Spring Boot</span><span class="chip">REST</span><span class="chip">Microservices</span></div>
-      </div>
-      <div class="skill-box reveal">
-        <h4><span class="ico">🏗️</span>Cloud &amp; IaC</h4>
-        <div class="chip-row"><span class="chip">Azure</span><span class="chip">AWS</span><span class="chip">GCP</span><span class="chip">Terraform</span><span class="chip">Bicep</span><span class="chip">Ansible</span><span class="chip">ARM Templates</span></div>
+        <h4><span class="ico">🏗️</span>Cloud, IaC &amp; DevOps</h4>
+        <div class="chip-row"><span class="chip">Azure</span><span class="chip">AWS</span><span class="chip">GCP</span><span class="chip">Terraform</span><span class="chip">Bicep</span><span class="chip">ARM</span><span class="chip">Azure DevOps</span><span class="chip">GitHub Actions</span><span class="chip">ArgoCD</span><span class="chip">FluxCD</span></div>
       </div>
       <div class="skill-box reveal">
         <h4><span class="ico">🐳</span>Containers &amp; Orchestration</h4>
-        <div class="chip-row"><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">Helm</span><span class="chip">Istio</span><span class="chip">Kyverno</span><span class="chip">ArgoCD</span><span class="chip">FluxCD</span></div>
+        <div class="chip-row"><span class="chip">Kubernetes (AKS, EKS)</span><span class="chip">Docker</span><span class="chip">Helm</span><span class="chip">Istio</span><span class="chip">Kyverno</span><span class="chip">OPA</span></div>
+      </div>
+      <div class="skill-box reveal">
+        <h4><span class="ico">🔎</span>Vector &amp; Search</h4>
+        <div class="chip-row"><span class="chip">Azure AI Search</span><span class="chip">Pinecone</span><span class="chip">ChromaDB</span><span class="chip">Qdrant</span><span class="chip">HuggingFace Embeddings</span><span class="chip">Top-k Reranking</span></div>
       </div>
       <div class="skill-box reveal">
         <h4><span class="ico">🛡️</span>Security &amp; Observability</h4>
-        <div class="chip-row"><span class="chip">Prompt Injection Defence</span><span class="chip">Audit Logging</span><span class="chip">mTLS Zero-Trust</span><span class="chip">OPA</span><span class="chip">Key Vault</span><span class="chip">Prometheus</span><span class="chip">Grafana</span></div>
+        <div class="chip-row"><span class="chip">Prompt Injection Defense</span><span class="chip">RBAC</span><span class="chip">mTLS Zero-Trust</span><span class="chip">Azure Key Vault</span><span class="chip">Prometheus</span><span class="chip">Grafana</span><span class="chip">Azure Monitor</span></div>
+      </div>
+      <div class="skill-box reveal">
+        <h4><span class="ico">⚡</span>Backend &amp; APIs</h4>
+        <div class="chip-row"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">Node.js</span><span class="chip">TypeScript</span><span class="chip">REST APIs</span><span class="chip">Microservices</span><span class="chip">Event-Driven Architecture</span></div>
+      </div>
+      <div class="skill-box reveal">
+        <h4><span class="ico">🏅</span>Quality Seals</h4>
+        <div class="chip-row"><span class="chip">AI-102</span><span class="chip">AZ-400</span><span class="chip">CKA</span><span class="chip">CKAD</span><span class="chip">AZ-700</span><span class="chip">AZ-104</span><span class="chip">AI-900</span><span class="chip">AZ-900</span></div>
       </div>
     </div>
     <div class="certs reveal">
       <div class="cert hoverable"><span class="star">★</span>AI-102 Azure AI Engineer</div>
+      <div class="cert hoverable"><span class="star">★</span>AZ-400 DevOps Expert</div>
       <div class="cert hoverable"><span class="star">★</span>CKA</div>
       <div class="cert hoverable"><span class="star">★</span>CKAD</div>
-      <div class="cert hoverable"><span class="star">★</span>AZ-400 DevOps Expert</div>
       <div class="cert hoverable"><span class="star">★</span>AZ-700 Networking</div>
       <div class="cert hoverable"><span class="star">★</span>AZ-104</div>
-      <div class="cert hoverable"><span class="star">★</span>AZ-900</div>
       <div class="cert hoverable"><span class="star">★</span>AI-900</div>
+      <div class="cert hoverable"><span class="star">★</span>AZ-900</div>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact" class="contact">
-    <div class="eyebrow reveal" style="justify-content:center">05 — Let's Build</div>
+    <div class="eyebrow reveal" style="justify-content:center">05 — Let's Swing</div>
     <h2 class="h2 flip3d">READY TO GO <span class="accent">AGENT-FIRST?</span></h2>
-    <p class="hero-sub reveal" style="opacity:1;margin:26px auto 0;text-align:center">Email me, message me, or just say hi. <b>Your next production AI system starts right here.</b></p>
+    <p class="hero-sub reveal" style="opacity:1;margin:26px auto 0;text-align:center">Email me, call me, or just say hi from anywhere in the multiverse. <b>Your next production GenAI platform starts right here.</b></p>
     <div class="mega-cta reveal">
       <a class="btn btn-primary hoverable magnetic" data-label="SEND IT!" href="mailto:priyansh.9071@gmail.com"><span class="dot"></span> priyansh.9071@gmail.com</a>
+      <a class="btn btn-ghost hoverable magnetic" data-label="RING RING!" href="tel:+9715065479919">📞 +971 50 654 7991 9</a>
     </div>
     <div class="social-row reveal">
-      <a class="social gh hoverable" href="https://github.com/priyansh19" target="_blank" rel="noopener">
+      <a class="social hoverable" href="https://github.com/priyansh19" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
         GitHub
       </a>
-      <!-- REPLACE href with your LinkedIn profile URL -->
-      <a class="social li hoverable" href="#" target="_blank" rel="noopener">
+      <a class="social hoverable" href="https://www.linkedin.com/in/priyansh19" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.4 2H3.6C2.7 2 2 2.7 2 3.6v16.8c0 .9.7 1.6 1.6 1.6h16.8c.9 0 1.6-.7 1.6-1.6V3.6c0-.9-.7-1.6-1.6-1.6zM8.1 18.7H5.2V9.7h2.9v9zM6.6 8.4a1.7 1.7 0 1 1 0-3.4 1.7 1.7 0 0 1 0 3.4zm12.1 10.3h-2.9v-4.4c0-1 0-2.4-1.5-2.4s-1.7 1.1-1.7 2.3v4.5H9.7V9.7h2.8V11h.1c.4-.7 1.3-1.5 2.8-1.5 3 0 3.5 2 3.5 4.5v4.7z"/></svg>
         LinkedIn
       </a>
-      <a class="social wa hoverable" href="https://wa.me/918130300323" target="_blank" rel="noopener">
+      <a class="social hoverable" href="https://wa.me/9715065479919" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.5 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-2.9-1.3-4.8-4.2-5-4.4-.1-.2-1.2-1.6-1.2-3s.8-2.1 1-2.4c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .7.5.2.6.8 2 .9 2.2.1.2.1.4 0 .6-.1.2-.2.4-.4.6l-.5.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.2.5.1.7-.1l1-1.1c.2-.3.4-.2.7-.1.3.1 1.8.8 2.1 1 .3.2.5.2.6.4.1.1.1.7-.1 1.4z"/></svg>
         WhatsApp
       </a>
-      <a class="social em hoverable" href="mailto:priyansh.9071@gmail.com">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="4.5" width="19" height="15" rx="3"/><path d="M3 6l9 7 9-7"/></svg>
-        Email
+      <a class="social hoverable" href="assets/Priyansh-Gupta-Resume.pdf" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5"/><path d="M4 17v2.5A1.5 1.5 0 0 0 5.5 21h13a1.5 1.5 0 0 0 1.5-1.5V17"/></svg>
+        Resume PDF
       </a>
     </div>
   </section>
@@ -532,8 +565,8 @@ footer{position:relative;z-index:2;border-top:3px solid var(--ink);padding:30px 
 </main>
 
 <footer>
-  <div>© 2026 PRIYANSH GUPTA — AGENTIC AI &amp; MLOPS ENGINEER</div>
-  <div>BANGALORE, INDIA · BUILT WITH AI ⚡</div>
+  <div>© 2026 PRIYANSH GUPTA — SENIOR AGENTIC AI ENGINEER</div>
+  <div>DUBAI JVC, UAE · BUILT WITH AI ⚡</div>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -544,9 +577,8 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
 gsap.registerPlugin(ScrollTrigger);
 
 /* ============================================================
-   3D SCENE — CITY + HERO ON ROOFTOP + SCROLL-FIRED WEB
-   Clean scene: skyline, hero silhouette, one epic web line
-   that draws farther across the sky with every scroll.
+   3D SCENE — NEON NIGHT CITY + SPIDER ON ROOFTOP + SCROLL WEB
+   Spider-Verse mood: dark skyline, neon windows, glowing moon
 ============================================================ */
 const canvas=document.getElementById('gl');
 const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});
@@ -555,21 +587,21 @@ renderer.setSize(innerWidth,innerHeight);
 renderer.setClearColor(0x000000,0);
 
 const scene=new THREE.Scene();
-scene.fog=new THREE.Fog(0xFBFAF5,26,60);
+scene.fog=new THREE.Fog(0x0B0B14,26,60);
 const camera=new THREE.PerspectiveCamera(55,innerWidth/innerHeight,.1,200);
 camera.position.set(-2,3.5,14);
 
-const INK=0x15151C, RED=0xE0202F, BLUE=0x2342D6, YELLOW=0xE8A800, PAPER=0xF2EFE6;
+const INK=0x05050C, RED=0xFF2E63, CYAN=0x00E5FF, PURPLE=0xB537F2, YELLOW=0xFFE600;
 
-/* ---------- CITY SKYLINE (windows texture + ink edges) ---------- */
+/* ---------- CITY SKYLINE (dark faces, neon windows) ---------- */
 function windowTexture(w,h){
   const c=document.createElement('canvas');c.width=64;c.height=128;
   const x=c.getContext('2d');
-  x.fillStyle='#EFEBDE';x.fillRect(0,0,64,128);
-  x.fillStyle='rgba(21,21,28,.8)';
+  x.fillStyle='#14142A';x.fillRect(0,0,64,128);
+  const neon=['rgba(255,230,0,.95)','rgba(0,229,255,.9)','rgba(255,46,99,.9)','rgba(181,55,242,.85)'];
   for(let r=8;r<124;r+=14)for(let col=8;col<60;col+=14){
-    if(Math.random()<.72)x.fillRect(col,r,7,8);
-    else{x.fillStyle='rgba(255,196,0,.9)';x.fillRect(col,r,7,8);x.fillStyle='rgba(21,21,28,.8)';}
+    if(Math.random()<.7){x.fillStyle='rgba(0,0,0,.55)';x.fillRect(col,r,7,8);}
+    else{x.fillStyle=neon[Math.floor(Math.random()*neon.length)];x.fillRect(col,r,7,8);}
   }
   const t=new THREE.CanvasTexture(c);
   t.repeat.set(Math.max(1,Math.round(w/1.4)),Math.max(1,Math.round(h/2.4)));
@@ -591,14 +623,14 @@ buildingDefs.forEach((d,i)=>{
   const m=new THREE.Mesh(g,new THREE.MeshBasicMaterial({map:windowTexture(bw,bh)}));
   m.position.set(bx,bh/2-4.5,bz);
   city.add(m);
-  const edges=new THREE.LineSegments(new THREE.EdgesGeometry(g),new THREE.LineBasicMaterial({color:INK,transparent:true,opacity:.9}));
+  const edges=new THREE.LineSegments(new THREE.EdgesGeometry(g),new THREE.LineBasicMaterial({color:PURPLE,transparent:true,opacity:.55}));
   edges.position.copy(m.position);
   city.add(edges);
   // rooftop ledge
   const ledge=new THREE.Mesh(new THREE.BoxGeometry(bw+.3,.22,bw+.3),new THREE.MeshBasicMaterial({color:INK}));
   ledge.position.set(bx,bh-4.5+.11,bz);
   city.add(ledge);
-  if(i===HERO_BIDX)heroBuilding=m; // foreground right tower = hero's perch
+  if(i===HERO_BIDX)heroBuilding=m; // foreground right tower = spider's perch
 });
 scene.add(city);
 
@@ -606,30 +638,25 @@ scene.add(city);
 const farRow=new THREE.Group();
 for(let i=0;i<16;i++){
   const w=2+Math.random()*2.5,h=4+Math.random()*8;
-  const m=new THREE.Mesh(new THREE.PlaneGeometry(w,h),new THREE.MeshBasicMaterial({color:0xD9D4C4,transparent:true,opacity:.55}));
+  const m=new THREE.Mesh(new THREE.PlaneGeometry(w,h),new THREE.MeshBasicMaterial({color:0x1B1B33,transparent:true,opacity:.85}));
   m.position.set(-22+i*3,h/2-4.5,-16);
   farRow.add(m);
 }
 scene.add(farRow);
 
-/* a couple of comic clouds */
-const clouds=new THREE.Group();
-for(let i=0;i<4;i++){
-  const cg=new THREE.Group();
-  for(let b=0;b<4;b++){
-    const s=new THREE.Mesh(new THREE.SphereGeometry(.7+Math.random()*.5,10,10),new THREE.MeshBasicMaterial({color:0xFFFFFF}));
-    s.position.set(b*.9-1.3,Math.random()*.3,0);
-    cg.add(s);
-    const o=new THREE.LineSegments(new THREE.EdgesGeometry(s.geometry),new THREE.LineBasicMaterial({color:INK,transparent:true,opacity:.12}));
-    o.position.copy(s.position);cg.add(o);
-  }
-  cg.position.set(-14+i*9,6.5+Math.random()*3,-10-Math.random()*4);
-  cg.userData={sp:.08+Math.random()*.12};
-  clouds.add(cg);
+/* neon dust — drifting glowing particles instead of clouds */
+const dust=new THREE.Group();
+const dustColors=[RED,CYAN,PURPLE,YELLOW];
+for(let i=0;i<26;i++){
+  const s=new THREE.Mesh(new THREE.SphereGeometry(.05+Math.random()*.07,6,6),
+    new THREE.MeshBasicMaterial({color:dustColors[i%4],transparent:true,opacity:.65}));
+  s.position.set(-20+Math.random()*42, -1+Math.random()*13, -12+Math.random()*9);
+  s.userData={sp:.12+Math.random()*.3,ph:Math.random()*Math.PI*2};
+  dust.add(s);
 }
-scene.add(clouds);
+scene.add(dust);
 
-/* ---------- HERO SILHOUETTE (original ink figure, crouched, arm out) ---------- */
+/* ---------- SPIDER SILHOUETTE (crouched, arm out — Miles on watch) ---------- */
 const hero=new THREE.Group();
 const inkMat=new THREE.MeshBasicMaterial({color:INK});
 function part(geom,x,y,z,rx=0,ry=0,rz=0,sx=1,sy=1,sz=1){
@@ -650,8 +677,17 @@ part(new THREE.CylinderGeometry(.09,.1,.8,8), .58,1.45,.05, 0,0,-1.35);         
 part(new THREE.SphereGeometry(.12,10,10), .98,1.62,.05);                          // firing hand
 part(new THREE.CylinderGeometry(.08,.09,.6,8), -.28,1.15,-.22, 0,0,.9);           // support arm down
 part(new THREE.SphereGeometry(.1,10,10), -.52,.88,-.22);                          // support hand on ledge
+/* Miles suit accents: red spider mark + glowing eyes */
+const markMat=new THREE.MeshBasicMaterial({color:RED});
+const chest=new THREE.Mesh(new THREE.SphereGeometry(.07,8,8),markMat);
+chest.position.set(.13,1.18,.21);hero.add(chest);
+const eyeMat=new THREE.MeshBasicMaterial({color:0xF4F2FF});
+[[.3,1.7,.22],[.05,1.72,.3]].forEach(p=>{
+  const e=new THREE.Mesh(new THREE.SphereGeometry(.055,8,8),eyeMat);
+  e.position.set(...p);e.scale.set(1,.55,.6);hero.add(e);
+});
 hero.scale.setScalar(2.2);
-/* place hero on rooftop corner of his tower, facing LEFT across the city */
+/* place spider on rooftop corner of his tower, facing LEFT across the city */
 const perch=new THREE.Vector3(heroBuilding.position.x-.4, heroBuilding.position.y+(HERO_BH/2)+.25, heroBuilding.position.z+1.2);
 hero.position.copy(perch);
 const HERO_BASE_ROT=2.75; // turned so the firing arm points left across the skyline
@@ -661,15 +697,15 @@ scene.add(hero);
 const handLocal=new THREE.Vector3(.98,1.62,.05);
 function handWorld(){return hero.localToWorld(handLocal.clone());}
 
-/* ---------- GIANT COMIC MOON behind the hero (silhouette pops) ---------- */
+/* ---------- GIANT NEON MOON behind the spider ---------- */
 const moon=new THREE.Group();
-const moonDisc=new THREE.Mesh(new THREE.CircleGeometry(4.6,48),new THREE.MeshBasicMaterial({color:0xFFE9A8}));
-const moonRing=new THREE.Mesh(new THREE.RingGeometry(4.6,4.78,48),new THREE.MeshBasicMaterial({color:INK}));
-const moonRing2=new THREE.Mesh(new THREE.RingGeometry(5.1,5.16,48),new THREE.MeshBasicMaterial({color:INK,transparent:true,opacity:.35}));
+const moonDisc=new THREE.Mesh(new THREE.CircleGeometry(4.6,48),new THREE.MeshBasicMaterial({color:0x2A1140}));
+const moonRing=new THREE.Mesh(new THREE.RingGeometry(4.6,4.78,48),new THREE.MeshBasicMaterial({color:RED}));
+const moonRing2=new THREE.Mesh(new THREE.RingGeometry(5.1,5.16,48),new THREE.MeshBasicMaterial({color:CYAN,transparent:true,opacity:.5}));
 moon.add(moonDisc,moonRing,moonRing2);
-/* halftone craters */
+/* halftone spots — spider-verse print dots */
 for(let i=0;i<7;i++){
-  const cr=new THREE.Mesh(new THREE.CircleGeometry(.22+Math.random()*.4,20),new THREE.MeshBasicMaterial({color:0xF3D67C}));
+  const cr=new THREE.Mesh(new THREE.CircleGeometry(.22+Math.random()*.4,20),new THREE.MeshBasicMaterial({color:0x451B66}));
   const a=Math.random()*Math.PI*2, r=Math.random()*3.4;
   cr.position.set(Math.cos(a)*r,Math.sin(a)*r,.01);
   moon.add(cr);
@@ -697,18 +733,18 @@ function buildWebCurve(){
 }
 let webCurve=buildWebCurve();
 const webGeo=new THREE.TubeGeometry(webCurve,WEB_SEGS,.045,RADIAL,false);
-const web=new THREE.Mesh(webGeo,new THREE.MeshBasicMaterial({color:INK}));
+const web=new THREE.Mesh(webGeo,new THREE.MeshBasicMaterial({color:0xF4F2FF}));
 web.geometry.setDrawRange(0,0);
 scene.add(web);
-/* thin twin strand slightly offset (double thread look) */
-const web2=new THREE.Mesh(new THREE.TubeGeometry(webCurve,WEB_SEGS,.016,RADIAL,false),new THREE.MeshBasicMaterial({color:RED}));
+/* thin twin strand slightly offset (electric venom thread) */
+const web2=new THREE.Mesh(new THREE.TubeGeometry(webCurve,WEB_SEGS,.016,RADIAL,false),new THREE.MeshBasicMaterial({color:CYAN}));
 web2.position.y=.09;
 web2.geometry.setDrawRange(0,0);
 scene.add(web2);
 
 /* glowing tip + spark at the leading end of the web */
 const tip=new THREE.Mesh(new THREE.SphereGeometry(.14,10,10),new THREE.MeshBasicMaterial({color:RED}));
-const tipRing=new THREE.Mesh(new THREE.TorusGeometry(.3,.02,6,24),new THREE.MeshBasicMaterial({color:INK,transparent:true,opacity:.7}));
+const tipRing=new THREE.Mesh(new THREE.TorusGeometry(.3,.02,6,24),new THREE.MeshBasicMaterial({color:CYAN,transparent:true,opacity:.8}));
 scene.add(tip,tipRing);
 
 /* radial web "checkpoints" that pop in as the web passes them */
@@ -719,12 +755,12 @@ const checkpoints=[];
   for(let s=0;s<SP;s++){
     const a=s/SP*Math.PI*2;
     const g=new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(0,0,0),new THREE.Vector3(Math.cos(a)*.9,Math.sin(a)*.9,0)]);
-    grp.add(new THREE.Line(g,new THREE.LineBasicMaterial({color:INK,transparent:true,opacity:.8})));
+    grp.add(new THREE.Line(g,new THREE.LineBasicMaterial({color:0xF4F2FF,transparent:true,opacity:.7})));
   }
   for(let r=.25;r<=.85;r+=.2){
     const ringPts=[];
     for(let s=0;s<=SP;s++){const a=s/SP*Math.PI*2;ringPts.push(new THREE.Vector3(Math.cos(a)*r,Math.sin(a)*r,0));}
-    grp.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(ringPts),new THREE.LineBasicMaterial({color:INK,transparent:true,opacity:.6})));
+    grp.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(ringPts),new THREE.LineBasicMaterial({color:CYAN,transparent:true,opacity:.5})));
   }
   const p=webCurve.getPointAt(at);
   grp.position.copy(p);
@@ -754,16 +790,16 @@ const camBase={x:0,y:5,z:14};
 const mouse={x:0,y:0};
 addEventListener('pointermove',e=>{mouse.x=e.clientX/innerWidth-.5;mouse.y=e.clientY/innerHeight-.5;});
 
-/* ---------- CLICK = hero fires a quick web at your cursor ---------- */
+/* ---------- CLICK = spider fires a venom-charged web at your cursor ---------- */
 const shots=[];
-const WORDS=['THWACK!','BAM!','ZAP!','SHIPPED!','DEPLOYED!'];
+const WORDS=['THWIP!','BZZT!','WHAM!','VENOM STRIKE!','SHIPPED!'];
 function comicBurst(x,y){
   const el=document.createElement('div');
   el.className='burst';
   el.style.left=x+'px';el.style.top=y+'px';
   const word=WORDS[Math.floor(Math.random()*WORDS.length)];
-  const col=Math.random()<.5?'#E0202F':'#2342D6';
-  el.innerHTML=`<svg viewBox="0 0 100 100"><polygon points="50,2 58,30 88,12 70,38 98,46 70,56 86,84 56,68 50,98 42,68 14,86 30,56 2,48 30,40 12,12 42,30" fill="${col}" stroke="#15151C" stroke-width="3"/></svg><b>${word}</b>`;
+  const col=Math.random()<.5?'#FF2E63':'#B537F2';
+  el.innerHTML=`<svg viewBox="0 0 100 100"><polygon points="50,2 58,30 88,12 70,38 98,46 70,56 86,84 56,68 50,98 42,68 14,86 30,56 2,48 30,40 12,12 42,30" fill="${col}" stroke="#00E5FF" stroke-width="2.5"/></svg><b>${word}</b>`;
   document.body.appendChild(el);
   gsap.fromTo(el,{scale:0,rotate:-20},{scale:1,rotate:6,duration:.35,ease:'back.out(3)'});
   gsap.to(el,{scale:0,opacity:0,duration:.3,delay:.55,ease:'back.in(2)',onComplete:()=>el.remove()});
@@ -779,7 +815,7 @@ function webSplat(x,y){
     for(let i=0;i<=10;i++){const a=i/10*Math.PI*2;d+=(i===0?'M':'L')+(60+Math.cos(a)*r)+','+(60+Math.sin(a)*r);}
     rings+=`<path d="${d}Z" fill="none"/>`;
   }
-  el.innerHTML=`<svg width="120" height="120" viewBox="0 0 120 120" stroke="#15151C" stroke-width="1.6" opacity=".75">${spokes}${rings}</svg>`;
+  el.innerHTML=`<svg width="120" height="120" viewBox="0 0 120 120" stroke="#F4F2FF" stroke-width="1.6" opacity=".7">${spokes}${rings}</svg>`;
   document.body.appendChild(el);
   gsap.fromTo(el,{scale:.2,opacity:1,rotate:Math.random()*40-20},{scale:1,duration:.3,ease:'back.out(2)'});
   gsap.to(el,{opacity:0,scale:1.15,duration:.6,delay:.5,onComplete:()=>el.remove()});
@@ -799,7 +835,7 @@ addEventListener('pointerdown',e=>{
   scene.add(m);
   const shot={mesh:m,seg:SEG,t:0};
   shots.push(shot);
-  // quick hero arm recoil
+  // quick spider arm recoil
   gsap.fromTo(hero.rotation,{z:0},{z:-.06,duration:.08,yoyo:true,repeat:1});
   comicBurst(e.clientX,e.clientY);
   webSplat(e.clientX,e.clientY);
@@ -810,7 +846,7 @@ const clock=new THREE.Clock();
 function tick(){
   const dt=clock.getDelta(), t=clock.getElapsedTime();
 
-  /* hero idle: breathing + slight head/arm motion */
+  /* spider idle: breathing + slight head/arm motion */
   hero.position.y=perch.y+Math.sin(t*1.6)*.04;
   hero.rotation.y=HERO_BASE_ROT+Math.sin(t*.5)*.05+mouse.x*.15;
   /* moon gently pulses + always faces camera */
@@ -850,19 +886,23 @@ function tick(){
     cp.lookAt(camera.position);
   });
 
-  /* camera: starts framing the hero on the right, then follows the web tip left across the city */
+  /* camera: starts framing the spider on the right, then follows the web tip left across the city */
   const followX=THREE.MathUtils.lerp(camBase.x, tp.x*.55, webProgress);
   const followY=THREE.MathUtils.lerp(camBase.y, 2.5+tp.y*.35, webProgress);
   const followZ=THREE.MathUtils.lerp(camBase.z, 15.5, webProgress);
   camera.position.x+=((followX+mouse.x*1.6)-camera.position.x)*.05;
   camera.position.y+=((followY-mouse.y*1.0)-camera.position.y)*.05;
   camera.position.z+=(followZ-camera.position.z)*.05;
-  const lookStart=new THREE.Vector3(perch.x-4.6,perch.y-2.2,perch.z); // hero sits right-of-center
+  const lookStart=new THREE.Vector3(perch.x-4.6,perch.y-2.2,perch.z); // spider sits right-of-center
   const look=new THREE.Vector3().lerpVectors(lookStart,tp,Math.min(1,webProgress*1.25+.05));
   camera.lookAt(look);
 
-  /* clouds drift */
-  clouds.children.forEach(c=>{c.position.x+=c.userData.sp*dt; if(c.position.x>22)c.position.x=-22;});
+  /* neon dust drifts + flickers */
+  dust.children.forEach(p=>{
+    p.position.x+=p.userData.sp*dt;
+    p.material.opacity=.35+Math.abs(Math.sin(t*2+p.userData.ph))*.45;
+    if(p.position.x>22)p.position.x=-22;
+  });
 
   /* fired shots animate out then fade */
   for(let i=shots.length-1;i>=0;i--){
@@ -883,7 +923,7 @@ function tick(){
 addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);});
 
 /* ============================================================
-   CURSOR WEB TRAIL (2D)
+   CURSOR WEB TRAIL (2D, electric)
 ============================================================ */
 const trailC=document.getElementById('webTrail'), tx=trailC.getContext('2d');
 function sizeTrail(){trailC.width=innerWidth;trailC.height=innerHeight;}
@@ -895,11 +935,11 @@ addEventListener('pointermove',e=>{trail.unshift({x:e.clientX,y:e.clientY});if(t
   if(trail.length>2&&!reduceMotion){
     for(let i=1;i<trail.length;i++){
       const f=1-i/trail.length;
-      tx.strokeStyle=`rgba(224,32,47,${f*.5})`;
+      tx.strokeStyle=`rgba(255,46,99,${f*.55})`;
       tx.lineWidth=f*3;
       tx.beginPath();tx.moveTo(trail[i-1].x,trail[i-1].y);tx.lineTo(trail[i].x,trail[i].y);tx.stroke();
       if(i%5===0){
-        tx.strokeStyle=`rgba(21,21,28,${f*.3})`;tx.lineWidth=1;
+        tx.strokeStyle=`rgba(0,229,255,${f*.45})`;tx.lineWidth=1;
         const dx=trail[i].x-trail[i-1].x,dy=trail[i].y-trail[i-1].y,L=Math.hypot(dx,dy)||1;
         const nx=-dy/L*7*f,ny=dx/L*7*f;
         tx.beginPath();tx.moveTo(trail[i].x-nx,trail[i].y-ny);tx.lineTo(trail[i].x+nx,trail[i].y+ny);tx.stroke();
@@ -912,7 +952,7 @@ addEventListener('pointermove',e=>{trail.unshift({x:e.clientX,y:e.clientY});if(t
 /* ============================================================
    LOADER → ENTRANCE
 ============================================================ */
-const statuses=['BOOTING THE AGENTS…','MOUNTING THE CLUSTERS…','LOADING WEB FLUID…','INDEXING THE VECTORS…','READY TO SHIP!'];
+const statuses=['WHAT\'S UP DANGER…','TAKING THE LEAP OF FAITH…','CHARGING VENOM STRIKE…','BOOTING THE AGENTS…','READY TO SWING!'];
 let progress=0,si=0;
 const loadFill=document.getElementById('loadFill'),loadStatus=document.getElementById('loadStatus');
 const loadInt=setInterval(()=>{
@@ -937,7 +977,7 @@ function launch(){
 }
 
 /* ============================================================
-   3D HERO TEXT — mouse tilt, depth rows, idle bob
+   3D HERO TEXT — mouse tilt, depth rows, idle bob + glitch
 ============================================================ */
 const h13d=document.getElementById('h13d');
 document.querySelectorAll('.hero h1 .row').forEach((r,i)=>r.style.transform=`translateZ(${i*38}px)`);
@@ -947,6 +987,12 @@ addEventListener('pointermove',e=>{
   gsap.to(h13d,{rotateY:x*14,rotateX:-y*10,duration:.8,ease:'power2.out',transformPerspective:1100});
 });
 gsap.to(h13d,{y:-8,duration:2.6,yoyo:true,repeat:-1,ease:'sine.inOut'});
+/* spider-verse glitch pulse */
+const glitchH1=document.getElementById('glitchH1');
+if(!reduceMotion)setInterval(()=>{
+  glitchH1.classList.add('glitching');
+  setTimeout(()=>glitchH1.classList.remove('glitching'),320);
+},3600);
 
 /* ============================================================
    TEXT SCRAMBLE
@@ -1050,7 +1096,7 @@ function setMenu(open){
 burger.addEventListener('click',()=>setMenu(!mobileMenu.classList.contains('open')));
 mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
 addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false);});
-addEventListener('resize',()=>{if(innerWidth>760)setMenu(false);});
+addEventListener('resize',()=>{if(innerWidth>860)setMenu(false);});
 </script>
 </body>
 </html>

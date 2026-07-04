@@ -232,6 +232,13 @@ section{position:relative;padding:clamp(90px,14vh,160px) clamp(20px,6vw,96px)}
 @keyframes floatGlyph{0%,100%{transform:translateZ(56px) translateY(0) rotate(-5deg)}50%{transform:translateZ(56px) translateY(-12px) rotate(6deg)}}
 .card-link{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-family:'Bangers',cursive;font-size:16px;letter-spacing:.08em;color:var(--bg);background:var(--cyan);border:3px solid var(--ink);border-radius:99px;padding:7px 18px;box-shadow:3px 3px 0 var(--red);transition:.25s;transform:translateZ(34px)}
 .card-link:hover{transform:translateZ(34px) translate(-2px,-2px);box-shadow:6px 6px 0 var(--red)}
+.card-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px;transform:translateZ(34px)}
+.card-links .card-link{margin-top:0}
+.card-link.alt{background:var(--yellow);box-shadow:3px 3px 0 var(--purple-deep)}
+.card-link.alt:hover{box-shadow:6px 6px 0 var(--purple-deep)}
+.card-wide{grid-column:1/-1}
+.card:nth-child(5) .badge{background:#F4F2FF;color:var(--bg)}
+.cards-cta{display:flex;justify-content:center;margin-top:46px}
 
 /* ---------- skills ---------- */
 .skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:64px}
@@ -454,7 +461,10 @@ footer{position:relative;z-index:2;border-top:3px solid var(--red);padding:30px 
         <div class="sub">Open-Source Multi-Agent AI Workforce Platform</div>
         <p>Built from scratch: a platform where a <b>CEO agent autonomously decomposes goals</b> into domain subtasks, delegates across specialist AI agents, proposes new hires when needed, and coordinates via multi-agent communication and approval workflows. Ships with <b>persistent per-agent memory, agent-to-agent and group chat, shared workspaces with file permissions, integrated terminal ops, real-time task boards, founder dashboards, and an interactive 3D office.</b></p>
         <div class="chip-row"><span class="chip">Hierarchical Orchestration</span><span class="chip">Memory Graph</span><span class="chip">3D Workspace</span><span class="chip">Approvals</span></div>
-        <a class="card-link hoverable" href="https://github.com/priyansh19/CrewSpace" target="_blank" rel="noopener">View on GitHub ↗</a>
+        <div class="card-links">
+          <a class="card-link hoverable" href="projects/crewspace.html">Open Case File ↗</a>
+          <a class="card-link alt hoverable" href="https://github.com/priyansh19/CrewSpace" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
       </div>
       <div class="card hoverable reveal">
         <div class="badge">OPEN SOURCE</div>
@@ -463,7 +473,10 @@ footer{position:relative;z-index:2;border-top:3px solid var(--red);padding:30px 
         <div class="sub">Autonomous AI Agent Platform — Contributor, PRs Merged</div>
         <p>Active contributor with <b>multiple PRs merged into the core codebase</b> — improving agent runtime tooling, workspace file handling, and developer-facing diagnostics. Fixed image-tool workspace path resolution to resolve against the agent workspace instead of <b>process.cwd()</b> (preserving allowlist security, with regression coverage), and improved tool validation errors to surface received parameter keys for easier debugging of long-running agent sessions.</p>
         <div class="chip-row"><span class="chip">Agent Runtime</span><span class="chip">Tooling DX</span><span class="chip">Security-Aware</span></div>
-        <a class="card-link hoverable" href="https://github.com/priyansh19" target="_blank" rel="noopener">My GitHub ↗</a>
+        <div class="card-links">
+          <a class="card-link hoverable" href="projects/openclaw.html">Open Case File ↗</a>
+          <a class="card-link alt hoverable" href="https://github.com/openclaw/openclaw/pulls?q=author%3Apriyansh19+is%3Apr" target="_blank" rel="noopener">Merged PRs ↗</a>
+        </div>
       </div>
       <div class="card hoverable reveal">
         <div class="badge">AUTONOMOUS</div>
@@ -472,6 +485,9 @@ footer{position:relative;z-index:2;border-top:3px solid var(--red);padding:30px 
         <div class="sub">Autonomous DevOps &amp; Infrastructure Agent</div>
         <p>Monitors GitHub repositories and CI/CD pipelines, performs multi-step <b>LLM root-cause analysis</b>, raises PRs with fixes, and triggers <b>Terraform-based remediation on Azure</b>. Plain-English infrastructure provisioning via function-calling — parsed to HCL, validated, planned, applied — with auto-revert through Prometheus alerting.</p>
         <div class="chip-row"><span class="chip">LLM Reasoning</span><span class="chip">Terraform</span><span class="chip">Prometheus</span></div>
+        <div class="card-links">
+          <a class="card-link hoverable" href="projects/autoops-ai.html">Open Case File ↗</a>
+        </div>
       </div>
       <div class="card hoverable reveal">
         <div class="badge">SHIPPED</div>
@@ -480,7 +496,24 @@ footer{position:relative;z-index:2;border-top:3px solid var(--red);padding:30px 
         <div class="sub">Local Ollama + Vector DB Pipeline</div>
         <p>Production RAG chatbot on fully <b>local Ollama inference — zero external API dependency</b> for data-privacy compliance. ChromaDB vector pipeline for chunking, indexing, semantic search, and top-k retrieval, with a FastAPI REST layer and <b>structured audit logging</b> of every query, retrieval, and response.</p>
         <div class="chip-row"><span class="chip">Ollama</span><span class="chip">ChromaDB</span><span class="chip">FastAPI</span><span class="chip">Audit Logs</span></div>
+        <div class="card-links">
+          <a class="card-link hoverable" href="projects/rag-chatbot.html">Open Case File ↗</a>
+        </div>
       </div>
+      <div class="card card-wide hoverable reveal">
+        <div class="badge">ENTERPRISE</div>
+        <div class="glyph">🛡️</div>
+        <h3>FMGlobal — GenAI Platform Modernisation</h3>
+        <div class="sub">Fortune 500 Insurer · Zero-Downtime Migration to Azure AI</div>
+        <p>Led the modernisation of FMGlobal's GenAI platform — <b>zero-downtime migration of critical insurance workloads</b> to secure Azure AI infrastructure. Multimodal LLM endpoints on <b>Azure AI Foundry</b> with auto-scaling and Content Safety guardrails, enterprise RAG with <b>hybrid vector + semantic indexing in Azure AI Search</b>, MCP integration for Azure Boards, and CI/CD governance across <b>20+ microservices</b> with JFrog promotion gates.</p>
+        <div class="chip-row"><span class="chip">Azure AI Foundry</span><span class="chip">Azure AI Search</span><span class="chip">MCP</span><span class="chip">Zero Downtime</span><span class="chip">JFrog</span></div>
+        <div class="card-links">
+          <a class="card-link hoverable" href="projects/fmglobal.html">Open Case File ↗</a>
+        </div>
+      </div>
+    </div>
+    <div class="cards-cta reveal">
+      <a class="btn btn-ghost hoverable magnetic" data-label="ASSEMBLE!" href="projects/index.html">Browse All Case Files ↗</a>
     </div>
   </section>
 

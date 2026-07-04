@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Case Files — Projects · Priyansh Gupta</title>
+<meta name="description" content="Every project by Priyansh Gupta, filed as an Avenger-grade case: multi-agent platforms, autonomous DevOps agents, private RAG pipelines, upstream OSS work, and Fortune 500 GenAI modernisation.">
+<link rel="icon" href="../favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Archivo:wght@400;500;600;700;900&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="theme.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="t-shield">
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+<div class="cursor-label" id="cursorLabel"></div>
+<canvas id="webTrail"></canvas>
+<div class="glow glow-1"></div>
+<div class="glow glow-2"></div>
+<div class="halftone"></div>
+<div class="halftone-pink"></div>
+<div class="halftone-cyan"></div>
+<div class="progress"><i id="progFill"></i></div>
+
+<div class="hud hud-tl">SYS // <b>S.H.I.E.L.D. DECK</b><br>ARCHIVE: ALL CASES</div>
+<div class="hud hud-br">SCROLL <b id="hudScroll">000%</b><br>NODE: DXB-AE</div>
+
+<nav>
+  <a class="nav-logo hoverable" href="../index.html">PRIYANSH<span>.AI</span></a>
+  <div class="nav-links">
+    <a class="hoverable here" href="index.html">Case Files</a>
+    <a class="hoverable" href="../index.html#about">About</a>
+    <a class="hoverable" href="../index.html#experience">Experience</a>
+    <a class="hoverable" href="../index.html#skills">Skills</a>
+    <a class="hoverable" href="../index.html#contact">Contact</a>
+    <a class="hoverable" href="../assets/Priyansh-Gupta-Resume.pdf" download>Resume ↓</a>
+  </div>
+  <div class="nav-right">
+    <a class="nav-cta hoverable" href="mailto:priyansh.9071@gmail.com">Hire Me ↗</a>
+    <button class="nav-burger hoverable" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html"><span class="no">01</span>Case Files</a>
+  <a href="../index.html#about"><span class="no">02</span>About</a>
+  <a href="../index.html#experience"><span class="no">03</span>Experience</a>
+  <a href="../index.html#skills"><span class="no">04</span>Skills</a>
+  <a href="../index.html#contact"><span class="no">05</span>Contact</a>
+  <a href="../assets/Priyansh-Gupta-Resume.pdf" download><span class="no">↓</span>Resume</a>
+  <a class="menu-cta" href="mailto:priyansh.9071@gmail.com">Hire Me ↗</a>
+</div>
+
+<main>
+
+  <!-- HERO — command deck -->
+  <section class="case-hero">
+    <div class="radar" aria-hidden="true"><i></i></div>
+    <div class="issue-tag" data-scramble>// PROJECT ARCHIVE — ONE AVENGER PER MISSION — CLEARANCE: PUBLIC</div>
+    <h1 class="case-title">
+      <span class="row"><span class="t3d-ink">OPEN THE</span></span>
+      <span class="row"><span class="t3d-red">CASE</span> <span class="t3d-cyan">FILES.</span></span>
+    </h1>
+    <p class="lede">Five missions on record, each filed under the Avenger it fights like — an <b>AI workforce platform</b> built like Stark tech, <b>vibranium-grade OSS fixes</b>, a <b>storm-watching DevOps agent</b>, a <b>RAG pipeline that never leaks</b>, and a <b>Fortune 500 platform held behind the shield</b>. Pick an issue. Dive in.</p>
+    <div class="case-meta">
+      <div class="meta-box hoverable"><div class="k">Case Files</div><div class="v">05 Active</div></div>
+      <div class="meta-box hoverable"><div class="k">Genre</div><div class="v">Agentic AI</div></div>
+      <div class="meta-box hoverable"><div class="k">Handler</div><div class="v">Priyansh Gupta</div></div>
+      <div class="meta-box hoverable"><div class="k">HQ</div><div class="v">Dubai, UAE</div></div>
+    </div>
+    <div class="case-actions">
+      <a class="btn btn-primary hoverable magnetic" data-label="ASSEMBLE!" href="#files"><span class="dot"></span> Browse the Files</a>
+      <a class="btn btn-ghost hoverable magnetic" data-label="HQ!" href="../index.html">← Back to HQ</a>
+    </div>
+  </section>
+
+  <div class="marquee m-fwd">
+    <div class="marquee-track">
+      <span>Iron Protocol</span><span class="hl">★</span><span>Panther Ops</span><span class="hl">★</span><span>Stormwatch</span><span class="hl">★</span><span>Widow File</span><span class="hl">★</span><span>Shield Wall</span><span class="hl">★</span>
+      <span>Iron Protocol</span><span class="hl">★</span><span>Panther Ops</span><span class="hl">★</span><span>Stormwatch</span><span class="hl">★</span><span>Widow File</span><span class="hl">★</span><span>Shield Wall</span><span class="hl">★</span>
+    </div>
+  </div>
+
+  <!-- FILES -->
+  <section id="files">
+    <div class="eyebrow reveal">THE ARCHIVE — CLEARED FOR RELEASE</div>
+    <h2 class="h2 flip3d">EVERY MISSION GETS <span class="accent">ITS OWN HERO</span></h2>
+
+    <div class="file-grid">
+
+      <a class="file-card hoverable reveal" href="crewspace.html" data-tilt
+         style="--red:#E23636;--red-deep:#8E1D1D;--cyan:#7FE7FF;--cyan-deep:#1E93B8;--yellow:#FFC33D;--purple:#D98E1B;--purple-deep:#8C5A0F">
+        <div class="file-no">01</div>
+        <div class="badge">IRON PROTOCOL</div>
+        <div class="glyph">🦾</div>
+        <h3>CrewSpace</h3>
+        <div class="sub">Open-Source Multi-Agent AI Workforce Platform</div>
+        <p>A <b>CEO agent</b> that decomposes goals, delegates to specialist agents, proposes new hires, and runs the whole company — memory, chat, task boards, terminal ops, and a 3D office. <b>Stark would approve.</b></p>
+        <div class="chip-row"><span class="chip">Multi-Agent</span><span class="chip">Memory Graph</span><span class="chip">HITL Approvals</span><span class="chip">3D Office</span></div>
+        <span class="open">Open Case File ↗</span>
+      </a>
+
+      <a class="file-card hoverable reveal" href="openclaw.html" data-tilt
+         style="--red:#9E63FF;--red-deep:#5A2EA6;--cyan:#CBD5E1;--cyan-deep:#64748B;--yellow:#E9D8FF;--purple:#6D28D9;--purple-deep:#3B1580">
+        <div class="file-no">02</div>
+        <div class="badge">PANTHER OPS</div>
+        <div class="glyph">🐾</div>
+        <h3>OpenClaw</h3>
+        <div class="sub">Autonomous Agent Platform — PRs Merged Upstream</div>
+        <p>Contributions merged into the core agent runtime: <b>workspace-safe path resolution</b> with allowlist security intact, and validation errors that explain themselves. <b>Silent, precise, vibranium-grade.</b></p>
+        <div class="chip-row"><span class="chip">Agent Runtime</span><span class="chip">Security</span><span class="chip">Developer Experience</span></div>
+        <span class="open">Open Case File ↗</span>
+      </a>
+
+      <a class="file-card hoverable reveal" href="autoops-ai.html" data-tilt
+         style="--red:#FF4D5E;--red-deep:#A61E2C;--cyan:#8FE3FF;--cyan-deep:#1F7FA6;--yellow:#FFE066;--purple:#5B7CFF;--purple-deep:#2C3F9E">
+        <div class="file-no">03</div>
+        <div class="badge">STORMWATCH</div>
+        <div class="glyph">⚡</div>
+        <h3>AutoOps AI</h3>
+        <div class="sub">Autonomous DevOps &amp; Infrastructure Agent</div>
+        <p>Watches repos and pipelines, runs <b>LLM root-cause analysis</b>, raises fix PRs, provisions Azure from plain English — and when metrics degrade, <b>the hammer returns: auto-revert</b>.</p>
+        <div class="chip-row"><span class="chip">LLM Reasoning</span><span class="chip">Terraform</span><span class="chip">Prometheus</span></div>
+        <span class="open">Open Case File ↗</span>
+      </a>
+
+      <a class="file-card hoverable reveal" href="rag-chatbot.html" data-tilt
+         style="--red:#E8253D;--red-deep:#8F1226;--cyan:#C7CEDE;--cyan-deep:#5F6B80;--yellow:#FF8FA3;--purple:#B0233A;--purple-deep:#5C0F1F">
+        <div class="file-no">04</div>
+        <div class="badge">WIDOW FILE</div>
+        <div class="glyph">🕷️</div>
+        <h3>RAG Chatbot</h3>
+        <div class="sub">Local Ollama + Vector DB Pipeline</div>
+        <p>Production RAG with <b>zero external API calls</b> — local Ollama inference, ChromaDB retrieval, FastAPI serving, and <b>a structured audit log for every single query</b>. Classified stays classified.</p>
+        <div class="chip-row"><span class="chip">Ollama</span><span class="chip">ChromaDB</span><span class="chip">FastAPI</span></div>
+        <span class="open">Open Case File ↗</span>
+      </a>
+
+      <a class="file-card hoverable reveal" href="fmglobal.html" data-tilt
+         style="--red:#4D8DFF;--red-deep:#1D4FA8;--cyan:#F0F5FF;--cyan-deep:#8CA3C7;--yellow:#F4F7FF;--purple:#E23B55;--purple-deep:#8C1D30">
+        <div class="file-no">05</div>
+        <div class="badge">SHIELD WALL</div>
+        <div class="glyph">🛡️</div>
+        <h3>FMGlobal</h3>
+        <div class="sub">GenAI Platform Modernisation — Fortune 500 Insurer</div>
+        <p><b>Zero-downtime migration</b> of critical insurance workloads to secure Azure AI infrastructure — guardrailed LLM endpoints, hybrid-index RAG, live MCP tool-use, and governed CI/CD. <b>The line held.</b></p>
+        <div class="chip-row"><span class="chip">Azure AI Foundry</span><span class="chip">Azure AI Search</span><span class="chip">MCP</span></div>
+        <span class="open">Open Case File ↗</span>
+      </a>
+
+      <a class="file-card wanted hoverable reveal" href="mailto:priyansh.9071@gmail.com" data-tilt>
+        <div class="file-no">06</div>
+        <div class="glyph">✳️</div>
+        <h3>Your Project Here?</h3>
+        <div class="sub">Next Mission — Recruiting Now</div>
+        <p>The next case file could be <b>your production GenAI platform</b>. Bring the mission; I'll bring the agents, the guardrails, and the audit trail.</p>
+        <span class="open">Start a Mission ↗</span>
+      </a>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div>© 2026 PRIYANSH GUPTA — SENIOR AGENTIC AI ENGINEER</div>
+  <div><a class="hoverable" href="../index.html">← BACK TO HQ</a></div>
+  <div>DUBAI JVC, UAE · BUILT WITH AI ⚡</div>
+</footer>
+
+<script>
+window.BURST_WORDS=['ASSEMBLE!','MISSION ON!','FILED!','CLEARED!'];
+window.BURST_COLORS=['#64A7FF','#3E5C8F'];
+</script>
+<script src="theme.js"></script>
+</body>
+</html>

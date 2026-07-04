@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CrewSpace — Case File 01 · Iron Protocol · Priyansh Gupta</title>
+<meta name="description" content="CrewSpace: an open-source multi-agent AI workforce platform by Priyansh Gupta — a CEO agent that decomposes goals, delegates to specialist agents, proposes hires, and runs the company with human-in-the-loop approvals.">
+<link rel="icon" href="../favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Archivo:wght@400;500;600;700;900&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="theme.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="t-iron">
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+<div class="cursor-label" id="cursorLabel"></div>
+<canvas id="webTrail"></canvas>
+<div class="glow glow-1"></div>
+<div class="glow glow-2"></div>
+<div class="halftone"></div>
+<div class="halftone-pink"></div>
+<div class="halftone-cyan"></div>
+<div class="progress"><i id="progFill"></i></div>
+
+<div class="hud hud-tl">SYS // <b>STARK-OS</b><br>SUIT: MK-CREW</div>
+<div class="hud hud-br">SCROLL <b id="hudScroll">000%</b><br>ARC REACTOR: STABLE</div>
+
+<nav>
+  <a class="nav-logo hoverable" href="../index.html">PRIYANSH<span>.AI</span></a>
+  <div class="nav-links">
+    <a class="hoverable here" href="index.html">Case Files</a>
+    <a class="hoverable" href="../index.html#about">About</a>
+    <a class="hoverable" href="../index.html#experience">Experience</a>
+    <a class="hoverable" href="../index.html#skills">Skills</a>
+    <a class="hoverable" href="../index.html#contact">Contact</a>
+    <a class="hoverable" href="../assets/Priyansh-Gupta-Resume.pdf" download>Resume ↓</a>
+  </div>
+  <div class="nav-right">
+    <a class="nav-cta hoverable" href="mailto:priyansh.9071@gmail.com">Hire Me ↗</a>
+    <button class="nav-burger hoverable" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html"><span class="no">01</span>Case Files</a>
+  <a href="../index.html#about"><span class="no">02</span>About</a>
+  <a href="../index.html#experience"><span class="no">03</span>Experience</a>
+  <a href="../index.html#skills"><span class="no">04</span>Skills</a>
+  <a href="../index.html#contact"><span class="no">05</span>Contact</a>
+  <a href="../assets/Priyansh-Gupta-Resume.pdf" download><span class="no">↓</span>Resume</a>
+  <a class="menu-cta" href="mailto:priyansh.9071@gmail.com">Hire Me ↗</a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="case-hero">
+    <svg class="hero-emblem emblem-spin" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+      <!-- arc reactor -->
+      <circle cx="100" cy="100" r="94" stroke="#7FE7FF" stroke-width="3" opacity=".8"/>
+      <circle cx="100" cy="100" r="78" stroke="#E23636" stroke-width="2" opacity=".55"/>
+      <circle cx="100" cy="100" r="60" stroke="#7FE7FF" stroke-width="6" opacity=".9"/>
+      <circle cx="100" cy="100" r="42" stroke="#FFC33D" stroke-width="2" opacity=".7"/>
+      <g stroke="#7FE7FF" stroke-width="4" opacity=".85">
+        <line x1="100" y1="6" x2="100" y2="26"/><line x1="100" y1="174" x2="100" y2="194"/>
+        <line x1="6" y1="100" x2="26" y2="100"/><line x1="174" y1="100" x2="194" y2="100"/>
+        <line x1="33" y1="33" x2="47" y2="47"/><line x1="153" y1="153" x2="167" y2="167"/>
+        <line x1="33" y1="167" x2="47" y2="153"/><line x1="153" y1="47" x2="167" y2="33"/>
+      </g>
+      <polygon points="100,64 131,118 69,118" stroke="#7FE7FF" stroke-width="5" fill="rgba(127,231,255,.15)"/>
+      <circle cx="100" cy="100" r="10" fill="#7FE7FF" opacity=".95"/>
+    </svg>
+
+    <div class="issue-tag" data-scramble>// CASE FILE 01 — CODENAME: IRON PROTOCOL — OPEN SOURCE · ACTIVE</div>
+    <h1 class="case-title">
+      <span class="row"><span class="t3d-ink">THE AI COMPANY,</span></span>
+      <span class="row"><span class="t3d-red">CREW</span><span class="t3d-cyan">SPACE.</span></span>
+    </h1>
+    <p class="lede">An open-source <b>multi-agent AI workforce platform</b>, built from scratch — a <b>CEO agent</b> that decomposes goals, delegates across specialist agents, proposes new hires when the org is missing a skill, and coordinates everything through <b>approval workflows a human actually controls</b>. Stark built a suit; this builds the whole company.</p>
+    <div class="case-meta">
+      <div class="meta-box hoverable"><div class="k">Inspired By</div><div class="v">Iron Man</div></div>
+      <div class="meta-box hoverable"><div class="k">Role</div><div class="v">Creator &amp; Architect</div></div>
+      <div class="meta-box hoverable"><div class="k">Type</div><div class="v">Open Source</div></div>
+      <div class="meta-box hoverable"><div class="k">Orchestration</div><div class="v">Hierarchical</div></div>
+    </div>
+    <div class="case-actions">
+      <a class="btn btn-primary hoverable magnetic" data-label="SUIT UP!" href="https://github.com/priyansh19/CrewSpace" target="_blank" rel="noopener"><span class="dot"></span> View on GitHub ↗</a>
+      <a class="btn btn-ghost hoverable magnetic" data-label="ARCHIVE!" href="index.html">All Case Files</a>
+    </div>
+  </section>
+
+  <div class="marquee m-fwd">
+    <div class="marquee-track">
+      <span>CEO Protocol</span><span class="hl">★</span><span>Assemble the Workforce</span><span class="hl">★</span><span>Memory Graph</span><span class="hl">★</span><span>Approvals Online</span><span class="hl">★</span><span>3D HQ</span><span class="hl">★</span>
+      <span>CEO Protocol</span><span class="hl">★</span><span>Assemble the Workforce</span><span class="hl">★</span><span>Memory Graph</span><span class="hl">★</span><span>Approvals Online</span><span class="hl">★</span><span>3D HQ</span><span class="hl">★</span>
+    </div>
+  </div>
+
+  <!-- MISSION -->
+  <section>
+    <div class="eyebrow reveal">FILE 01 — THE MISSION</div>
+    <h2 class="h2 flip3d">AN ORG CHART THAT <span class="accent">EXECUTES ITSELF</span></h2>
+    <div class="mission-grid">
+      <div class="prose">
+        <p class="reveal">Most "multi-agent" demos are a group chat with extra steps. CrewSpace asks the harder question: <b>what if a company's entire operating structure — hierarchy, delegation, hiring, approvals — was software?</b></p>
+        <p class="reveal">You hand the platform a goal. A <b>CEO agent decomposes it into domain subtasks</b>, routes them to specialist agents, and when the org lacks a capability, it <b>proposes a new hire</b> — a fresh specialist spun up with its own role, memory, and workspace permissions. Like JARVIS running Stark Industries: autonomous where it's safe, <b>asking the human where it matters</b>.</p>
+        <p class="quote reveal">"Anyone can spawn agents. CrewSpace runs a company."</p>
+      </div>
+      <ul class="snapshot reveal">
+        <li style="border-top:none"><b>FILE SNAPSHOT</b></li>
+        <li><b>Founder-led</b> — HITL approval workflows</li>
+        <li><b>Per-agent memory</b> — persistent across sessions</li>
+        <li><b>A2A + group chat</b> — built-in comms layer</li>
+        <li><b>Workspaces</b> — shared files, scoped permissions</li>
+        <li><b>Terminal ops</b> — integrated &amp; reviewable</li>
+        <li><b>Open source</b> — full build on GitHub</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CHAIN OF COMMAND -->
+  <section>
+    <div class="eyebrow reveal">FILE 02 — CHAIN OF COMMAND</div>
+    <h2 class="h2 flip3d">FROM ONE GOAL TO <span class="accent-b">A WORKING COMPANY</span></h2>
+    <div class="steps">
+      <div class="step hoverable reveal">
+        <div class="no">01</div>
+        <div><h4>Goal Intake</h4><p>You give the company one objective. The <b>CEO agent breaks it into domain subtasks</b> — engineering, research, content, ops — each with a scope and an owner.</p></div>
+      </div>
+      <div class="step hoverable reveal">
+        <div class="no">02</div>
+        <div><h4>Delegation</h4><p>Subtasks route to <b>specialist agents</b> by domain. Each specialist works inside its own workspace with scoped file permissions — no agent touches what it shouldn't.</p></div>
+      </div>
+      <div class="step hoverable reveal">
+        <div class="no">03</div>
+        <div><h4>The Hiring Loop</h4><p>Missing a capability? The CEO <b>proposes a new hire</b>. You approve, and a new specialist joins the org with its own role, memory, and permissions.</p></div>
+      </div>
+      <div class="step hoverable reveal">
+        <div class="no">04</div>
+        <div><h4>Coordination</h4><p>Agents collaborate over <b>agent-to-agent and group chat</b>. Consequential actions flow through <b>approval workflows</b>, so a human signs off before anything irreversible happens.</p></div>
+      </div>
+      <div class="step hoverable reveal">
+        <div class="no">05</div>
+        <div><h4>Delivery</h4><p>Work lands on <b>real-time task boards</b>; the <b>founder dashboard</b> tracks every agent, task, and conversation — and the <b>interactive 3D office</b> lets you literally walk the floor.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORE SYSTEMS -->
+  <section>
+    <div class="eyebrow reveal">FILE 03 — CORE SYSTEMS</div>
+    <h2 class="h2 flip3d">EVERYTHING A COMPANY NEEDS, <span class="accent">AGENT-NATIVE</span></h2>
+    <div class="panels">
+      <div class="panel hoverable reveal" data-tilt>
+        <div class="glyph">🧠</div>
+        <h3>Persistent Agent Memory</h3>
+        <div class="sub">Per-Agent Memory Graph</div>
+        <p>Every agent keeps its own <b>persistent memory across sessions</b> — decisions, context, and learnings survive restarts instead of resetting to zero.</p>
+        <div class="chip-row"><span class="chip">Memory Graph</span><span class="chip">Long-Running Agents</span></div>
+      </div>
+      <div class="panel hoverable reveal" data-tilt>
+        <div class="glyph">🗣️</div>
+        <h3>Comms Layer</h3>
+        <div class="sub">A2A + Group Channels</div>
+        <p><b>Agent-to-agent messaging and group chat</b> with humans in the room. Conversations are first-class objects, not hidden prompt chains.</p>
+        <div class="chip-row"><span class="chip">Agent-to-Agent</span><span class="chip">Group Chat</span></div>
+      </div>
+      <div class="panel hoverable reveal" data-tilt>
+        <div class="glyph">🗂️</div>
+        <h3>Shared Workspaces</h3>
+        <div class="sub">Scoped File Permissions</div>
+        <p>Agents collaborate on shared files with <b>per-agent permissions</b> — read, write, or hands-off — so the intern agent can't touch prod configs.</p>
+        <div class="chip-row"><span class="chip">File Permissions</span><span class="chip">Collaboration</span></div>
+      </div>
+      <div class="panel hoverable reveal" data-tilt>
+        <div class="glyph">⌨️</div>
+        <h3>Integrated Terminal Ops</h3>
+        <div class="sub">Execution With Oversight</div>
+        <p>Agents run <b>real terminal operations inside the platform</b> — visible and reviewable, not hidden behind an opaque API call.</p>
+        <div class="chip-row"><span class="chip">Terminal</span><span class="chip">Auditable Actions</span></div>
+      </div>
+      <div class="panel hoverable reveal" data-tilt>
+        <div class="glyph">📋</div>
+        <h3>Real-Time Task Boards</h3>
+        <div class="sub">Live Work Tracking + Founder Dashboard</div>
+        <p>Every subtask, owner, and status on a <b>live board</b>, with a founder dashboard over the whole org — the standup that writes itself.</p>
+        <div class="chip-row"><span class="chip">Task Boards</span><span class="chip">Dashboards</span></div>
+      </div>
+      <div class="panel hoverable reveal" data-tilt>
+        <div class="glyph">🏙️</div>
+        <h3>Interactive 3D Office</h3>
+        <div class="sub">See Your Company</div>
+        <p>A rendered <b>3D workspace where you watch your AI org at work</b> — because dashboards are better with a skyline.</p>
+        <div class="chip-row"><span class="chip">3D Workspace</span><span class="chip">Live View</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLUEPRINT -->
+  <section>
+    <div class="eyebrow reveal">FILE 04 — THE BLUEPRINT</div>
+    <h2 class="h2 flip3d">HIERARCHY, <span class="accent-b">WIRED FOR AUTONOMY</span></h2>
+    <div class="arch reveal">
+      <div class="arch-stack">
+        <div class="arch-row">
+          <div class="node hoverable"><h5>Founder Dashboard</h5><p>Human Oversight</p></div>
+          <div class="node hoverable"><h5>3D Office</h5><p>Live Org View</p></div>
+          <div class="node hoverable"><h5>Task Boards</h5><p>Real-Time Status</p></div>
+        </div>
+        <div class="down">▼ ▼ ▼</div>
+        <div class="arch-row">
+          <div class="node hot hoverable"><h5>CEO Agent</h5><p>Goal Decomposition · Delegation · Hiring Proposals</p></div>
+        </div>
+        <div class="down">▼ ▼ ▼</div>
+        <div class="arch-row">
+          <div class="node hoverable"><h5>Specialist Agents</h5><p>Domain Execution</p></div>
+          <div class="node hoverable"><h5>Hiring Loop</h5><p>HITL Approval</p></div>
+          <div class="node hoverable"><h5>Group Chat</h5><p>A2A Coordination</p></div>
+        </div>
+        <div class="down">▼ ▼ ▼</div>
+        <div class="arch-row">
+          <div class="node cold hoverable"><h5>Memory Graph</h5><p>Persistent</p></div>
+          <div class="node cold hoverable"><h5>Workspaces</h5><p>Scoped Files</p></div>
+          <div class="node cold hoverable"><h5>Terminal Ops</h5><p>Reviewable</p></div>
+          <div class="node cold hoverable"><h5>Approval Engine</h5><p>Human Gates</p></div>
+        </div>
+      </div>
+      <div class="arch-caption">Hierarchical orchestration — every consequential action gated by human approval</div>
+    </div>
+    <div class="stamps">
+      <div class="stamp hoverable"><span>★</span>100% Open Source</div>
+      <div class="stamp hoverable"><span>★</span>HITL Approvals</div>
+      <div class="stamp hoverable"><span>★</span>Persistent Memory</div>
+      <div class="stamp hoverable"><span>★</span>Built From Scratch</div>
+    </div>
+  </section>
+
+  <!-- NEXT -->
+  <section>
+    <div class="eyebrow reveal">NEXT MISSION</div>
+    <div class="case-actions reveal" style="margin:0 0 34px">
+      <a class="btn btn-primary hoverable magnetic" data-label="SUIT UP!" href="https://github.com/priyansh19/CrewSpace" target="_blank" rel="noopener"><span class="dot"></span> Explore the Code ↗</a>
+      <a class="btn btn-ghost hoverable magnetic" data-label="CALL ME!" href="../index.html#contact">Build Yours With Me</a>
+    </div>
+    <div class="issue-nav">
+      <a class="issue-link hoverable reveal" href="fmglobal.html"><div class="k">← Previous · Case 05</div><div class="t">FMGlobal — Shield Wall</div></a>
+      <a class="issue-link next hoverable reveal" href="openclaw.html"><div class="k">Next · Case 02 →</div><div class="t">OpenClaw — Panther Ops</div></a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div>© 2026 PRIYANSH GUPTA — SENIOR AGENTIC AI ENGINEER</div>
+  <div><a class="hoverable" href="index.html">ALL CASE FILES</a> · <a class="hoverable" href="../index.html">BACK TO HQ</a></div>
+  <div>DUBAI JVC, UAE · BUILT WITH AI ⚡</div>
+</footer>
+
+<script>
+window.BURST_WORDS=['SUIT UP!','JARVIS, GO!','ONLINE!','ASSEMBLED!'];
+window.BURST_COLORS=['#E23636','#FFC33D'];
+</script>
+<script src="theme.js"></script>
+</body>
+</html>

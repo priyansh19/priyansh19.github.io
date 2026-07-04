@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAG Chatbot — Case File 04 · Widow File · Priyansh Gupta</title>
+<meta name="description" content="Production RAG chatbot by Priyansh Gupta — fully local Ollama inference with zero external API dependency, ChromaDB vector retrieval, FastAPI serving, and structured audit logging of every query, retrieval, and response.">
+<link rel="icon" href="../favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Archivo:wght@400;500;600;700;900&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="theme.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="t-widow">
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+<div class="cursor-label" id="cursorLabel"></div>
+<canvas id="webTrail"></canvas>
+<div class="glow glow-1"></div>
+<div class="glow glow-2"></div>
+<div class="halftone"></div>
+<div class="halftone-pink"></div>
+<div class="halftone-cyan"></div>
+<div class="progress"><i id="progFill"></i></div>
+
+<div class="hud hud-tl">SYS // <b>WIDOW FILE</b><br>STATUS: CLASSIFIED</div>
+<div class="hud hud-br">SCROLL <b id="hudScroll">000%</b><br>EXTERNAL CALLS: ZERO</div>
+
+<nav>
+  <a class="nav-logo hoverable" href="../index.html">PRIYANSH<span>.AI</span></a>
+  <div class="nav-links">
+    <a class="hoverable here" href="index.html">Case Files</a>
+    <a class="hoverable" href="../index.html#about">About</a>
+    <a class="hoverable" href="../index.html#experience">Experience</a>
+    <a class="hoverable" href="../index.html#skills">Skills</a>
+    <a class="hoverable" href="../index.html#contact">Contact</a>
+    <a class="hoverable" href="../assets/Priyansh-Gupta-Resume.pdf" download>Resume ↓</a>
+  </div>
+  <div class="nav-right">
+    <a class="nav-cta hoverable" href="mailto:priyansh.9071@gmail.com">Hire Me ↗</a>
+    <button class="nav-burger hoverable" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html"><span class="no">01</span>Case Files</a>
+  <a href="../index.html#about"><span class="no">02</span>About</a>
+  <a href="../index.html#experience"><span class="no">03</span>Experience</a>
+  <a href="../index.html#skills"><span class="no">04</span>Skills</a>
+  <a href="../index.html#contact"><span class="no">05</span>Contact</a>
+  <a href="../assets/Priyansh-Gupta-Resume.pdf" download><span class="no">↓</span>Resume</a>
+  <a class="menu-cta" href="mailto:priyansh.9071@gmail.com">Hire Me ↗</a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="case-hero">
+    <svg class="hero-emblem emblem-float" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+      <!-- widow hourglass sigil -->
+      <circle cx="100" cy="100" r="92" stroke="#E8253D" stroke-width="5" opacity=".85"/>
+      <circle cx="100" cy="100" r="76" stroke="#C7CEDE" stroke-width="2" opacity=".45"/>
+      <path d="M62 46 L138 46 L108 100 L138 154 L62 154 L92 100 Z" fill="rgba(232,37,61,.22)" stroke="#E8253D" stroke-width="5" stroke-linejoin="round"/>
+      <line x1="100" y1="8" x2="100" y2="30" stroke="#E8253D" stroke-width="4"/>
+      <line x1="100" y1="170" x2="100" y2="192" stroke="#E8253D" stroke-width="4"/>
+    </svg>
+
+    <div class="issue-tag" data-scramble>// CASE FILE 04 — CODENAME: WIDOW FILE — SHIPPED · PRIVACY-FIRST</div>
+    <h1 class="case-title">
+      <span class="row"><span class="t3d-ink">CLASSIFIED BY DESIGN,</span></span>
+      <span class="row"><span class="t3d-red">RAG</span> <span class="t3d-cyan">CHATBOT.</span></span>
+    </h1>
+    <p class="lede">A <b>production RAG chatbot that never phones home</b> — fully local Ollama inference with <b>zero external API dependency</b>, a ChromaDB vector pipeline, FastAPI serving, and <b>structured audit logging of every query, retrieval, and response</b>. Like any good spy: it works everywhere, and it leaks nothing.</p>
+    <div class="case-meta">
+      <div class="meta-box hoverable"><div class="k">Inspired By</div><div class="v">Black Widow</div></div>
+      <div class="meta-box hoverable"><div class="k">Role</div><div class="v">Creator</div></div>
+      <div class="meta-box hoverable"><div class="k">Inference</div><div class="v">100% Local</div></div>
+      <div class="meta-box hoverable"><div class="k">Vector DB</div><div class="v">ChromaDB</div></div>
+    </div>
+    <div class="case-actions">
+      <a class="btn btn-primary hoverable magnetic" data-label="NO LEAKS!" href="https://github.com/priyansh19" target="_blank" rel="noopener"><span class="dot"></span> GitHub ↗</a>
+      <a class="btn btn-ghost hoverable magnetic" data-label="ARCHIVE!" href="index.html">All Case Files</a>
+    </div>
+  </section>
+
+  <div class="marquee m2 m-rev">
+    <div class="marquee-track">
+      <span>Ingest</span><span>·</span><span>Chunk</span><span>·</span><span>Embed</span><span>·</span><span>Index</span><span>·</span><span>Retrieve</span><span>·</span><span>Generate</span><span>·</span><span>Audit</span><span>·</span><span>Zero Leaks</span><span>·</span>
+      <span>Ingest</span><span>·</span><span>Chunk</span><span>·</span><span>Embed</span><span>·</span><span>Index</span><span>·</span><span>Retrieve</span><span>·</span><span>Generate</span><span>·</span><span>Audit</span><span>·</span><span>Zero Leaks</span><span>·</span>
+    </div>
+  </div>
+
+  <!-- MISSION -->
+  <section>
+    <div class="eyebrow reveal">FILE 01 — THE MISSION</div>
+    <h2 class="h2 flip3d">RAG FOR TEAMS THAT <span class="accent">CAN'T LEAK DATA</span></h2>
+    <div class="mission-grid">
+      <div class="prose">
+        <p class="reveal">Some documents can never leave the building — compliance says so, clients say so, common sense says so. That rules out every RAG tutorial that starts with an external API key.</p>
+        <p class="reveal">This chatbot runs the <b>entire pipeline locally</b>: Ollama for inference, ChromaDB for vectors, FastAPI in front. Data-privacy compliance isn't a feature flag — <b>it's the architecture</b>. And because production means accountability, <b>every query, retrieval, and response lands in a structured audit log</b>. The dossier writes itself.</p>
+        <p class="quote reveal">"If you can't audit the answer, you can't ship the answer."</p>
+      </div>
+      <ul class="snapshot reveal">
+        <li style="border-top:none"><b>DOSSIER SNAPSHOT</b></li>
+        <li><b>Zero</b> — external API calls</li>
+        <li><b>Local</b> — Ollama inference, on your metal</li>
+        <li><b>ChromaDB</b> — chunking, indexing, top-k retrieval</li>
+        <li><b>FastAPI</b> — clean REST integration layer</li>
+        <li><b>Audited</b> — every interaction on record</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PIPELINE -->
+  <section>
+    <div class="eyebrow reveal">FILE 02 — THE PIPELINE</div>
+    <h2 class="h2 flip3d">DOCUMENT IN, <span class="accent-b">GROUNDED ANSWER OUT</span></h2>
+    <div class="steps">
+      <div class="step hoverable reveal">
+        <div class="no">01</div>
+        <div><h4>Ingest &amp; Chunk</h4><p>Documents are parsed and <b>chunked for retrieval</b> — sized so answers cite focused context instead of entire files.</p></div>
+      </div>
+      <div class="step hoverable reveal">
+        <div class="no">02</div>
+        <div><h4>Embed</h4><p>Chunks become vectors with <b>local embedding models</b> — nothing leaves the machine, not even for math.</p></div>
+      </div>
+      <div class="step hoverable reveal">
+        <div class="no">03</div>
+        <div><h4>Index</h4><p><b>ChromaDB</b> stores and indexes the vector space for fast similarity lookups across the corpus.</p></div>
+      </div>
+      <div class="step hoverable reveal">
+        <div class="no">04</div>
+        <div><h4>Retrieve</h4><p><b>Semantic search pulls the top-k relevant chunks</b> for each query — the needle, not the haystack.</p></div>
+      </div>
+      <div class="step hoverable reveal">
+        <div class="no">05</div>
+        <div><h4>Generate</h4><p><b>Local Ollama inference</b> answers grounded in the retrieved context — zero external dependency, full data custody.</p></div>
+      </div>
+      <div class="step hoverable reveal">
+        <div class="no">06</div>
+        <div><h4>Audit</h4><p>A <b>structured log records every query, retrieval set, and response</b> — the whole interaction traceable end to end.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY IT HOLDS -->
+  <section>
+    <div class="eyebrow reveal">FILE 03 — WHY IT HOLDS UP</div>
+    <h2 class="h2 flip3d">BUILT LIKE <span class="accent">PRODUCTION</span>, NOT A DEMO</h2>
+    <div class="panels">
+      <div class="panel hoverable reveal" data-tilt>
+        <div class="glyph">🔒</div>
+        <h3>Zero External Calls</h3>
+        <div class="sub">Air-Gap Friendly</div>
+        <p>No third-party inference APIs, no embedding SaaS, no telemetry. <b>The compliance conversation gets very short.</b></p>
+        <div class="chip-row"><span class="chip">Data Privacy</span><span class="chip">On-Prem Ready</span></div>
+      </div>
+      <div class="panel hoverable reveal" data-tilt>
+        <div class="glyph">🎯</div>
+        <h3>Grounded Answers</h3>
+        <div class="sub">Top-K Semantic Retrieval</div>
+        <p>Responses are grounded in retrieved chunks — <b>the model answers from your documents</b>, not from its imagination.</p>
+        <div class="chip-row"><span class="chip">Semantic Search</span><span class="chip">Top-K</span></div>
+      </div>
+      <div class="panel hoverable reveal" data-tilt>
+        <div class="glyph">⚡</div>
+        <h3>FastAPI REST Layer</h3>
+        <div class="sub">Drop-In Integration</div>
+        <p>Clean REST endpoints make the chatbot <b>embeddable in existing products and workflows</b> without ceremony.</p>
+        <div class="chip-row"><span class="chip">FastAPI</span><span class="chip">Python</span></div>
+      </div>
+      <div class="panel hoverable reveal" data-tilt>
+        <div class="glyph">🧾</div>
+        <h3>Audit-Grade Logging</h3>
+        <div class="sub">Every Interaction on Record</div>
+        <p>Structured logs of <b>query → retrieval → response</b>, ready for review, debugging, and compliance sign-off.</p>
+        <div class="chip-row"><span class="chip">Structured Logs</span><span class="chip">Traceability</span></div>
+      </div>
+    </div>
+    <div class="stat-row">
+      <div class="stat reveal"><div class="num" data-count="0" data-suffix="">0</div><div class="lbl">External API Calls</div></div>
+      <div class="stat reveal"><div class="num" data-count="100" data-suffix="%">100%</div><div class="lbl">Local Inference</div></div>
+      <div class="stat reveal"><div class="num" data-count="6" data-suffix="">6</div><div class="lbl">Pipeline Stages, Fully Audited</div></div>
+    </div>
+  </section>
+
+  <!-- NEXT -->
+  <section>
+    <div class="eyebrow reveal">NEXT MISSION</div>
+    <div class="case-actions reveal" style="margin:0 0 34px">
+      <a class="btn btn-primary hoverable magnetic" data-label="NO LEAKS!" href="https://github.com/priyansh19" target="_blank" rel="noopener"><span class="dot"></span> See More on GitHub ↗</a>
+      <a class="btn btn-ghost hoverable magnetic" data-label="CALL ME!" href="../index.html#contact">Need Private RAG?</a>
+    </div>
+    <div class="issue-nav">
+      <a class="issue-link hoverable reveal" href="autoops-ai.html"><div class="k">← Previous · Case 03</div><div class="t">AutoOps AI — Stormwatch</div></a>
+      <a class="issue-link next hoverable reveal" href="fmglobal.html"><div class="k">Next · Case 05 →</div><div class="t">FMGlobal — Shield Wall</div></a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div>© 2026 PRIYANSH GUPTA — SENIOR AGENTIC AI ENGINEER</div>
+  <div><a class="hoverable" href="index.html">ALL CASE FILES</a> · <a class="hoverable" href="../index.html">BACK TO HQ</a></div>
+  <div>DUBAI JVC, UAE · BUILT WITH AI ⚡</div>
+</footer>
+
+<script>
+window.BURST_WORDS=['CLASSIFIED!','NO LEAKS!','LOGGED!','GROUNDED!'];
+window.BURST_COLORS=['#E8253D','#5F6B80'];
+</script>
+<script src="theme.js"></script>
+</body>
+</html>

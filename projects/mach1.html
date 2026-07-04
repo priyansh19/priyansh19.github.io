@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mach1 — Case File 02 · Pym Protocol · Priyansh Gupta</title>
+<meta name="description" content="Mach1 by Priyansh Gupta — a local-first multi-tool AI agent on LangChain + LangGraph running open-source LLMs through Ollama, with a confidence-scored triage router answering 65%+ of requests locally and escalating only hard prompts to Claude via MCP.">
+<link rel="icon" href="../favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Archivo:wght@400;500;600;700;900&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="theme.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="t-antman">
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+<div class="cursor-label" id="cursorLabel"></div>
+<canvas id="webTrail"></canvas>
+<div class="glow glow-1"></div>
+<div class="glow glow-2"></div>
+<div class="halftone"></div>
+<div class="halftone-pink"></div>
+<div class="halftone-cyan"></div>
+<div class="progress"><i id="progFill"></i></div>
+
+<a class="corner-nav left hoverable" data-label="HOME!" href="../index.html">← Home</a>
+<a class="corner-nav right hoverable" data-label="ARCHIVE!" href="index.html">All Case Files ▦</a>
+<div class="hud hud-br">SCROLL <b id="hudScroll">000%</b><br>LOCAL WINS: 65%+</div>
+
+<nav>
+  <a class="nav-logo hoverable" href="../index.html">PRIYANSH<span>.AI</span></a>
+  <div class="nav-links">
+    <a class="hoverable here" href="index.html">Case Files</a>
+    <a class="hoverable" href="../index.html#about">About</a>
+    <a class="hoverable" href="../index.html#experience">Experience</a>
+    <a class="hoverable" href="../index.html#skills">Skills</a>
+    <a class="hoverable" href="../index.html#contact">Contact</a>
+    <a class="hoverable" href="../assets/Priyansh-Gupta-Resume.pdf" download>Resume ↓</a>
+  </div>
+  <div class="nav-right">
+    <a class="nav-cta hoverable" href="mailto:priyansh.9071@gmail.com">Hire Me ↗</a>
+    <button class="nav-burger hoverable" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html"><span class="no">01</span>Home</a>
+  <a href="index.html"><span class="no">02</span>Case Files</a>
+  <a href="../index.html#about"><span class="no">03</span>About</a>
+  <a href="../index.html#skills"><span class="no">04</span>Skills</a>
+  <a href="../index.html#contact"><span class="no">05</span>Contact</a>
+  <a href="../assets/Priyansh-Gupta-Resume.pdf" download><span class="no">↓</span>Resume</a>
+  <a class="menu-cta" href="mailto:priyansh.9071@gmail.com">Hire Me ↗</a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="case-hero">
+    <svg class="hero-emblem emblem-float" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+      <!-- pym shrink rings -->
+      <circle cx="100" cy="100" r="92" stroke="#7E8BB8" stroke-width="2.5" opacity=".5"/>
+      <circle cx="100" cy="100" r="62" stroke="#6FC3FF" stroke-width="4" opacity=".8"/>
+      <circle cx="100" cy="100" r="34" stroke="#F04E3E" stroke-width="6" opacity=".95"/>
+      <circle cx="100" cy="100" r="8" fill="#F04E3E"/>
+      <g stroke="#6FC3FF" stroke-width="4" opacity=".85" stroke-linecap="round">
+        <path d="M100 22 L100 44 M92 36 L100 44 L108 36"/>
+        <path d="M100 178 L100 156 M92 164 L100 156 L108 164"/>
+        <path d="M22 100 L44 100 M36 92 L44 100 L36 108"/>
+        <path d="M178 100 L156 100 M164 92 L156 100 L164 108"/>
+      </g>
+      <g stroke="#FFCE5C" stroke-width="2.5" opacity=".8" stroke-linecap="round">
+        <path d="M78 60 Q100 40 122 60"/>
+        <circle cx="78" cy="60" r="3.5" fill="#FFCE5C"/><circle cx="122" cy="60" r="3.5" fill="#FFCE5C"/>
+      </g>
+    </svg>
+
+    <div class="issue-tag" data-scramble>// CASE FILE 02 — CODENAME: PYM PROTOCOL — LOCAL-FIRST · ZERO-COST</div>
+    <h1 class="case-title">
+      <span class="row"><span class="t3d-ink">GO SMALL FIRST,</span></span>
+      <span class="row"><span class="t3d-red">MACH</span><span class="t3d-cyan">1.</span></span>
+    </h1>
+    <p class="lede">A <b>local-first multi-tool AI agent</b> on LangChain and LangGraph (StateGraph), running open-source LLMs through <b>Ollama</b> — a <b>confidence-scored triage router answers 65%+ of requests locally</b> and escalates only the hard prompts to Claude via MCP. <b>Fast, private, zero-cost.</b> Small when small works; big only when it counts.</p>
+    <div class="case-meta">
+      <div class="meta-box hoverable"><div class="k">Inspired By</div><div class="v">Ant-Man</div></div>
+      <div class="meta-box hoverable"><div class="k">Role</div><div class="v">Creator</div></div>
+      <div class="meta-box hoverable"><div class="k">Inference</div><div class="v">Local-First</div></div>
+      <div class="meta-box hoverable"><div class="k">Escalation</div><div class="v">Claude via MCP</div></div>
+    </div>
+    <div class="case-actions">
+      <a class="btn btn-primary hoverable magnetic" data-label="GO SMALL!" href="https://github.com/priyansh19/Mach1-Agent" target="_blank" rel="noopener"><span class="dot"></span> View on GitHub ↗</a>
+      <a class="btn btn-ghost hoverable magnetic" data-label="HOME!" href="../index.html">← Back to Home</a>
+    </div>
+  </section>
+
+  <div class="marquee m2 m-rev">
+    <div class="marquee-track">
+      <span>Triage</span><span>·</span><span>Local First</span><span>·</span><span>Tools</span><span>·</span><span>Memory</span><span>·</span><span>Escalate Only When Worthy</span><span>·</span>
+      <span>Triage</span><span>·</span><span>Local First</span><span>·</span><span>Tools</span><span>·</span><span>Memory</span><span>·</span><span>Escalate Only When Worthy</span><span>·</span>
+    </div>
+  </div>
+
+  <!-- MISSION -->
+  <section>
+    <div class="eyebrow reveal">FILE 01 — THE MISSION</div>
+    <h2 class="h2 flip3d">MOST PROMPTS DON'T NEED <span class="accent">A FRONTIER MODEL</span></h2>
+    <div class="mission-grid">
+      <div class="prose">
+        <p class="reveal">Sending every prompt to a frontier API is the engineering equivalent of calling in an Avenger to open a jar. Most requests are small — <b>a small, local model can handle them faster, cheaper, and completely privately</b>.</p>
+        <p class="reveal">Mach1's <b>confidence-scored triage router</b> makes that call on every request: <b>65%+ resolve locally</b> on open-source LLMs through Ollama (Gemma); only genuinely hard prompts escalate to <b>Claude via MCP</b>. The result is an agent that's <b>fast, private, and zero-cost</b> for the bulk of its work — and still has a heavyweight on speed dial.</p>
+        <p class="quote reveal">"Go small first. Escalate only when it counts."</p>
+      </div>
+      <ul class="snapshot reveal">
+        <li style="border-top:none"><b>FILE SNAPSHOT</b></li>
+        <li><b>Router</b> — confidence-scored triage</li>
+        <li><b>Local</b> — Ollama (Gemma), 65%+ of requests</li>
+        <li><b>Escalation</b> — Claude via MCP, hard prompts only</li>
+        <li><b>Tools</b> — files, shell, REPL, web &amp; more</li>
+        <li><b>Memory</b> — episodic + semantic ChromaDB</li>
+        <li><b>Stack</b> — FastAPI · React + TypeScript (Vite)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- THE PIPELINE -->
+  <section>
+    <div class="eyebrow reveal">FILE 02 — THE PIPELINE</div>
+    <h2 class="h2 flip3d">TRIAGE → LOCAL → <span class="accent-b">ESCALATE IF WORTHY</span></h2>
+    <div class="steps">
+      <div class="step hoverable reveal">
+        <div class="no">01</div>
+        <div><h4>Triage</h4><p>Every request hits the <b>confidence-scored triage router</b> first — it decides in-flight whether local inference is enough.</p></div>
+      </div>
+      <div class="step hoverable reveal">
+        <div class="no">02</div>
+        <div><h4>Answer Locally</h4><p><b>Open-source LLMs through Ollama (Gemma)</b> handle 65%+ of traffic on LangChain + LangGraph StateGraph — no API bill, no data leaving the machine.</p></div>
+      </div>
+      <div class="step hoverable reveal">
+        <div class="no">03</div>
+        <div><h4>Run the Tool Loop</h4><p>A full multi-tool agent loop: <b>file ops, shell, Python REPL, DuckDuckGo, Wikipedia, Stack Overflow, and URL browsing</b> — orchestrated per request.</p></div>
+      </div>
+      <div class="step hoverable reveal">
+        <div class="no">04</div>
+        <div><h4>Remember in Layers</h4><p><b>Episodic and semantic vector stores in ChromaDB</b> with top-k RAG recall, plus a <b>periodic summarizer agent</b> compacting history — served over a FastAPI backend.</p></div>
+      </div>
+      <div class="step hoverable reveal">
+        <div class="no">05</div>
+        <div><h4>Escalate When Worthy</h4><p>Hard prompts route to <b>Claude via MCP</b> — the giant-mode button, pressed only when the router's confidence says the local model is outmatched.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTROL ROOM -->
+  <section>
+    <div class="eyebrow reveal">FILE 03 — THE CONTROL ROOM</div>
+    <h2 class="h2 flip3d">A UI THAT SHOWS <span class="accent">EVERY DECISION</span></h2>
+    <div class="panels">
+      <div class="panel hoverable reveal" data-tilt>
+        <div class="glyph">🎚️</div>
+        <h3>Live Triage Controls</h3>
+        <div class="sub">Adjustable Threshold Slider</div>
+        <p><b>Live confidence and routing tags on every message</b>, plus a threshold slider to tune how eagerly the agent escalates — in real time.</p>
+        <div class="chip-row"><span class="chip">Confidence Scores</span><span class="chip">Routing Tags</span></div>
+      </div>
+      <div class="panel hoverable reveal" data-tilt>
+        <div class="glyph">🧰</div>
+        <h3>Per-Message Tool Badges</h3>
+        <div class="sub">See What the Agent Used</div>
+        <p>Every response wears badges for the <b>tools it actually invoked</b> — shell, REPL, web, files — no black-box answers.</p>
+        <div class="chip-row"><span class="chip">7 Tools</span><span class="chip">Transparent Runs</span></div>
+      </div>
+      <div class="panel hoverable reveal" data-tilt>
+        <div class="glyph">🗃️</div>
+        <h3>Multi-Session Sidebar</h3>
+        <div class="sub">Three-Mode React + TS (Vite) UI</div>
+        <p>Sessions, <b>memory indicators</b>, and mode switching in one desktop-grade interface built on React + TypeScript.</p>
+        <div class="chip-row"><span class="chip">React + TS</span><span class="chip">Vite</span></div>
+      </div>
+      <div class="panel hoverable reveal" data-tilt>
+        <div class="glyph">🔐</div>
+        <h3>Private by Default</h3>
+        <div class="sub">Local Inference · Zero Cost</div>
+        <p>The 65%+ that stays local costs <b>nothing and leaks nothing</b> — privacy isn't a mode, it's the default route.</p>
+        <div class="chip-row"><span class="chip">Ollama</span><span class="chip">Gemma</span><span class="chip">FastAPI</span></div>
+      </div>
+    </div>
+    <div class="stat-row">
+      <div class="stat reveal"><div class="num" data-count="65" data-suffix="%+">65%+</div><div class="lbl">Requests Answered Locally</div></div>
+      <div class="stat reveal"><div class="num" data-count="7" data-suffix="">7</div><div class="lbl">Tools in the Agent Loop</div></div>
+      <div class="stat reveal"><div class="num" data-count="0" data-suffix="">0</div><div class="lbl">Cost for Local Inference</div></div>
+    </div>
+  </section>
+
+  <!-- BLUEPRINT -->
+  <section>
+    <div class="eyebrow reveal">FILE 04 — THE BLUEPRINT</div>
+    <h2 class="h2 flip3d">SMALL CORE, <span class="accent-b">GIANT REACH</span></h2>
+    <div class="arch reveal">
+      <div class="arch-stack">
+        <div class="arch-row">
+          <div class="node hoverable"><h5>React + TS UI</h5><p>Sessions · Badges · Threshold Slider</p></div>
+        </div>
+        <div class="down">▼ ▼ ▼</div>
+        <div class="arch-row">
+          <div class="node hoverable"><h5>FastAPI Backend</h5><p>Agent Loop Serving</p></div>
+          <div class="node hot hoverable"><h5>Triage Router</h5><p>Confidence-Scored Routing</p></div>
+        </div>
+        <div class="down">▼ ▼ ▼</div>
+        <div class="arch-row">
+          <div class="node hoverable"><h5>Local Agent</h5><p>Ollama (Gemma) · LangGraph</p></div>
+          <div class="node hoverable"><h5>Tool Loop</h5><p>Files · Shell · REPL · Web</p></div>
+          <div class="node hoverable"><h5>Claude via MCP</h5><p>Hard Prompts Only</p></div>
+        </div>
+        <div class="down">▼ ▼ ▼</div>
+        <div class="arch-row">
+          <div class="node cold hoverable"><h5>ChromaDB Memory</h5><p>Episodic + Semantic · Top-K RAG · Summarizer Agent</p></div>
+        </div>
+      </div>
+      <div class="arch-caption">Local by default, escalation by evidence — the router decides, the UI shows its work</div>
+    </div>
+  </section>
+
+  <!-- END OF FILE -->
+  <section>
+    <div class="eyebrow reveal">END OF FILE</div>
+    <h2 class="h2 flip3d">MISSION LOGGED. <span class="accent">RETURN TO BASE.</span></h2>
+    <div class="case-actions reveal">
+      <a class="btn btn-primary hoverable magnetic" data-label="HOME!" href="../index.html"><span class="dot"></span> ← Return to Home</a>
+      <a class="btn btn-ghost hoverable magnetic" data-label="ARCHIVE!" href="index.html">Browse All Case Files</a>
+      <a class="btn btn-ghost hoverable magnetic" data-label="GO SMALL!" href="https://github.com/priyansh19/Mach1-Agent" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div>© 2026 PRIYANSH GUPTA — SENIOR AGENTIC AI ENGINEER</div>
+  <div><a class="hoverable" href="../index.html">HOME</a> · <a class="hoverable" href="index.html">ALL CASE FILES</a></div>
+  <div>DUBAI JVC, UAE · BUILT WITH AI ⚡</div>
+</footer>
+
+<script>
+window.BURST_WORDS=['GO SMALL!','PYM!','LOCAL WIN!','TINY MIGHTY!'];
+window.BURST_COLORS=['#F04E3E','#6FC3FF'];
+</script>
+<script src="theme.js"></script>
+</body>
+</html>

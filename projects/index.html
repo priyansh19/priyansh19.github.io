@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Case Files — Projects · Priyansh Gupta</title>
-<meta name="description" content="Every project by Priyansh Gupta, filed as an Avenger-grade case: multi-agent platforms, autonomous DevOps agents, private RAG pipelines, upstream OSS work, and Fortune 500 GenAI modernisation.">
+<meta name="description" content="Every project by Priyansh Gupta, filed as an Avenger-grade case: agent harnesses with observability, local-first agents, self-scaffolding coding models, graph-aware security analysis, a multi-agent AI workforce platform, and Fortune 500 GenAI modernisation.">
 <link rel="icon" href="../favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="theme.css">
 <script>document.documentElement.classList.add('js')</script>
 </head>
-<body class="t-shield">
+<body class="t-panther">
 
 <div class="cursor-dot"></div>
 <div class="cursor-ring"></div>
@@ -25,8 +25,8 @@
 <div class="halftone-cyan"></div>
 <div class="progress"><i id="progFill"></i></div>
 
-<div class="hud hud-tl">SYS // <b>S.H.I.E.L.D. DECK</b><br>ARCHIVE: ALL CASES</div>
-<div class="hud hud-br">SCROLL <b id="hudScroll">000%</b><br>NODE: DXB-AE</div>
+<a class="corner-nav left hoverable" data-label="HOME!" href="../index.html">← Home</a>
+<div class="hud hud-br">SCROLL <b id="hudScroll">000%</b><br>VAULT: UNLOCKED</div>
 
 <nav>
   <a class="nav-logo hoverable" href="../index.html">PRIYANSH<span>.AI</span></a>
@@ -45,7 +45,7 @@
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
-  <a href="index.html"><span class="no">01</span>Case Files</a>
+  <a href="../index.html"><span class="no">01</span>Home</a>
   <a href="../index.html#about"><span class="no">02</span>About</a>
   <a href="../index.html#experience"><span class="no">03</span>Experience</a>
   <a href="../index.html#skills"><span class="no">04</span>Skills</a>
@@ -56,31 +56,44 @@
 
 <main>
 
-  <!-- HERO — command deck -->
+  <!-- HERO — vibranium vault -->
   <section class="case-hero">
-    <div class="radar" aria-hidden="true"><i></i></div>
-    <div class="issue-tag" data-scramble>// PROJECT ARCHIVE — ONE AVENGER PER MISSION — CLEARANCE: PUBLIC</div>
+    <svg class="hero-emblem emblem-float" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+      <!-- vibranium claw slashes -->
+      <g stroke-linecap="round">
+        <path d="M46 22 C74 74 94 128 102 182" stroke="#9E63FF" stroke-width="13" opacity=".9"/>
+        <path d="M92 14 C114 68 130 122 136 176" stroke="#CBD5E1" stroke-width="11" opacity=".8"/>
+        <path d="M138 20 C154 66 164 116 166 166" stroke="#6D28D9" stroke-width="9" opacity=".85"/>
+      </g>
+      <g stroke="#E9D8FF" stroke-width="2.5" opacity=".7" stroke-linecap="round">
+        <path d="M40 30 C68 80 88 130 96 178"/>
+        <path d="M86 22 C108 74 124 124 130 172"/>
+        <path d="M132 28 C148 72 158 118 160 162"/>
+      </g>
+    </svg>
+
+    <div class="issue-tag" data-scramble>// THE VIBRANIUM VAULT — ONE AVENGER PER MISSION — CLEARANCE: PUBLIC</div>
     <h1 class="case-title">
       <span class="row"><span class="t3d-ink">OPEN THE</span></span>
       <span class="row"><span class="t3d-red">CASE</span> <span class="t3d-cyan">FILES.</span></span>
     </h1>
-    <p class="lede">Five missions on record, each filed under the Avenger it fights like — an <b>AI workforce platform</b> built like Stark tech, <b>vibranium-grade OSS fixes</b>, a <b>storm-watching DevOps agent</b>, a <b>RAG pipeline that never leaks</b>, and a <b>Fortune 500 platform held behind the shield</b>. Pick an issue. Dive in.</p>
+    <p class="lede">Six missions on record, each filed under the Avenger it fights like — an <b>all-seeing agent harness</b>, a <b>local-first agent that goes big only when it must</b>, a <b>self-scaffolding coding model</b>, a <b>blast-radius security engine</b>, an <b>AI workforce built like Stark tech</b>, and a <b>Fortune 500 platform held behind the shield</b>. Pick an issue. Dive in.</p>
     <div class="case-meta">
-      <div class="meta-box hoverable"><div class="k">Case Files</div><div class="v">05 Active</div></div>
+      <div class="meta-box hoverable"><div class="k">Case Files</div><div class="v">06 Active</div></div>
       <div class="meta-box hoverable"><div class="k">Genre</div><div class="v">Agentic AI</div></div>
       <div class="meta-box hoverable"><div class="k">Handler</div><div class="v">Priyansh Gupta</div></div>
       <div class="meta-box hoverable"><div class="k">HQ</div><div class="v">Dubai, UAE</div></div>
     </div>
     <div class="case-actions">
       <a class="btn btn-primary hoverable magnetic" data-label="ASSEMBLE!" href="#files"><span class="dot"></span> Browse the Files</a>
-      <a class="btn btn-ghost hoverable magnetic" data-label="HQ!" href="../index.html">← Back to HQ</a>
+      <a class="btn btn-ghost hoverable magnetic" data-label="HOME!" href="../index.html">← Back to Home</a>
     </div>
   </section>
 
   <div class="marquee m-fwd">
     <div class="marquee-track">
-      <span>Iron Protocol</span><span class="hl">★</span><span>Panther Ops</span><span class="hl">★</span><span>Stormwatch</span><span class="hl">★</span><span>Widow File</span><span class="hl">★</span><span>Shield Wall</span><span class="hl">★</span>
-      <span>Iron Protocol</span><span class="hl">★</span><span>Panther Ops</span><span class="hl">★</span><span>Stormwatch</span><span class="hl">★</span><span>Widow File</span><span class="hl">★</span><span>Shield Wall</span><span class="hl">★</span>
+      <span>Vision Watch</span><span class="hl">★</span><span>Pym Protocol</span><span class="hl">★</span><span>Chaos Works</span><span class="hl">★</span><span>Gamma Files</span><span class="hl">★</span><span>Iron Protocol</span><span class="hl">★</span><span>Shield Wall</span><span class="hl">★</span>
+      <span>Vision Watch</span><span class="hl">★</span><span>Pym Protocol</span><span class="hl">★</span><span>Chaos Works</span><span class="hl">★</span><span>Gamma Files</span><span class="hl">★</span><span>Iron Protocol</span><span class="hl">★</span><span>Shield Wall</span><span class="hl">★</span>
     </div>
   </div>
 
@@ -91,9 +104,57 @@
 
     <div class="file-grid">
 
+      <a class="file-card hoverable reveal" href="mach2.html" data-tilt
+         style="--red:#E0565F;--red-deep:#8E2430;--cyan:#7CF2C8;--cyan-deep:#1F9E78;--yellow:#FFD34D;--purple:#9B72F2;--purple-deep:#5636A8">
+        <div class="file-no">01</div>
+        <div class="badge">VISION WATCH</div>
+        <div class="glyph">👁️</div>
+        <h3>Mach2</h3>
+        <div class="sub">Multi-Agent ReAct Harness · Observability &amp; LLM Evaluation</div>
+        <p>Every thought, tool call, and LLM span traced in <b>self-hosted Langfuse</b>; an <b>LLM-as-a-Judge (Grok)</b> scores each response, and a <b>five-critic pipeline</b> gates every answer with a severity-tagged ledger. <b>It sees everything.</b></p>
+        <div class="chip-row"><span class="chip">LangGraph ReAct</span><span class="chip">Langfuse</span><span class="chip">LLM-as-a-Judge</span><span class="chip">Critic Pipeline</span></div>
+        <span class="open">Open Case File ↗</span>
+      </a>
+
+      <a class="file-card hoverable reveal" href="mach1.html" data-tilt
+         style="--red:#F04E3E;--red-deep:#9B1F1F;--cyan:#6FC3FF;--cyan-deep:#2A6FB8;--yellow:#FFCE5C;--purple:#7E8BB8;--purple-deep:#3E4A78">
+        <div class="file-no">02</div>
+        <div class="badge">PYM PROTOCOL</div>
+        <div class="glyph">🐜</div>
+        <h3>Mach1</h3>
+        <div class="sub">Local-First Multi-Tool AI Agent · Triage Routing</div>
+        <p>A <b>confidence-scored triage router</b> answers <b>65%+ of requests locally</b> on Ollama (Gemma) and escalates only hard prompts to <b>Claude via MCP</b> — fast, private, zero-cost. <b>Goes big only when it counts.</b></p>
+        <div class="chip-row"><span class="chip">LangGraph</span><span class="chip">Ollama</span><span class="chip">ChromaDB</span><span class="chip">7-Tool Loop</span></div>
+        <span class="open">Open Case File ↗</span>
+      </a>
+
+      <a class="file-card hoverable reveal" href="ornith.html" data-tilt
+         style="--red:#F2314F;--red-deep:#96122F;--cyan:#FF7EDB;--cyan-deep:#B0349B;--yellow:#FFB3C7;--purple:#B03A8C;--purple-deep:#5E1D4C">
+        <div class="file-no">03</div>
+        <div class="badge">CHAOS WORKS</div>
+        <div class="glyph">🔮</div>
+        <h3>Ornith 1.0</h3>
+        <div class="sub">Local Coding-Agent Harness · Self-Scaffolding Model</div>
+        <p>A desktop harness for the <b>self-scaffolding ornith:9b model</b> — each session conjures its own pluggable Python harness, streams <b>native tool-calls</b>, and answers to an <b>L2–L7 critic ledger</b>. <b>Chaos, fully observed.</b></p>
+        <div class="chip-row"><span class="chip">ornith:9b</span><span class="chip">Native Tool-Calls</span><span class="chip">Next.js + Electron</span><span class="chip">Playwright</span></div>
+        <span class="open">Open Case File ↗</span>
+      </a>
+
+      <a class="file-card hoverable reveal" href="blastr.html" data-tilt
+         style="--red:#54E065;--red-deep:#1F8A3B;--cyan:#C77DFF;--cyan-deep:#7A3FB8;--yellow:#D9FF7E;--purple:#8C52D9;--purple-deep:#4A2A80">
+        <div class="file-no">04</div>
+        <div class="badge">GAMMA FILES</div>
+        <div class="glyph">💥</div>
+        <h3>BlastR</h3>
+        <div class="sub">Graph-Aware RAG Security Analysis · M.Sc. Dissertation</div>
+        <p>Parses Terraform into <b>NetworkX attack graphs</b> and propagates <b>blast radius across cloud layers</b> — a LangGraph agent with FAISS RAG and a <b>LoRA/QLoRA fine-tuned SLM</b> explains and prioritises what to fix first.</p>
+        <div class="chip-row"><span class="chip">NetworkX</span><span class="chip">FAISS RAG</span><span class="chip">LoRA/QLoRA</span><span class="chip">LangSmith</span></div>
+        <span class="open">Open Case File ↗</span>
+      </a>
+
       <a class="file-card hoverable reveal" href="crewspace.html" data-tilt
          style="--red:#E23636;--red-deep:#8E1D1D;--cyan:#7FE7FF;--cyan-deep:#1E93B8;--yellow:#FFC33D;--purple:#D98E1B;--purple-deep:#8C5A0F">
-        <div class="file-no">01</div>
+        <div class="file-no">05</div>
         <div class="badge">IRON PROTOCOL</div>
         <div class="glyph">🦾</div>
         <h3>CrewSpace</h3>
@@ -103,45 +164,9 @@
         <span class="open">Open Case File ↗</span>
       </a>
 
-      <a class="file-card hoverable reveal" href="openclaw.html" data-tilt
-         style="--red:#9E63FF;--red-deep:#5A2EA6;--cyan:#CBD5E1;--cyan-deep:#64748B;--yellow:#E9D8FF;--purple:#6D28D9;--purple-deep:#3B1580">
-        <div class="file-no">02</div>
-        <div class="badge">PANTHER OPS</div>
-        <div class="glyph">🐾</div>
-        <h3>OpenClaw</h3>
-        <div class="sub">Autonomous Agent Platform — PRs Merged Upstream</div>
-        <p>Contributions merged into the core agent runtime: <b>workspace-safe path resolution</b> with allowlist security intact, and validation errors that explain themselves. <b>Silent, precise, vibranium-grade.</b></p>
-        <div class="chip-row"><span class="chip">Agent Runtime</span><span class="chip">Security</span><span class="chip">Developer Experience</span></div>
-        <span class="open">Open Case File ↗</span>
-      </a>
-
-      <a class="file-card hoverable reveal" href="autoops-ai.html" data-tilt
-         style="--red:#FF4D5E;--red-deep:#A61E2C;--cyan:#8FE3FF;--cyan-deep:#1F7FA6;--yellow:#FFE066;--purple:#5B7CFF;--purple-deep:#2C3F9E">
-        <div class="file-no">03</div>
-        <div class="badge">STORMWATCH</div>
-        <div class="glyph">⚡</div>
-        <h3>AutoOps AI</h3>
-        <div class="sub">Autonomous DevOps &amp; Infrastructure Agent</div>
-        <p>Watches repos and pipelines, runs <b>LLM root-cause analysis</b>, raises fix PRs, provisions Azure from plain English — and when metrics degrade, <b>the hammer returns: auto-revert</b>.</p>
-        <div class="chip-row"><span class="chip">LLM Reasoning</span><span class="chip">Terraform</span><span class="chip">Prometheus</span></div>
-        <span class="open">Open Case File ↗</span>
-      </a>
-
-      <a class="file-card hoverable reveal" href="rag-chatbot.html" data-tilt
-         style="--red:#E8253D;--red-deep:#8F1226;--cyan:#C7CEDE;--cyan-deep:#5F6B80;--yellow:#FF8FA3;--purple:#B0233A;--purple-deep:#5C0F1F">
-        <div class="file-no">04</div>
-        <div class="badge">WIDOW FILE</div>
-        <div class="glyph">🕷️</div>
-        <h3>RAG Chatbot</h3>
-        <div class="sub">Local Ollama + Vector DB Pipeline</div>
-        <p>Production RAG with <b>zero external API calls</b> — local Ollama inference, ChromaDB retrieval, FastAPI serving, and <b>a structured audit log for every single query</b>. Classified stays classified.</p>
-        <div class="chip-row"><span class="chip">Ollama</span><span class="chip">ChromaDB</span><span class="chip">FastAPI</span></div>
-        <span class="open">Open Case File ↗</span>
-      </a>
-
       <a class="file-card hoverable reveal" href="fmglobal.html" data-tilt
          style="--red:#4D8DFF;--red-deep:#1D4FA8;--cyan:#F0F5FF;--cyan-deep:#8CA3C7;--yellow:#F4F7FF;--purple:#E23B55;--purple-deep:#8C1D30">
-        <div class="file-no">05</div>
+        <div class="file-no">06</div>
         <div class="badge">SHIELD WALL</div>
         <div class="glyph">🛡️</div>
         <h3>FMGlobal</h3>
@@ -152,7 +177,7 @@
       </a>
 
       <a class="file-card wanted hoverable reveal" href="mailto:priyansh.9071@gmail.com" data-tilt>
-        <div class="file-no">06</div>
+        <div class="file-no">07</div>
         <div class="glyph">✳️</div>
         <h3>Your Project Here?</h3>
         <div class="sub">Next Mission — Recruiting Now</div>
@@ -167,13 +192,13 @@
 
 <footer>
   <div>© 2026 PRIYANSH GUPTA — SENIOR AGENTIC AI ENGINEER</div>
-  <div><a class="hoverable" href="../index.html">← BACK TO HQ</a></div>
+  <div><a class="hoverable" href="../index.html">← BACK TO HOME</a></div>
   <div>DUBAI JVC, UAE · BUILT WITH AI ⚡</div>
 </footer>
 
 <script>
-window.BURST_WORDS=['ASSEMBLE!','MISSION ON!','FILED!','CLEARED!'];
-window.BURST_COLORS=['#64A7FF','#3E5C8F'];
+window.BURST_WORDS=['WAKANDA!','VIBRANIUM!','FILED!','ASSEMBLE!'];
+window.BURST_COLORS=['#9E63FF','#6D28D9'];
 </script>
 <script src="theme.js"></script>
 </body>

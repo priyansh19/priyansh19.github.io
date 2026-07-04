@@ -456,6 +456,54 @@ footer{position:relative;z-index:2;border-top:3px solid var(--red);padding:30px 
     <div class="cards">
       <div class="card hoverable reveal">
         <div class="badge">FLAGSHIP</div>
+        <div class="glyph">👁️</div>
+        <h3>Mach2</h3>
+        <div class="sub">Multi-Agent ReAct Harness · Observability &amp; LLM Evaluation</div>
+        <p>Successor to Mach1 — a <b>multi-agent ReAct harness instrumented end-to-end with self-hosted Langfuse</b>, tracing every thought, tool call, and LLM span. An <b>LLM-as-a-Judge (Grok)</b> scores each response on hallucination and quality, while a <b>five-critic pipeline</b> (Fact, Gap, Logic, Efficiency, Sign-off) emits a severity-tagged critique ledger that gates synthesis and triggers targeted re-research — plus a nested Research Agent fanning out scoped sub-agents over shared ChromaDB memory, streamed live in an Electron + React desktop UI.</p>
+        <div class="chip-row"><span class="chip">LangGraph ReAct</span><span class="chip">Langfuse</span><span class="chip">LLM-as-a-Judge</span><span class="chip">Critic Pipeline</span><span class="chip">Electron + React</span></div>
+        <div class="card-links">
+          <a class="card-link hoverable" href="projects/mach2.html">Open Case File ↗</a>
+          <a class="card-link alt hoverable" href="https://github.com/priyansh19/Mach-2-Agent-Harness" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="card hoverable reveal">
+        <div class="badge">LOCAL-FIRST</div>
+        <div class="glyph">🐜</div>
+        <h3>Mach1</h3>
+        <div class="sub">Local-First Multi-Tool AI Agent · Triage Routing</div>
+        <p>A local-first agent on LangChain + LangGraph (StateGraph) running open-source LLMs through Ollama — a <b>confidence-scored triage router answers 65%+ of requests locally</b> and escalates only hard prompts to <b>Claude via MCP</b>: fast, private, zero-cost. Full multi-tool loop (file ops, shell, Python REPL, web tools) with <b>episodic + semantic ChromaDB memory</b>, top-k RAG recall, a periodic summarizer agent, and a three-mode React + TypeScript UI with live confidence and routing tags.</p>
+        <div class="chip-row"><span class="chip">LangGraph</span><span class="chip">Ollama (Gemma)</span><span class="chip">ChromaDB</span><span class="chip">FastAPI</span><span class="chip">React + TS</span></div>
+        <div class="card-links">
+          <a class="card-link hoverable" href="projects/mach1.html">Open Case File ↗</a>
+          <a class="card-link alt hoverable" href="https://github.com/priyansh19/Mach1-Agent" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="card hoverable reveal">
+        <div class="badge">CODING AGENT</div>
+        <div class="glyph">🔮</div>
+        <h3>Ornith 1.0</h3>
+        <div class="sub">Local Coding-Agent Harness · Self-Scaffolding Model</div>
+        <p>A desktop coding-agent harness (Next.js + Electron, React + TypeScript) for the <b>self-scaffolding ornith:9b model</b> on local Ollama — each session binds its own <b>pluggable Python agent harness</b> that plans tasks and streams <b>native tool-calls</b> (file edits, reads, shell runs). An Inspector / Thinking / Critiques workspace surfaces ReAct reasoning and an <b>L2–L7 critic ledger</b> per response, with a harness registry and a full Playwright e2e suite.</p>
+        <div class="chip-row"><span class="chip">ornith:9b</span><span class="chip">Native Tool-Calls</span><span class="chip">Critic Ledger</span><span class="chip">Next.js + Electron</span><span class="chip">Playwright</span></div>
+        <div class="card-links">
+          <a class="card-link hoverable" href="projects/ornith.html">Open Case File ↗</a>
+          <a class="card-link alt hoverable" href="https://github.com/priyansh19/Ornith-1.0-Code" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="card hoverable reveal">
+        <div class="badge">M.SC. RESEARCH</div>
+        <div class="glyph">💥</div>
+        <h3>BlastR</h3>
+        <div class="sub">Graph-Aware RAG Security Analysis · Cross-Layer DevSecOps</div>
+        <p>M.Sc. dissertation: parses Terraform/IaC into <b>NetworkX attack graphs</b> and propagates <b>"blast radius" across cloud layers</b>, pairing a LangGraph reasoning agent with <b>FAISS + Sentence-Transformers RAG</b> to explain and prioritise security misconfigurations. Fine-tuned <b>Qwen2.5-Coder-1.5B with LoRA/QLoRA</b> on Checkov/Trivy-labelled Terraform, benchmarked against a zero-shot baseline and tracked in LangSmith — shipped as a Typer CLI, FastAPI service, and React dashboard.</p>
+        <div class="chip-row"><span class="chip">NetworkX</span><span class="chip">FAISS RAG</span><span class="chip">LoRA/QLoRA</span><span class="chip">LangSmith</span><span class="chip">FastAPI</span></div>
+        <div class="card-links">
+          <a class="card-link hoverable" href="projects/blastr.html">Open Case File ↗</a>
+          <a class="card-link alt hoverable" href="https://github.com/priyansh19/BlastR" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="card hoverable reveal">
+        <div class="badge">OPEN SOURCE</div>
         <div class="glyph">🕸️</div>
         <h3>CrewSpace</h3>
         <div class="sub">Open-Source Multi-Agent AI Workforce Platform</div>
@@ -463,47 +511,13 @@ footer{position:relative;z-index:2;border-top:3px solid var(--red);padding:30px 
         <div class="chip-row"><span class="chip">Hierarchical Orchestration</span><span class="chip">Memory Graph</span><span class="chip">3D Workspace</span><span class="chip">Approvals</span></div>
         <div class="card-links">
           <a class="card-link hoverable" href="projects/crewspace.html">Open Case File ↗</a>
-          <a class="card-link alt hoverable" href="https://github.com/priyansh19/CrewSpace" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="card-link alt hoverable" href="https://github.com/priyansh19/crewspace" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
       </div>
       <div class="card hoverable reveal">
-        <div class="badge">OPEN SOURCE</div>
-        <div class="glyph">🦾</div>
-        <h3>OpenClaw</h3>
-        <div class="sub">Autonomous AI Agent Platform — Contributor, PRs Merged</div>
-        <p>Active contributor with <b>multiple PRs merged into the core codebase</b> — improving agent runtime tooling, workspace file handling, and developer-facing diagnostics. Fixed image-tool workspace path resolution to resolve against the agent workspace instead of <b>process.cwd()</b> (preserving allowlist security, with regression coverage), and improved tool validation errors to surface received parameter keys for easier debugging of long-running agent sessions.</p>
-        <div class="chip-row"><span class="chip">Agent Runtime</span><span class="chip">Tooling DX</span><span class="chip">Security-Aware</span></div>
-        <div class="card-links">
-          <a class="card-link hoverable" href="projects/openclaw.html">Open Case File ↗</a>
-          <a class="card-link alt hoverable" href="https://github.com/openclaw/openclaw/pulls?q=author%3Apriyansh19+is%3Apr" target="_blank" rel="noopener">Merged PRs ↗</a>
-        </div>
-      </div>
-      <div class="card hoverable reveal">
-        <div class="badge">AUTONOMOUS</div>
-        <div class="glyph">⚙️</div>
-        <h3>AutoOps AI</h3>
-        <div class="sub">Autonomous DevOps &amp; Infrastructure Agent</div>
-        <p>Monitors GitHub repositories and CI/CD pipelines, performs multi-step <b>LLM root-cause analysis</b>, raises PRs with fixes, and triggers <b>Terraform-based remediation on Azure</b>. Plain-English infrastructure provisioning via function-calling — parsed to HCL, validated, planned, applied — with auto-revert through Prometheus alerting.</p>
-        <div class="chip-row"><span class="chip">LLM Reasoning</span><span class="chip">Terraform</span><span class="chip">Prometheus</span></div>
-        <div class="card-links">
-          <a class="card-link hoverable" href="projects/autoops-ai.html">Open Case File ↗</a>
-        </div>
-      </div>
-      <div class="card hoverable reveal">
-        <div class="badge">SHIPPED</div>
-        <div class="glyph">📚</div>
-        <h3>RAG Production Chatbot</h3>
-        <div class="sub">Local Ollama + Vector DB Pipeline</div>
-        <p>Production RAG chatbot on fully <b>local Ollama inference — zero external API dependency</b> for data-privacy compliance. ChromaDB vector pipeline for chunking, indexing, semantic search, and top-k retrieval, with a FastAPI REST layer and <b>structured audit logging</b> of every query, retrieval, and response.</p>
-        <div class="chip-row"><span class="chip">Ollama</span><span class="chip">ChromaDB</span><span class="chip">FastAPI</span><span class="chip">Audit Logs</span></div>
-        <div class="card-links">
-          <a class="card-link hoverable" href="projects/rag-chatbot.html">Open Case File ↗</a>
-        </div>
-      </div>
-      <div class="card card-wide hoverable reveal">
         <div class="badge">ENTERPRISE</div>
         <div class="glyph">🛡️</div>
-        <h3>FMGlobal — GenAI Platform Modernisation</h3>
+        <h3>FMGlobal — GenAI Modernisation</h3>
         <div class="sub">Fortune 500 Insurer · Zero-Downtime Migration to Azure AI</div>
         <p>Led the modernisation of FMGlobal's GenAI platform — <b>zero-downtime migration of critical insurance workloads</b> to secure Azure AI infrastructure. Multimodal LLM endpoints on <b>Azure AI Foundry</b> with auto-scaling and Content Safety guardrails, enterprise RAG with <b>hybrid vector + semantic indexing in Azure AI Search</b>, MCP integration for Azure Boards, and CI/CD governance across <b>20+ microservices</b> with JFrog promotion gates.</p>
         <div class="chip-row"><span class="chip">Azure AI Foundry</span><span class="chip">Azure AI Search</span><span class="chip">MCP</span><span class="chip">Zero Downtime</span><span class="chip">JFrog</span></div>

@@ -263,7 +263,7 @@ section{position:relative;padding:clamp(80px,12vh,140px) clamp(20px,6vw,96px)}
 .file-card .chip-row{margin-top:20px}
 .file-card .open{display:inline-flex;align-items:center;gap:8px;margin-top:24px;font-family:'Bangers',cursive;font-size:16px;letter-spacing:.08em;color:var(--bg);background:var(--cyan);border:3px solid var(--ink);border-radius:99px;padding:7px 18px;box-shadow:3px 3px 0 var(--red);transition:.25s}
 .file-card:hover .open{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--red)}
-.file-card.wanted{border-style:dashed;background:transparent;box-shadow:8px 8px 0 var(--purple-deep);display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.file-card.wanted{grid-column:1/-1;border-style:dashed;background:transparent;box-shadow:8px 8px 0 var(--purple-deep);display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
 .file-card.wanted h3{color:var(--yellow)}
 
 /* ---------- footer ---------- */
@@ -334,13 +334,63 @@ body.t-cap{
   --purple:#E23B55; --purple-deep:#8C1D30;
 }
 
-/* S.H.I.E.L.D. — Case Files hub · command-deck steel & radar blue */
+/* S.H.I.E.L.D. — command-deck steel & radar blue */
 body.t-shield{
   --bg-2:#121826;
   --red:#64A7FF; --red-deep:#2B5AA6;
   --cyan:#D3DCE8; --cyan-deep:#6E7F94;
   --yellow:#B9C7DA;
   --purple:#3E5C8F; --purple-deep:#22375C;
+}
+
+/* VISION — Mach2 · vision crimson, synthezoid green, mind-stone gold */
+body.t-vision{
+  --bg-2:#1E1322;
+  --red:#E0565F; --red-deep:#8E2430;
+  --cyan:#7CF2C8; --cyan-deep:#1F9E78;
+  --yellow:#FFD34D;
+  --purple:#9B72F2; --purple-deep:#5636A8;
+}
+
+/* ANT-MAN — Mach1 · suit red, Pym-particle blue, silver */
+body.t-antman{
+  --bg-2:#191125;
+  --red:#F04E3E; --red-deep:#9B1F1F;
+  --cyan:#6FC3FF; --cyan-deep:#2A6FB8;
+  --yellow:#FFCE5C;
+  --purple:#7E8BB8; --purple-deep:#3E4A78;
+}
+
+/* HULK — BlastR · gamma green, purple pants, radiation lime */
+body.t-hulk{
+  --bg-2:#0F1F16;
+  --red:#54E065; --red-deep:#1F8A3B;
+  --cyan:#C77DFF; --cyan-deep:#7A3FB8;
+  --yellow:#D9FF7E;
+  --purple:#8C52D9; --purple-deep:#4A2A80;
+}
+
+/* WANDA — Ornith · scarlet hex, chaos magenta, rose glow */
+body.t-wanda{
+  --bg-2:#220F1D;
+  --red:#F2314F; --red-deep:#96122F;
+  --cyan:#FF7EDB; --cyan-deep:#B0349B;
+  --yellow:#FFB3C7;
+  --purple:#B03A8C; --purple-deep:#5E1D4C;
+}
+
+/* ---------- fixed corner navigation (independent pages) ---------- */
+.corner-nav{position:fixed;top:86px;z-index:7300;display:inline-flex;align-items:center;gap:8px;
+  font-family:'Bangers',cursive;font-size:16px;letter-spacing:.08em;text-transform:uppercase;
+  border:3px solid var(--ink);border-radius:99px;padding:9px 20px;background:var(--bg-2);color:var(--ink);
+  box-shadow:3px 3px 0 var(--red);transition:.25s}
+.corner-nav.left{left:22px;transform:rotate(-1deg)}
+.corner-nav.right{right:22px;transform:rotate(1deg);box-shadow:3px 3px 0 var(--cyan-deep)}
+.corner-nav:hover{transform:translate(-2px,-2px) rotate(0);box-shadow:6px 6px 0 var(--purple-deep);background:var(--yellow);color:var(--bg)}
+@media(max-width:860px){
+  .corner-nav{top:80px;font-size:13px;padding:7px 14px}
+  .corner-nav.left{left:12px}
+  .corner-nav.right{right:12px}
 }
 
 /* radar emblem for the S.H.I.E.L.D. hub (pure CSS) */

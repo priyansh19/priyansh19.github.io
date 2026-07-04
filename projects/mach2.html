@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mach2 — Case File 01 · Vision Watch · Priyansh Gupta</title>
+<meta name="description" content="Mach2 by Priyansh Gupta — a multi-agent ReAct harness instrumented end-to-end with self-hosted Langfuse, an LLM-as-a-Judge (Grok) scoring every response, and a five-critic pipeline that gates synthesis with a severity-tagged critique ledger.">
+<link rel="icon" href="../favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Archivo:wght@400;500;600;700;900&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="theme.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="t-vision">
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+<div class="cursor-label" id="cursorLabel"></div>
+<canvas id="webTrail"></canvas>
+<div class="glow glow-1"></div>
+<div class="glow glow-2"></div>
+<div class="halftone"></div>
+<div class="halftone-pink"></div>
+<div class="halftone-cyan"></div>
+<div class="progress"><i id="progFill"></i></div>
+
+<a class="corner-nav left hoverable" data-label="HOME!" href="../index.html">← Home</a>
+<a class="corner-nav right hoverable" data-label="ARCHIVE!" href="index.html">All Case Files ▦</a>
+<div class="hud hud-br">SCROLL <b id="hudScroll">000%</b><br>EVERY SPAN: TRACED</div>
+
+<nav>
+  <a class="nav-logo hoverable" href="../index.html">PRIYANSH<span>.AI</span></a>
+  <div class="nav-links">
+    <a class="hoverable here" href="index.html">Case Files</a>
+    <a class="hoverable" href="../index.html#about">About</a>
+    <a class="hoverable" href="../index.html#experience">Experience</a>
+    <a class="hoverable" href="../index.html#skills">Skills</a>
+    <a class="hoverable" href="../index.html#contact">Contact</a>
+    <a class="hoverable" href="../assets/Priyansh-Gupta-Resume.pdf" download>Resume ↓</a>
+  </div>
+  <div class="nav-right">
+    <a class="nav-cta hoverable" href="mailto:priyansh.9071@gmail.com">Hire Me ↗</a>
+    <button class="nav-burger hoverable" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html"><span class="no">01</span>Home</a>
+  <a href="index.html"><span class="no">02</span>Case Files</a>
+  <a href="../index.html#about"><span class="no">03</span>About</a>
+  <a href="../index.html#skills"><span class="no">04</span>Skills</a>
+  <a href="../index.html#contact"><span class="no">05</span>Contact</a>
+  <a href="../assets/Priyansh-Gupta-Resume.pdf" download><span class="no">↓</span>Resume</a>
+  <a class="menu-cta" href="mailto:priyansh.9071@gmail.com">Hire Me ↗</a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="case-hero">
+    <svg class="hero-emblem emblem-spin" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+      <!-- mind stone -->
+      <circle cx="100" cy="100" r="94" stroke="#7CF2C8" stroke-width="2.5" opacity=".5"/>
+      <circle cx="100" cy="100" r="72" stroke="#E0565F" stroke-width="2" opacity=".5"/>
+      <g stroke="#FFD34D" stroke-width="3" opacity=".8">
+        <line x1="100" y1="6" x2="100" y2="24"/><line x1="100" y1="176" x2="100" y2="194"/>
+        <line x1="6" y1="100" x2="24" y2="100"/><line x1="176" y1="100" x2="194" y2="100"/>
+      </g>
+      <polygon points="100,48 142,100 100,152 58,100" fill="rgba(255,211,77,.22)" stroke="#FFD34D" stroke-width="5" stroke-linejoin="round"/>
+      <g stroke="#FFD34D" stroke-width="2" opacity=".85">
+        <line x1="100" y1="48" x2="100" y2="152"/>
+        <line x1="58" y1="100" x2="142" y2="100"/>
+        <line x1="100" y1="48" x2="79" y2="100"/><line x1="100" y1="48" x2="121" y2="100"/>
+        <line x1="100" y1="152" x2="79" y2="100"/><line x1="100" y1="152" x2="121" y2="100"/>
+      </g>
+      <circle cx="100" cy="100" r="9" fill="#FFD34D"/>
+    </svg>
+
+    <div class="issue-tag" data-scramble>// CASE FILE 01 — CODENAME: VISION WATCH — FLAGSHIP · OBSERVABILITY</div>
+    <h1 class="case-title">
+      <span class="row"><span class="t3d-ink">THE ALL-SEEING HARNESS,</span></span>
+      <span class="row"><span class="t3d-red">MACH</span><span class="t3d-cyan">2.</span></span>
+    </h1>
+    <p class="lede">A <b>multi-agent ReAct harness instrumented end-to-end</b> — self-hosted <b>Langfuse traces every thought, tool call, and LLM span</b>, an <b>LLM-as-a-Judge (Grok)</b> scores each response for hallucination and quality, and a <b>five-critic pipeline gates every answer</b> before it reaches the user. Like Vision: it sees everything, and it judges what it sees.</p>
+    <div class="case-meta">
+      <div class="meta-box hoverable"><div class="k">Inspired By</div><div class="v">Vision</div></div>
+      <div class="meta-box hoverable"><div class="k">Role</div><div class="v">Creator &amp; Architect</div></div>
+      <div class="meta-box hoverable"><div class="k">Type</div><div class="v">Desktop Harness</div></div>
+      <div class="meta-box hoverable"><div class="k">Evaluation</div><div class="v">LLM-as-a-Judge</div></div>
+    </div>
+    <div class="case-actions">
+      <a class="btn btn-primary hoverable magnetic" data-label="I SEE ALL!" href="https://github.com/priyansh19/Mach-2-Agent-Harness" target="_blank" rel="noopener"><span class="dot"></span> View on GitHub ↗</a>
+      <a class="btn btn-ghost hoverable magnetic" data-label="HOME!" href="../index.html">← Back to Home</a>
+    </div>
+  </section>
+
+  <div class="marquee m-fwd">
+    <div class="marquee-track">
+      <span>Think</span><span class="hl">★</span><span>Act</span><span class="hl">★</span><span>Trace</span><span class="hl">★</span><span>Judge</span><span class="hl">★</span><span>Critique</span><span class="hl">★</span><span>Synthesise</span><span class="hl">★</span>
+      <span>Think</span><span class="hl">★</span><span>Act</span><span class="hl">★</span><span>Trace</span><span class="hl">★</span><span>Judge</span><span class="hl">★</span><span>Critique</span><span class="hl">★</span><span>Synthesise</span><span class="hl">★</span>
+    </div>
+  </div>
+
+  <!-- MISSION -->
+  <section>
+    <div class="eyebrow reveal">FILE 01 — THE MISSION</div>
+    <h2 class="h2 flip3d">NO ANSWER SHIPS <span class="accent">UNJUDGED</span></h2>
+    <div class="mission-grid">
+      <div class="prose">
+        <p class="reveal">Most agent demos optimise for the happy path. Mach2 — the <b>successor to Mach1</b> — optimises for the question that actually matters in production: <b>how good is this answer, and can you prove it?</b></p>
+        <p class="reveal">Every run is <b>traced end-to-end in self-hosted Langfuse</b> — each thought, tool call, and LLM span on record. An <b>LLM-as-a-Judge (Grok) scores every response on hallucination and quality</b>, surfacing live evaluation and performance metrics. And before anything reaches the user, a <b>multi-layer critic pipeline</b> gets its say — maximising answer quality per token.</p>
+        <p class="quote reveal">"If you can't see the reasoning, you can't trust the answer."</p>
+      </div>
+      <ul class="snapshot reveal">
+        <li style="border-top:none"><b>FILE SNAPSHOT</b></li>
+        <li><b>ReAct core</b> — LangGraph multi-agent harness</li>
+        <li><b>Tracing</b> — self-hosted Langfuse, every span</li>
+        <li><b>Judge</b> — Grok scoring hallucination + quality</li>
+        <li><b>Critics</b> — Fact · Gap · Logic · Efficiency · Sign-off</li>
+        <li><b>Memory</b> — shared ChromaDB across agents</li>
+        <li><b>Desktop</b> — Electron + React, live SSE panel</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- THE WATCHTOWER LOOP -->
+  <section>
+    <div class="eyebrow reveal">FILE 02 — THE WATCHTOWER LOOP</div>
+    <h2 class="h2 flip3d">EVERY THOUGHT TRACED, <span class="accent-b">EVERY ANSWER GATED</span></h2>
+    <div class="steps">
+      <div class="step hoverable reveal">
+        <div class="no">01</div>
+        <div><h4>Reason &amp; Act</h4><p>A <b>LangGraph ReAct harness</b> drives multi-agent reasoning — thoughts, tool calls, and observations in an auditable loop.</p></div>
+      </div>
+      <div class="step hoverable reveal">
+        <div class="no">02</div>
+        <div><h4>Fan Out Research</h4><p>A nested <b>Research Agent dynamically spawns scoped scouting sub-agents</b> (agent-as-tool), all backed by <b>shared ChromaDB memory</b>.</p></div>
+      </div>
+      <div class="step hoverable reveal">
+        <div class="no">03</div>
+        <div><h4>Trace Everything</h4><p><b>Self-hosted Langfuse</b> instruments the run end-to-end — every thought, tool call, and LLM span lands in the trace, nothing happens off the record.</p></div>
+      </div>
+      <div class="step hoverable reveal">
+        <div class="no">04</div>
+        <div><h4>Judge the Response</h4><p>An <b>LLM-as-a-Judge (Grok) scores each response on hallucination and quality</b> — live evaluation and performance metrics, not vibes.</p></div>
+      </div>
+      <div class="step hoverable reveal">
+        <div class="no">05</div>
+        <div><h4>Critique, Gate, Re-Research</h4><p><b>Fact, Gap, Logic, Efficiency, and Sign-off critics</b> emit a severity-tagged critique ledger (<b>blocker / major / minor</b>) that gates synthesis and triggers <b>targeted re-research</b> — maximising answer quality per token.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORE SYSTEMS -->
+  <section>
+    <div class="eyebrow reveal">FILE 03 — CORE SYSTEMS</div>
+    <h2 class="h2 flip3d">BUILT TO <span class="accent">WATCH ITSELF WORK</span></h2>
+    <div class="panels">
+      <div class="panel hoverable reveal" data-tilt>
+        <div class="glyph">🔭</div>
+        <h3>Langfuse Observability</h3>
+        <div class="sub">Self-Hosted · Full-Span Tracing</div>
+        <p>Every thought, tool call, and LLM span traced end-to-end — <b>the whole reasoning chain is inspectable after the fact</b>.</p>
+        <div class="chip-row"><span class="chip">Langfuse</span><span class="chip">Tracing</span></div>
+      </div>
+      <div class="panel hoverable reveal" data-tilt>
+        <div class="glyph">⚖️</div>
+        <h3>LLM-as-a-Judge</h3>
+        <div class="sub">Grok Scoring Every Response</div>
+        <p>Hallucination and quality scores on each answer, surfacing <b>live evaluation and performance metrics</b> across the harness.</p>
+        <div class="chip-row"><span class="chip">Grok</span><span class="chip">Eval Metrics</span></div>
+      </div>
+      <div class="panel hoverable reveal" data-tilt>
+        <div class="glyph">🧾</div>
+        <h3>Critique Ledger</h3>
+        <div class="sub">Five Critics · Severity Tags</div>
+        <p><b>Fact, Gap, Logic, Efficiency, Sign-off</b> — every response earns a blocker/major/minor ledger that <b>gates synthesis</b> and fires targeted re-research.</p>
+        <div class="chip-row"><span class="chip">Critic Pipeline</span><span class="chip">Quality Gates</span></div>
+      </div>
+      <div class="panel hoverable reveal" data-tilt>
+        <div class="glyph">🛰️</div>
+        <h3>Research Fan-Out</h3>
+        <div class="sub">Agent-as-Tool Sub-Agents</div>
+        <p>A nested Research Agent <b>spawns scoped scouting sub-agents on demand</b>, sharing ChromaDB memory so no scout starts blind.</p>
+        <div class="chip-row"><span class="chip">Agent-as-Tool</span><span class="chip">ChromaDB</span></div>
+      </div>
+      <div class="panel hoverable reveal" data-tilt>
+        <div class="glyph">🖥️</div>
+        <h3>Live Thinking Panel</h3>
+        <div class="sub">Electron + React · SSE Streaming</div>
+        <p>A desktop UI with a <b>live Thinking &amp; Critique panel</b> streaming agent reasoning and critic verdicts over SSE as they happen.</p>
+        <div class="chip-row"><span class="chip">Electron</span><span class="chip">React</span><span class="chip">SSE</span></div>
+      </div>
+      <div class="panel hoverable reveal" data-tilt>
+        <div class="glyph">🎯</div>
+        <h3>Quality per Token</h3>
+        <div class="sub">Gated Synthesis · Targeted Re-Research</div>
+        <p>The ledger decides what ships: blockers stop synthesis, gaps trigger <b>re-research aimed exactly where the answer is weak</b>.</p>
+        <div class="chip-row"><span class="chip">ReAct</span><span class="chip">LangGraph</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLUEPRINT -->
+  <section>
+    <div class="eyebrow reveal">FILE 04 — THE BLUEPRINT</div>
+    <h2 class="h2 flip3d">REASONING UNDER <span class="accent-b">FULL SURVEILLANCE</span></h2>
+    <div class="arch reveal">
+      <div class="arch-stack">
+        <div class="arch-row">
+          <div class="node hoverable"><h5>Electron + React UI</h5><p>Thinking &amp; Critique Panel · SSE</p></div>
+        </div>
+        <div class="down">▼ ▼ ▼</div>
+        <div class="arch-row">
+          <div class="node hot hoverable"><h5>LangGraph ReAct Orchestrator</h5><p>Multi-Agent Reasoning Loop</p></div>
+        </div>
+        <div class="down">▼ ▼ ▼</div>
+        <div class="arch-row">
+          <div class="node hoverable"><h5>Research Agent</h5><p>Scoped Scout Sub-Agents</p></div>
+          <div class="node hoverable"><h5>Critic Pipeline</h5><p>Fact · Gap · Logic · Efficiency · Sign-off</p></div>
+          <div class="node hoverable"><h5>LLM Judge</h5><p>Grok · Hallucination + Quality</p></div>
+        </div>
+        <div class="down">▼ ▼ ▼</div>
+        <div class="arch-row">
+          <div class="node cold hoverable"><h5>ChromaDB</h5><p>Shared Agent Memory</p></div>
+          <div class="node cold hoverable"><h5>Langfuse</h5><p>Self-Hosted · Every Span Traced</p></div>
+        </div>
+      </div>
+      <div class="arch-caption">Nothing ships until the ledger clears — blockers gate synthesis, gaps trigger re-research</div>
+    </div>
+    <div class="stat-row">
+      <div class="stat reveal"><div class="num" data-count="5" data-suffix="">5</div><div class="lbl">Critics on Every Answer</div></div>
+      <div class="stat reveal"><div class="num" data-count="100" data-suffix="%">100%</div><div class="lbl">Spans Traced in Langfuse</div></div>
+      <div class="stat reveal"><div class="num" data-count="3" data-suffix="">3</div><div class="lbl">Severity Tiers Gating Synthesis</div></div>
+    </div>
+  </section>
+
+  <!-- END OF FILE -->
+  <section>
+    <div class="eyebrow reveal">END OF FILE</div>
+    <h2 class="h2 flip3d">MISSION LOGGED. <span class="accent">RETURN TO BASE.</span></h2>
+    <div class="case-actions reveal">
+      <a class="btn btn-primary hoverable magnetic" data-label="HOME!" href="../index.html"><span class="dot"></span> ← Return to Home</a>
+      <a class="btn btn-ghost hoverable magnetic" data-label="ARCHIVE!" href="index.html">Browse All Case Files</a>
+      <a class="btn btn-ghost hoverable magnetic" data-label="I SEE ALL!" href="https://github.com/priyansh19/Mach-2-Agent-Harness" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div>© 2026 PRIYANSH GUPTA — SENIOR AGENTIC AI ENGINEER</div>
+  <div><a class="hoverable" href="../index.html">HOME</a> · <a class="hoverable" href="index.html">ALL CASE FILES</a></div>
+  <div>DUBAI JVC, UAE · BUILT WITH AI ⚡</div>
+</footer>
+
+<script>
+window.BURST_WORDS=['I SEE ALL!','JUDGED!','TRACED!','GATED!'];
+window.BURST_COLORS=['#E0565F','#FFD34D'];
+</script>
+<script src="theme.js"></script>
+</body>
+</html>

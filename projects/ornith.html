@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ornith 1.0 — Case File 03 · Chaos Works · Priyansh Gupta</title>
+<meta name="description" content="Ornith 1.0 by Priyansh Gupta — a desktop coding-agent harness (Next.js + Electron) for the self-scaffolding ornith:9b model on local Ollama, with pluggable Python harnesses, native tool-calls, an L2–L7 critic ledger, and a full Playwright e2e suite.">
+<link rel="icon" href="../favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Archivo:wght@400;500;600;700;900&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="theme.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="t-wanda">
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+<div class="cursor-label" id="cursorLabel"></div>
+<canvas id="webTrail"></canvas>
+<div class="glow glow-1"></div>
+<div class="glow glow-2"></div>
+<div class="halftone"></div>
+<div class="halftone-pink"></div>
+<div class="halftone-cyan"></div>
+<div class="progress"><i id="progFill"></i></div>
+
+<a class="corner-nav left hoverable" data-label="HOME!" href="../index.html">← Home</a>
+<a class="corner-nav right hoverable" data-label="ARCHIVE!" href="index.html">All Case Files ▦</a>
+<div class="hud hud-br">SCROLL <b id="hudScroll">000%</b><br>HARNESS: SELF-BUILT</div>
+
+<nav>
+  <a class="nav-logo hoverable" href="../index.html">PRIYANSH<span>.AI</span></a>
+  <div class="nav-links">
+    <a class="hoverable here" href="index.html">Case Files</a>
+    <a class="hoverable" href="../index.html#about">About</a>
+    <a class="hoverable" href="../index.html#experience">Experience</a>
+    <a class="hoverable" href="../index.html#skills">Skills</a>
+    <a class="hoverable" href="../index.html#contact">Contact</a>
+    <a class="hoverable" href="../assets/Priyansh-Gupta-Resume.pdf" download>Resume ↓</a>
+  </div>
+  <div class="nav-right">
+    <a class="nav-cta hoverable" href="mailto:priyansh.9071@gmail.com">Hire Me ↗</a>
+    <button class="nav-burger hoverable" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html"><span class="no">01</span>Home</a>
+  <a href="index.html"><span class="no">02</span>Case Files</a>
+  <a href="../index.html#about"><span class="no">03</span>About</a>
+  <a href="../index.html#skills"><span class="no">04</span>Skills</a>
+  <a href="../index.html#contact"><span class="no">05</span>Contact</a>
+  <a href="../assets/Priyansh-Gupta-Resume.pdf" download><span class="no">↓</span>Resume</a>
+  <a class="menu-cta" href="mailto:priyansh.9071@gmail.com">Hire Me ↗</a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="case-hero">
+    <svg class="hero-emblem emblem-float" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+      <!-- chaos hex -->
+      <polygon points="100,12 176,56 176,144 100,188 24,144 24,56" stroke="#F2314F" stroke-width="4.5" opacity=".9"/>
+      <polygon points="100,34 157,67 157,133 100,166 43,133 43,67" stroke="#FF7EDB" stroke-width="3" opacity=".75" transform="rotate(30 100 100)"/>
+      <polygon points="100,56 138,78 138,122 100,144 62,122 62,78" stroke="#B03A8C" stroke-width="3" opacity=".85"/>
+      <g fill="#FF7EDB" opacity=".9">
+        <circle cx="100" cy="12" r="4"/><circle cx="176" cy="56" r="4"/><circle cx="176" cy="144" r="4"/>
+        <circle cx="100" cy="188" r="4"/><circle cx="24" cy="144" r="4"/><circle cx="24" cy="56" r="4"/>
+      </g>
+      <path d="M84 100 Q100 78 116 100 Q100 122 84 100 Z" stroke="#FFB3C7" stroke-width="3" fill="rgba(242,49,79,.2)"/>
+      <circle cx="100" cy="100" r="5" fill="#F2314F"/>
+    </svg>
+
+    <div class="issue-tag" data-scramble>// CASE FILE 03 — CODENAME: CHAOS WORKS — CODING AGENT · SELF-SCAFFOLDING</div>
+    <h1 class="case-title">
+      <span class="row"><span class="t3d-ink">CODE THAT CONJURES ITSELF,</span></span>
+      <span class="row"><span class="t3d-red">ORNITH</span> <span class="t3d-cyan">1.0.</span></span>
+    </h1>
+    <p class="lede">A desktop <b>coding-agent harness</b> (Next.js + Electron, React + TypeScript) for the <b>self-scaffolding ornith:9b model</b> on local Ollama — each session <b>binds its own pluggable Python agent harness</b> that plans tasks and streams <b>native tool-calls</b>: file edits, reads, shell runs. Like Wanda's constructs: the scaffolding appears exactly when the work demands it.</p>
+    <div class="case-meta">
+      <div class="meta-box hoverable"><div class="k">Inspired By</div><div class="v">Wanda</div></div>
+      <div class="meta-box hoverable"><div class="k">Role</div><div class="v">Creator</div></div>
+      <div class="meta-box hoverable"><div class="k">Model</div><div class="v">ornith:9b · Local</div></div>
+      <div class="meta-box hoverable"><div class="k">Tool-Calls</div><div class="v">Native</div></div>
+    </div>
+    <div class="case-actions">
+      <a class="btn btn-primary hoverable magnetic" data-label="HEXED!" href="https://github.com/priyansh19/Ornith-1.0-Code" target="_blank" rel="noopener"><span class="dot"></span> View on GitHub ↗</a>
+      <a class="btn btn-ghost hoverable magnetic" data-label="HOME!" href="../index.html">← Back to Home</a>
+    </div>
+  </section>
+
+  <div class="marquee m-fwd">
+    <div class="marquee-track">
+      <span>Plan</span><span class="hl">★</span><span>Scaffold</span><span class="hl">★</span><span>Tool-Call</span><span class="hl">★</span><span>Critique</span><span class="hl">★</span><span>Inspect</span><span class="hl">★</span><span>Ship</span><span class="hl">★</span>
+      <span>Plan</span><span class="hl">★</span><span>Scaffold</span><span class="hl">★</span><span>Tool-Call</span><span class="hl">★</span><span>Critique</span><span class="hl">★</span><span>Inspect</span><span class="hl">★</span><span>Ship</span><span class="hl">★</span>
+    </div>
+  </div>
+
+  <!-- MISSION -->
+  <section>
+    <div class="eyebrow reveal">FILE 01 — THE MISSION</div>
+    <h2 class="h2 flip3d">A HARNESS FOR A MODEL THAT <span class="accent">BUILDS ITS OWN</span></h2>
+    <div class="mission-grid">
+      <div class="prose">
+        <p class="reveal">Coding agents usually get one hard-coded harness and like it. Ornith 1.0 inverts that: built for the <b>self-scaffolding ornith:9b model</b> running on local Ollama, <b>every session binds its own pluggable Python agent harness</b> — the scaffolding is part of the experiment, not a constant.</p>
+        <p class="reveal">The model <b>plans tasks and streams native tool-calls</b> — file edits, reads, shell runs — while the desktop app makes every step visible: an <b>Inspector / Thinking / Critiques workspace</b> surfaces the agent's ReAct reasoning and an <b>L2–L7 critic ledger for every response</b>. Chaos, fully observed.</p>
+        <p class="quote reveal">"The best harness is the one the session conjures for itself."</p>
+      </div>
+      <ul class="snapshot reveal">
+        <li style="border-top:none"><b>FILE SNAPSHOT</b></li>
+        <li><b>Model</b> — self-scaffolding ornith:9b, local Ollama</li>
+        <li><b>Harnesses</b> — pluggable Python, per session</li>
+        <li><b>Tool-calls</b> — native: edits, reads, shell runs</li>
+        <li><b>Critics</b> — L2–L7 ledger on every response</li>
+        <li><b>Desktop</b> — Next.js + Electron, React + TS</li>
+        <li><b>Tested</b> — full Playwright e2e suite</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- THE RITUAL -->
+  <section>
+    <div class="eyebrow reveal">FILE 02 — THE RITUAL</div>
+    <h2 class="h2 flip3d">FROM EMPTY SESSION TO <span class="accent-b">RUNNING AGENT</span></h2>
+    <div class="steps">
+      <div class="step hoverable reveal">
+        <div class="no">01</div>
+        <div><h4>Bind a Harness</h4><p>Each session picks from the <b>harness registry (load / unload)</b> — a pluggable Python agent harness that defines how this agent will work.</p></div>
+      </div>
+      <div class="step hoverable reveal">
+        <div class="no">02</div>
+        <div><h4>Plan the Task</h4><p>The <b>self-scaffolding ornith:9b model</b> plans the work — running entirely on local Ollama, no cloud dependency.</p></div>
+      </div>
+      <div class="step hoverable reveal">
+        <div class="no">03</div>
+        <div><h4>Stream Native Tool-Calls</h4><p><b>File edits, reads, and shell runs stream live</b> as native tool-calls — you watch the code change as the agent reasons.</p></div>
+      </div>
+      <div class="step hoverable reveal">
+        <div class="no">04</div>
+        <div><h4>Face the Critics</h4><p>An <b>L2–L7 critic ledger</b> attaches to every response — layered verdicts on the agent's output before you trust it.</p></div>
+      </div>
+      <div class="step hoverable reveal">
+        <div class="no">05</div>
+        <div><h4>Inspect Everything</h4><p>The <b>Inspector / Thinking / Critiques workspace</b> lays out ReAct reasoning, tool activity, and critic verdicts side by side — with session and folder organisation keeping long projects sane.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORE SYSTEMS -->
+  <section>
+    <div class="eyebrow reveal">FILE 03 — CORE SYSTEMS</div>
+    <h2 class="h2 flip3d">CHAOS MAGIC, <span class="accent">FULLY OBSERVED</span></h2>
+    <div class="panels">
+      <div class="panel hoverable reveal" data-tilt>
+        <div class="glyph">🔮</div>
+        <h3>Self-Scaffolding Model</h3>
+        <div class="sub">ornith:9b on Local Ollama</div>
+        <p>A model that <b>constructs its own working scaffolding</b> — the harness binds per session instead of being welded to the app.</p>
+        <div class="chip-row"><span class="chip">ornith:9b</span><span class="chip">Ollama</span></div>
+      </div>
+      <div class="panel hoverable reveal" data-tilt>
+        <div class="glyph">🧩</div>
+        <h3>Harness Registry</h3>
+        <div class="sub">Pluggable Python · Load / Unload</div>
+        <p>Swap agent harnesses like spell books — <b>each session binds the Python harness it needs</b>, and the registry manages the collection.</p>
+        <div class="chip-row"><span class="chip">Pluggable Harnesses</span><span class="chip">Per-Session</span></div>
+      </div>
+      <div class="panel hoverable reveal" data-tilt>
+        <div class="glyph">🛠️</div>
+        <h3>Native Tool-Calls</h3>
+        <div class="sub">Edits · Reads · Shell Runs</div>
+        <p>No brittle text-parsing — the model emits <b>native tool-calls that stream into the workspace</b> as they execute.</p>
+        <div class="chip-row"><span class="chip">ReAct</span><span class="chip">Streaming</span></div>
+      </div>
+      <div class="panel hoverable reveal" data-tilt>
+        <div class="glyph">🕵️</div>
+        <h3>Inspector Workspace</h3>
+        <div class="sub">Thinking · Critiques · L2–L7 Ledger</div>
+        <p>Reasoning, tool activity, and <b>a seven-layer critic ledger per response</b> — the whole session is glass-walled.</p>
+        <div class="chip-row"><span class="chip">Critic Ledger</span><span class="chip">Observability</span></div>
+      </div>
+      <div class="panel hoverable reveal" data-tilt>
+        <div class="glyph">🖥️</div>
+        <h3>Desktop-Grade App</h3>
+        <div class="sub">Next.js + Electron · React + TS</div>
+        <p>Session and folder organisation for real projects — a coding agent that lives <b>where the code lives</b>.</p>
+        <div class="chip-row"><span class="chip">Next.js</span><span class="chip">Electron</span></div>
+      </div>
+      <div class="panel hoverable reveal" data-tilt>
+        <div class="glyph">🎭</div>
+        <h3>Playwright E2E Suite</h3>
+        <div class="sub">The Harness Is Itself Tested</div>
+        <p>A <b>full end-to-end test suite</b> covers the app — because a tool for judging agents should survive judgment itself.</p>
+        <div class="chip-row"><span class="chip">Playwright</span><span class="chip">E2E</span></div>
+      </div>
+    </div>
+    <div class="stat-row">
+      <div class="stat reveal"><div class="num" data-count="6" data-suffix="">6</div><div class="lbl">Critic Layers (L2–L7) per Response</div></div>
+      <div class="stat reveal"><div class="num" data-count="100" data-suffix="%">100%</div><div class="lbl">Local Model Inference</div></div>
+      <div class="stat reveal"><div class="num" data-count="9" data-suffix="B">9B</div><div class="lbl">Params in the Self-Scaffolding Model</div></div>
+    </div>
+  </section>
+
+  <!-- END OF FILE -->
+  <section>
+    <div class="eyebrow reveal">END OF FILE</div>
+    <h2 class="h2 flip3d">MISSION LOGGED. <span class="accent">RETURN TO BASE.</span></h2>
+    <div class="case-actions reveal">
+      <a class="btn btn-primary hoverable magnetic" data-label="HOME!" href="../index.html"><span class="dot"></span> ← Return to Home</a>
+      <a class="btn btn-ghost hoverable magnetic" data-label="ARCHIVE!" href="index.html">Browse All Case Files</a>
+      <a class="btn btn-ghost hoverable magnetic" data-label="HEXED!" href="https://github.com/priyansh19/Ornith-1.0-Code" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div>© 2026 PRIYANSH GUPTA — SENIOR AGENTIC AI ENGINEER</div>
+  <div><a class="hoverable" href="../index.html">HOME</a> · <a class="hoverable" href="index.html">ALL CASE FILES</a></div>
+  <div>DUBAI JVC, UAE · BUILT WITH AI ⚡</div>
+</footer>
+
+<script>
+window.BURST_WORDS=['HEXED!','CHAOS!','SCAFFOLDED!','CONJURED!'];
+window.BURST_COLORS=['#F2314F','#FF7EDB'];
+</script>
+<script src="theme.js"></script>
+</body>
+</html>

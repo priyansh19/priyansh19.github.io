@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BlastR — Case File 04 · Gamma Files · Priyansh Gupta</title>
+<meta name="description" content="BlastR by Priyansh Gupta (M.Sc. dissertation) — parses Terraform/IaC into NetworkX attack graphs, propagates blast radius across cloud layers, and pairs a LangGraph reasoning agent with FAISS RAG and a LoRA/QLoRA fine-tuned SLM to explain and prioritise security misconfigurations.">
+<link rel="icon" href="../favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Archivo:wght@400;500;600;700;900&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="theme.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="t-hulk">
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+<div class="cursor-label" id="cursorLabel"></div>
+<canvas id="webTrail"></canvas>
+<div class="glow glow-1"></div>
+<div class="glow glow-2"></div>
+<div class="halftone"></div>
+<div class="halftone-pink"></div>
+<div class="halftone-cyan"></div>
+<div class="progress"><i id="progFill"></i></div>
+
+<a class="corner-nav left hoverable" data-label="HOME!" href="../index.html">← Home</a>
+<a class="corner-nav right hoverable" data-label="ARCHIVE!" href="index.html">All Case Files ▦</a>
+<div class="hud hud-br">SCROLL <b id="hudScroll">000%</b><br>GAMMA: CONTAINED</div>
+
+<nav>
+  <a class="nav-logo hoverable" href="../index.html">PRIYANSH<span>.AI</span></a>
+  <div class="nav-links">
+    <a class="hoverable here" href="index.html">Case Files</a>
+    <a class="hoverable" href="../index.html#about">About</a>
+    <a class="hoverable" href="../index.html#experience">Experience</a>
+    <a class="hoverable" href="../index.html#skills">Skills</a>
+    <a class="hoverable" href="../index.html#contact">Contact</a>
+    <a class="hoverable" href="../assets/Priyansh-Gupta-Resume.pdf" download>Resume ↓</a>
+  </div>
+  <div class="nav-right">
+    <a class="nav-cta hoverable" href="mailto:priyansh.9071@gmail.com">Hire Me ↗</a>
+    <button class="nav-burger hoverable" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html"><span class="no">01</span>Home</a>
+  <a href="index.html"><span class="no">02</span>Case Files</a>
+  <a href="../index.html#about"><span class="no">03</span>About</a>
+  <a href="../index.html#skills"><span class="no">04</span>Skills</a>
+  <a href="../index.html#contact"><span class="no">05</span>Contact</a>
+  <a href="../assets/Priyansh-Gupta-Resume.pdf" download><span class="no">↓</span>Resume</a>
+  <a class="menu-cta" href="mailto:priyansh.9071@gmail.com">Hire Me ↗</a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="case-hero">
+    <svg class="hero-emblem emblem-float" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+      <!-- gamma blast radius as an attack graph -->
+      <circle cx="100" cy="100" r="90" stroke="#54E065" stroke-width="2" opacity=".4" stroke-dasharray="6 8"/>
+      <circle cx="100" cy="100" r="58" stroke="#54E065" stroke-width="2.5" opacity=".6" stroke-dasharray="5 6"/>
+      <g stroke="#54E065" stroke-width="2.5" opacity=".8">
+        <line x1="100" y1="100" x2="100" y2="22"/><line x1="100" y1="100" x2="164" y2="58"/>
+        <line x1="100" y1="100" x2="172" y2="122"/><line x1="100" y1="100" x2="134" y2="172"/>
+        <line x1="100" y1="100" x2="58" y2="166"/><line x1="100" y1="100" x2="28" y2="116"/>
+        <line x1="100" y1="100" x2="44" y2="46"/>
+      </g>
+      <g stroke="#C77DFF" stroke-width="2" opacity=".7">
+        <line x1="100" y1="22" x2="164" y2="58"/><line x1="172" y1="122" x2="134" y2="172"/>
+        <line x1="28" y1="116" x2="58" y2="166"/><line x1="44" y1="46" x2="100" y2="22"/>
+      </g>
+      <circle cx="100" cy="100" r="13" fill="rgba(84,224,101,.3)" stroke="#54E065" stroke-width="4"/>
+      <g fill="#54E065">
+        <circle cx="100" cy="22" r="6"/><circle cx="164" cy="58" r="6"/><circle cx="172" cy="122" r="6"/>
+        <circle cx="134" cy="172" r="6"/><circle cx="58" cy="166" r="6"/>
+      </g>
+      <g fill="#C77DFF">
+        <circle cx="28" cy="116" r="6"/><circle cx="44" cy="46" r="6"/>
+      </g>
+    </svg>
+
+    <div class="issue-tag" data-scramble>// CASE FILE 04 — CODENAME: GAMMA FILES — M.SC. DISSERTATION · DEVSECOPS</div>
+    <h1 class="case-title">
+      <span class="row"><span class="t3d-ink">MAP THE BLAST RADIUS,</span></span>
+      <span class="row"><span class="t3d-red">BLAST</span><span class="t3d-cyan">R.</span></span>
+    </h1>
+    <p class="lede"><b>Graph-aware RAG security analysis for cross-layer DevSecOps</b> (M.Sc. dissertation) — parses Terraform/IaC into <b>NetworkX attack graphs</b>, propagates <b>"blast radius" across cloud layers</b>, and pairs a <b>LangGraph reasoning agent</b> with FAISS + Sentence-Transformers RAG to explain and prioritise security misconfigurations. Know exactly what goes green before it goes boom.</p>
+    <div class="case-meta">
+      <div class="meta-box hoverable"><div class="k">Inspired By</div><div class="v">Hulk</div></div>
+      <div class="meta-box hoverable"><div class="k">Role</div><div class="v">Creator · M.Sc.</div></div>
+      <div class="meta-box hoverable"><div class="k">Domain</div><div class="v">DevSecOps</div></div>
+      <div class="meta-box hoverable"><div class="k">Fine-Tune</div><div class="v">LoRA / QLoRA</div></div>
+    </div>
+    <div class="case-actions">
+      <a class="btn btn-primary hoverable magnetic" data-label="SMASH!" href="https://github.com/priyansh19/BlastR" target="_blank" rel="noopener"><span class="dot"></span> View on GitHub ↗</a>
+      <a class="btn btn-ghost hoverable magnetic" data-label="HOME!" href="../index.html">← Back to Home</a>
+    </div>
+  </section>
+
+  <div class="marquee m-fwd">
+    <div class="marquee-track">
+      <span>Parse IaC</span><span class="hl">★</span><span>Build the Graph</span><span class="hl">★</span><span>Propagate the Blast</span><span class="hl">★</span><span>Explain</span><span class="hl">★</span><span>Prioritise</span><span class="hl">★</span>
+      <span>Parse IaC</span><span class="hl">★</span><span>Build the Graph</span><span class="hl">★</span><span>Propagate the Blast</span><span class="hl">★</span><span>Explain</span><span class="hl">★</span><span>Prioritise</span><span class="hl">★</span>
+    </div>
+  </div>
+
+  <!-- MISSION -->
+  <section>
+    <div class="eyebrow reveal">FILE 01 — THE MISSION</div>
+    <h2 class="h2 flip3d">A MISCONFIG IS NEVER <span class="accent">JUST ONE RESOURCE</span></h2>
+    <div class="mission-grid">
+      <div class="prose">
+        <p class="reveal">Security scanners hand you a flat list of findings. What they don't tell you is the Hulk question: <b>if this one thing breaks open, how far does the damage spread?</b></p>
+        <p class="reveal">BlastR answers it structurally — parsing Terraform into <b>NetworkX attack graphs</b> and <b>propagating blast radius across cloud layers</b>, so one weak security group is scored by everything it exposes. A <b>LangGraph reasoning agent</b> grounded in <b>FAISS + Sentence-Transformers RAG</b> then explains each misconfiguration and prioritises what to fix first — in plain, cited language.</p>
+        <p class="quote reveal">"Severity isn't the finding. Severity is the blast radius."</p>
+      </div>
+      <ul class="snapshot reveal">
+        <li style="border-top:none"><b>FILE SNAPSHOT</b></li>
+        <li><b>Input</b> — Terraform / IaC</li>
+        <li><b>Graph</b> — NetworkX attack graphs</li>
+        <li><b>Radius</b> — propagated across cloud layers</li>
+        <li><b>Reasoning</b> — LangGraph agent + FAISS RAG</li>
+        <li><b>SLM</b> — Qwen2.5-Coder-1.5B, LoRA/QLoRA</li>
+        <li><b>Ships as</b> — Typer CLI · FastAPI · React dashboard</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- THE GAMMA PIPELINE -->
+  <section>
+    <div class="eyebrow reveal">FILE 02 — THE GAMMA PIPELINE</div>
+    <h2 class="h2 flip3d">FROM HCL TO <span class="accent-b">PRIORITISED FIXES</span></h2>
+    <div class="steps">
+      <div class="step hoverable reveal">
+        <div class="no">01</div>
+        <div><h4>Parse the IaC</h4><p><b>Terraform is parsed into a NetworkX attack graph</b> — resources become nodes, trust and reachability become edges.</p></div>
+      </div>
+      <div class="step hoverable reveal">
+        <div class="no">02</div>
+        <div><h4>Propagate the Blast</h4><p><b>"Blast radius" propagates across cloud layers</b> — a single misconfiguration is scored by everything it can reach, not just what it is.</p></div>
+      </div>
+      <div class="step hoverable reveal">
+        <div class="no">03</div>
+        <div><h4>Reason &amp; Ground</h4><p>A <b>LangGraph reasoning agent</b> paired with <b>FAISS + Sentence-Transformers RAG</b> explains each misconfiguration and prioritises remediation with grounded citations.</p></div>
+      </div>
+      <div class="step hoverable reveal">
+        <div class="no">04</div>
+        <div><h4>Fine-Tune the Specialist</h4><p>A domain SLM — <b>Qwen2.5-Coder-1.5B, fine-tuned with LoRA/QLoRA</b> via HuggingFace Transformers + PEFT — trained on Terraform labelled with <b>Checkov and Trivy</b>.</p></div>
+      </div>
+      <div class="step hoverable reveal">
+        <div class="no">05</div>
+        <div><h4>Benchmark &amp; Track</h4><p>The fine-tune is <b>benchmarked against a zero-shot baseline and tracked in LangSmith</b> — the gains are measured, not assumed.</p></div>
+      </div>
+      <div class="step hoverable reveal">
+        <div class="no">06</div>
+        <div><h4>Ship Three Ways</h4><p>A <b>Typer CLI</b> for pipelines, a <b>FastAPI service</b> for integration, and a <b>React + TypeScript dashboard</b> for humans.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY IT HITS -->
+  <section>
+    <div class="eyebrow reveal">FILE 03 — WHY IT HITS HARD</div>
+    <h2 class="h2 flip3d">STRONGEST THERE IS, <span class="accent">PROVABLY</span></h2>
+    <div class="panels">
+      <div class="panel hoverable reveal" data-tilt>
+        <div class="glyph">🕸️</div>
+        <h3>Graph-Aware, Not List-Based</h3>
+        <div class="sub">NetworkX Attack Graphs</div>
+        <p>Findings are ranked by <b>cross-layer reachability</b> — the graph knows that a public bucket feeding a privileged role is not a "low".</p>
+        <div class="chip-row"><span class="chip">NetworkX</span><span class="chip">Cross-Layer</span></div>
+      </div>
+      <div class="panel hoverable reveal" data-tilt>
+        <div class="glyph">🧠</div>
+        <h3>Grounded Explanations</h3>
+        <div class="sub">LangGraph Agent + FAISS RAG</div>
+        <p>Every priority call comes with <b>a retrieved, cited explanation</b> — security review that reads like a senior engineer wrote it.</p>
+        <div class="chip-row"><span class="chip">LangGraph</span><span class="chip">FAISS</span><span class="chip">Sentence-Transformers</span></div>
+      </div>
+      <div class="panel hoverable reveal" data-tilt>
+        <div class="glyph">🧬</div>
+        <h3>A Domain Specialist SLM</h3>
+        <div class="sub">Qwen2.5-Coder-1.5B · LoRA/QLoRA · PEFT</div>
+        <p>Small model, gamma-boosted: fine-tuned on <b>Checkov/Trivy-labelled Terraform</b> so it speaks IaC security natively.</p>
+        <div class="chip-row"><span class="chip">LoRA/QLoRA</span><span class="chip">HuggingFace + PEFT</span></div>
+      </div>
+      <div class="panel hoverable reveal" data-tilt>
+        <div class="glyph">📊</div>
+        <h3>Measured, Not Vibed</h3>
+        <div class="sub">Zero-Shot Baseline · LangSmith</div>
+        <p><b>Benchmarked against zero-shot and tracked in LangSmith</b> — dissertation-grade rigour behind every claim.</p>
+        <div class="chip-row"><span class="chip">Benchmarks</span><span class="chip">LangSmith</span></div>
+      </div>
+    </div>
+    <div class="stat-row">
+      <div class="stat reveal"><div class="num" data-count="3" data-suffix="">3</div><div class="lbl">Interfaces — CLI · API · Dashboard</div></div>
+      <div class="stat reveal"><div class="num" data-count="2" data-suffix="">2</div><div class="lbl">Scanners Labelling the Training Set</div></div>
+      <div class="stat reveal"><div class="num" data-count="100" data-suffix="%">100%</div><div class="lbl">Priorities Backed by Graph + Citations</div></div>
+    </div>
+  </section>
+
+  <!-- BLUEPRINT -->
+  <section>
+    <div class="eyebrow reveal">FILE 04 — THE BLUEPRINT</div>
+    <h2 class="h2 flip3d">CONTAINMENT <span class="accent-b">ARCHITECTURE</span></h2>
+    <div class="arch reveal">
+      <div class="arch-stack">
+        <div class="arch-row">
+          <div class="node hoverable"><h5>Terraform / IaC</h5><p>Source of Truth</p></div>
+          <div class="node hoverable"><h5>Checkov + Trivy</h5><p>Labelled Training Data</p></div>
+        </div>
+        <div class="down">▼ ▼ ▼</div>
+        <div class="arch-row">
+          <div class="node hot hoverable"><h5>Attack Graph Engine</h5><p>NetworkX · Blast-Radius Propagation Across Layers</p></div>
+        </div>
+        <div class="down">▼ ▼ ▼</div>
+        <div class="arch-row">
+          <div class="node hoverable"><h5>LangGraph Agent</h5><p>Reasoning + Prioritisation</p></div>
+          <div class="node hoverable"><h5>FAISS RAG</h5><p>Sentence-Transformers Grounding</p></div>
+          <div class="node hoverable"><h5>Fine-Tuned SLM</h5><p>Qwen2.5-Coder-1.5B · LoRA/QLoRA</p></div>
+        </div>
+        <div class="down">▼ ▼ ▼</div>
+        <div class="arch-row">
+          <div class="node cold hoverable"><h5>Typer CLI</h5><p>Pipelines</p></div>
+          <div class="node cold hoverable"><h5>FastAPI</h5><p>Service</p></div>
+          <div class="node cold hoverable"><h5>React + TS Dashboard</h5><p>Humans</p></div>
+        </div>
+      </div>
+      <div class="arch-caption">M.Sc. dissertation — benchmarked against zero-shot baseline, tracked in LangSmith</div>
+    </div>
+  </section>
+
+  <!-- END OF FILE -->
+  <section>
+    <div class="eyebrow reveal">END OF FILE</div>
+    <h2 class="h2 flip3d">MISSION LOGGED. <span class="accent">RETURN TO BASE.</span></h2>
+    <div class="case-actions reveal">
+      <a class="btn btn-primary hoverable magnetic" data-label="HOME!" href="../index.html"><span class="dot"></span> ← Return to Home</a>
+      <a class="btn btn-ghost hoverable magnetic" data-label="ARCHIVE!" href="index.html">Browse All Case Files</a>
+      <a class="btn btn-ghost hoverable magnetic" data-label="SMASH!" href="https://github.com/priyansh19/BlastR" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div>© 2026 PRIYANSH GUPTA — SENIOR AGENTIC AI ENGINEER</div>
+  <div><a class="hoverable" href="../index.html">HOME</a> · <a class="hoverable" href="index.html">ALL CASE FILES</a></div>
+  <div>DUBAI JVC, UAE · BUILT WITH AI ⚡</div>
+</footer>
+
+<script>
+window.BURST_WORDS=['SMASH!','GAMMA!','CODE GREEN!','BLAST MAPPED!'];
+window.BURST_COLORS=['#54E065','#C77DFF'];
+</script>
+<script src="theme.js"></script>
+</body>
+</html>
